@@ -7,7 +7,7 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\PressStart.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\PressStart.xnb</Output>
       <Time>2009-04-01T18:31:57.0755-07:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\background.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\background.xnb</Output>
       <Time>2009-04-03T14:09:44.042-07:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\key.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\key.xnb</Output>
       <Time>2009-04-01T15:05:36.35-07:00</Time>
     </Item>
     <Item>
@@ -34,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\character.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\character.xnb</Output>
       <Time>2009-04-01T00:25:44.397-07:00</Time>
     </Item>
     <Item>
@@ -43,7 +43,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\title.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\title.xnb</Output>
       <Time>2009-04-02T19:59:53.591-07:00</Time>
     </Item>
     <Item>
@@ -52,7 +52,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\key_shadow.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\key_shadow.xnb</Output>
       <Time>2009-04-01T13:14:45.086-07:00</Time>
     </Item>
     <Item>
@@ -61,7 +61,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\door.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\door.xnb</Output>
       <Time>2009-04-01T13:07:53.219-07:00</Time>
     </Item>
     <Item>
@@ -70,7 +70,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\lives.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\lives.xnb</Output>
       <Time>2009-04-02T21:32:03.212-07:00</Time>
     </Item>
     <Item>
@@ -79,7 +79,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\chest.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\chest.xnb</Output>
       <Time>2009-04-02T22:32:22.385-07:00</Time>
     </Item>
     <Item>
@@ -88,7 +88,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\dead.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\dead.xnb</Output>
       <Time>2009-04-03T14:31:48.4375-07:00</Time>
     </Item>
     <Item>
@@ -97,7 +97,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\gravestone.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\gravestone.xnb</Output>
       <Time>2009-04-03T17:34:01.354-07:00</Time>
     </Item>
     <Item>
@@ -106,7 +106,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\door_locked.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\door_locked.xnb</Output>
       <Time>2009-04-01T16:14:11.233-07:00</Time>
     </Item>
     <Item>
@@ -115,7 +115,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\pickup_key.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\pickup_key.xnb</Output>
       <Time>2009-03-31T21:45:48.247375-07:00</Time>
     </Item>
     <Item>
@@ -124,7 +124,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\walk1.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\walk1.xnb</Output>
       <Time>2009-03-31T21:45:53.153625-07:00</Time>
     </Item>
     <Item>
@@ -133,7 +133,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\walk2.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\walk2.xnb</Output>
       <Time>2009-03-31T21:45:57.23175-07:00</Time>
     </Item>
     <Item>
@@ -142,7 +142,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\door_close.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\door_close.xnb</Output>
       <Time>2009-04-02T14:12:01.638-07:00</Time>
     </Item>
     <Item>
@@ -151,7 +151,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\hit_wall.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\hit_wall.xnb</Output>
       <Time>2009-04-01T16:10:48.602-07:00</Time>
     </Item>
     <Item>
@@ -160,7 +160,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\start.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\start.xnb</Output>
       <Time>2009-04-01T23:27:57.763-07:00</Time>
     </Item>
     <Item>
@@ -169,7 +169,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\bgmusic.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\bgmusic.xnb</Output>
       <Time>2009-04-04T20:59:36.951-07:00</Time>
     </Item>
     <Item>
@@ -178,7 +178,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\bgmusic_fast.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\bgmusic_fast.xnb</Output>
       <Time>2009-04-04T20:59:51.81-07:00</Time>
     </Item>
     <Item>
@@ -187,7 +187,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\titlemusic_intro.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\titlemusic_intro.xnb</Output>
       <Time>2009-04-04T20:58:45.591-07:00</Time>
     </Item>
     <Item>
@@ -196,7 +196,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\titlemusic_main.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\titlemusic_main.xnb</Output>
       <Time>2009-04-04T20:59:19.595-07:00</Time>
     </Item>
     <Item>
@@ -205,7 +205,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\menu.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\menu.xnb</Output>
       <Time>2009-04-02T00:08:15.997375-07:00</Time>
     </Item>
     <Item>
@@ -214,7 +214,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\pause.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\pause.xnb</Output>
       <Time>2009-04-02T00:18:16.813-07:00</Time>
     </Item>
     <Item>
@@ -223,7 +223,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\chest_locked.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\chest_locked.xnb</Output>
       <Time>2009-04-04T21:01:03.354125-07:00</Time>
     </Item>
     <Item>
@@ -232,7 +232,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\game_over.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\game_over.xnb</Output>
       <Time>2009-04-04T21:00:07.471-07:00</Time>
     </Item>
     <Item>
@@ -241,7 +241,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\congrats.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\congrats.xnb</Output>
       <Time>2009-04-04T21:00:21.9-07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -249,10 +249,10 @@
       <TargetPlatform>Windows</TargetPlatform>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\Content\</RootDirectory>
-      <LoggerRootDirectory>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\Content\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\Content\</RootDirectory>
+      <LoggerRootDirectory>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\Content\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

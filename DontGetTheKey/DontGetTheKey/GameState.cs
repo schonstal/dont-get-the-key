@@ -14,34 +14,65 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace DontGetTheKey
 {
-    public class GameState
+    //Singleton
+    public sealed class GameState
     {
         private static GameState instance;
+        
+        //So we can keep previous state data if necessary
         private Stack<State> states;
 
-        private GameState() {
+        //Use the same spritebatch and content manager for all states
+        private SpriteBatch spriteBatch;
+        private ContentManager content;
+
+        private GameState() 
+        {
             states = new Stack<State>();
         }
-
+        
         public static GameState Instance
-        {
-           get 
-           {
-              if (instance == null)
-                 instance = new GameState();
-              return instance;
-           }
-        }
-
-        public static State Current
         {
             get
             {
-                return instance.states.Peek();
+                if (instance == null)
+                    instance = new GameState();
+                return instance;
             }
         }
 
-        public void Update() 
+        public SpriteBatch Batch 
+        {
+            get
+            {
+                return spriteBatch;
+            }
+        }
+
+        public ContentManager Content
+        {
+            get
+            {
+                return content;
+            }
+        }
+        
+        //Quick access to the current state (can be avoided?)
+        public State Current
+        {
+            get
+            {
+                return states.Peek();
+            }
+        }
+
+        public void Init(SpriteBatch batch, ContentManager manager)
+        {
+            spriteBatch = batch;
+            content = manager;
+        }
+
+        public void Update()
         { 
             states.Peek().Update();
         }
@@ -51,12 +82,14 @@ namespace DontGetTheKey
             states.Peek().Draw(); 
         }
 
+        //Return to the previous state.
         public void Previous() 
         { 
             states.Pop(); 
         }
 
-        public void New(State state) 
+        //Enter a new state
+        public void Enter(State state) 
         { 
             states.Push(state); 
         }

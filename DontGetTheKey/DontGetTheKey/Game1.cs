@@ -31,11 +31,11 @@ namespace DontGetTheKey
 
         protected override void Initialize()
         {
-            GameState.Instance.New(new State(spriteBatch, Content));
+            GameState.Instance.Enter(new State());
 
             string[] intro = { "background", "logo", "character", "subtext" };
             foreach (string s in intro)
-                GameState.Current.Register(s);
+                GameState.Instance.Current.Register(s);
 
             base.Initialize();
         }

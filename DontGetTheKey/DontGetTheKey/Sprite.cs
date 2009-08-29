@@ -33,11 +33,6 @@ namespace DontGetTheKey
             throw new NotImplementedException();
         }
 
-        public override void Init(Actor a, Dictionary<string, object> parameters) //Probably killing dict
-        {
-            owner = a;
-        }
-
         #endregion
     }
 }

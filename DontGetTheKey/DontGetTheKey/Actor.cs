@@ -57,13 +57,12 @@ namespace DontGetTheKey
                 kvp.Value.LoadContent();
         }
 
-        //Creates a new component and adds it to the list of components; accepts arbitrary data.
-        public void Register<C>(Dictionary<string, object> parameters) where C : Component, new()
+        //You can only have one of any component.
+        public void Register<C>(C component) where C : Component
         {
             if (!components.Any(c => c.GetType() is C))
             {
-                C c = new C();
-                c.Init(this, parameters);
+                component.Init(this);
                 //components.Add(c);
             }
         }

@@ -22,9 +22,14 @@ namespace DontGetTheKey
             }
         }
 
+        public void Init(Actor a)
+        {
+            owner = a;
+        }
+
         public abstract void Update();
         public abstract void Draw();
         public abstract void LoadContent();
-        public abstract void Init(Actor a, Dictionary<string, object> parameters);
+
     }
 }

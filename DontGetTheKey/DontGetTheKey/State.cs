@@ -17,14 +17,10 @@ namespace DontGetTheKey
     public class State
     {
         private List<Actor> actors;
-        private SpriteBatch spriteBatch;
-        private ContentManager content;
 
-        public State(SpriteBatch sb, ContentManager c)
+        public State()
         {
             actors = new List<Actor>();
-            spriteBatch = sb;
-            content = c;
         }
 
         public void Update()
@@ -40,7 +36,7 @@ namespace DontGetTheKey
         public void Register(string name)
         {
             Actor a = new Actor();
-            a.Init(name, spriteBatch, content);
+            //a.Init(name);
             actors.Add(a);
         }
     }

@@ -33,10 +33,8 @@ namespace DontGetTheKey
             actors.ForEach(a => a.Draw());
         }
 
-        public void Register(string name)
+        public void Register(Actor a)
         {
-            Actor a = new Actor();
-            //a.Init(name);
             actors.Add(a);
         }
     }

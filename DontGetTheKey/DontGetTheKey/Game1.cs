@@ -35,7 +35,7 @@ namespace DontGetTheKey
 
             string[] intro = { "background", "logo", "character", "subtext" };
             foreach (string s in intro)
-                GameState.Instance.Current.Register(s);
+                GameState.Instance.Current.Register(new Actor(s, spriteBatch, Content));
 
             base.Initialize();
         }

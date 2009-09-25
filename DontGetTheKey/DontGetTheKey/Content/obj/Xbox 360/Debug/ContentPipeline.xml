@@ -7,7 +7,7 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\PressStart.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\PressStart.xnb</Output>
       <Time>2009-04-01T18:31:57.0755-07:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\background.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\background.xnb</Output>
       <Time>2009-04-03T14:09:44.042-07:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\key.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\key.xnb</Output>
       <Time>2009-04-01T15:05:36.35-07:00</Time>
     </Item>
     <Item>
@@ -34,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\character.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\character.xnb</Output>
       <Time>2009-04-01T00:25:44.397-07:00</Time>
     </Item>
     <Item>
@@ -43,7 +43,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\title.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\title.xnb</Output>
       <Time>2009-04-02T19:59:53.591-07:00</Time>
     </Item>
     <Item>
@@ -52,7 +52,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\key_shadow.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\key_shadow.xnb</Output>
       <Time>2009-04-01T13:14:45.086-07:00</Time>
     </Item>
     <Item>
@@ -61,134 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\door.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\door.xnb</Output>
       <Time>2009-04-01T13:07:53.219-07:00</Time>
-    </Item>
-    <Item>
-      <Source>door_locked.wav</Source>
-      <Name>door_locked</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\door_locked.xnb</Output>
-      <Time>2009-04-01T16:14:11.233-07:00</Time>
-    </Item>
-    <Item>
-      <Source>pickup_key.wav</Source>
-      <Name>pickup_key</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\pickup_key.xnb</Output>
-      <Time>2009-03-31T21:45:48.247375-07:00</Time>
-    </Item>
-    <Item>
-      <Source>walk1.wav</Source>
-      <Name>walk1</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\walk1.xnb</Output>
-      <Time>2009-03-31T21:45:53.153625-07:00</Time>
-    </Item>
-    <Item>
-      <Source>walk2.wav</Source>
-      <Name>walk2</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\walk2.xnb</Output>
-      <Time>2009-03-31T21:45:57.23175-07:00</Time>
-    </Item>
-    <Item>
-      <Source>door_close.wav</Source>
-      <Name>door_close</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\door_close.xnb</Output>
-      <Time>2009-04-02T14:12:01.638-07:00</Time>
-    </Item>
-    <Item>
-      <Source>hit_wall.wav</Source>
-      <Name>hit_wall</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\hit_wall.xnb</Output>
-      <Time>2009-04-01T16:10:48.602-07:00</Time>
-    </Item>
-    <Item>
-      <Source>game_over.wav</Source>
-      <Name>game_over</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\game_over.xnb</Output>
-      <Time>2009-04-04T21:00:07.471-07:00</Time>
-    </Item>
-    <Item>
-      <Source>start.wav</Source>
-      <Name>start</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\start.xnb</Output>
-      <Time>2009-04-01T23:27:57.763-07:00</Time>
-    </Item>
-    <Item>
-      <Source>bgmusic.wav</Source>
-      <Name>bgmusic</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\bgmusic.xnb</Output>
-      <Time>2009-04-04T20:59:36.951-07:00</Time>
-    </Item>
-    <Item>
-      <Source>bgmusic_fast.wav</Source>
-      <Name>bgmusic_fast</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\bgmusic_fast.xnb</Output>
-      <Time>2009-04-04T20:59:51.81-07:00</Time>
-    </Item>
-    <Item>
-      <Source>titlemusic_intro.wav</Source>
-      <Name>titlemusic_intro</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\titlemusic_intro.xnb</Output>
-      <Time>2009-04-04T20:58:45.591-07:00</Time>
-    </Item>
-    <Item>
-      <Source>titlemusic_main.wav</Source>
-      <Name>titlemusic_main</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\titlemusic_main.xnb</Output>
-      <Time>2009-04-04T20:59:19.595-07:00</Time>
-    </Item>
-    <Item>
-      <Source>menu.wav</Source>
-      <Name>menu</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\menu.xnb</Output>
-      <Time>2009-04-02T00:08:15.997375-07:00</Time>
-    </Item>
-    <Item>
-      <Source>pause.wav</Source>
-      <Name>pause</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\pause.xnb</Output>
-      <Time>2009-04-02T00:18:16.813-07:00</Time>
     </Item>
     <Item>
       <Source>lives.png</Source>
@@ -196,7 +70,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\lives.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\lives.xnb</Output>
       <Time>2009-04-02T21:32:03.212-07:00</Time>
     </Item>
     <Item>
@@ -205,7 +79,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\chest.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\chest.xnb</Output>
       <Time>2009-04-02T22:32:22.385-07:00</Time>
     </Item>
     <Item>
@@ -214,7 +88,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\dead.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\dead.xnb</Output>
       <Time>2009-04-03T14:31:48.4375-07:00</Time>
     </Item>
     <Item>
@@ -223,8 +97,125 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\gravestone.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\gravestone.xnb</Output>
       <Time>2009-04-03T17:34:01.354-07:00</Time>
+    </Item>
+    <Item>
+      <Source>door_locked.wav</Source>
+      <Name>door_locked</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\door_locked.xnb</Output>
+      <Time>2009-04-01T16:14:11.233-07:00</Time>
+    </Item>
+    <Item>
+      <Source>pickup_key.wav</Source>
+      <Name>pickup_key</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\pickup_key.xnb</Output>
+      <Time>2009-03-31T21:45:48.247375-07:00</Time>
+    </Item>
+    <Item>
+      <Source>walk1.wav</Source>
+      <Name>walk1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\walk1.xnb</Output>
+      <Time>2009-03-31T21:45:53.153625-07:00</Time>
+    </Item>
+    <Item>
+      <Source>walk2.wav</Source>
+      <Name>walk2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\walk2.xnb</Output>
+      <Time>2009-03-31T21:45:57.23175-07:00</Time>
+    </Item>
+    <Item>
+      <Source>door_close.wav</Source>
+      <Name>door_close</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\door_close.xnb</Output>
+      <Time>2009-04-02T14:12:01.638-07:00</Time>
+    </Item>
+    <Item>
+      <Source>hit_wall.wav</Source>
+      <Name>hit_wall</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\hit_wall.xnb</Output>
+      <Time>2009-04-01T16:10:48.602-07:00</Time>
+    </Item>
+    <Item>
+      <Source>start.wav</Source>
+      <Name>start</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\start.xnb</Output>
+      <Time>2009-04-01T23:27:57.763-07:00</Time>
+    </Item>
+    <Item>
+      <Source>bgmusic.wav</Source>
+      <Name>bgmusic</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\bgmusic.xnb</Output>
+      <Time>2009-04-04T20:59:36.951-07:00</Time>
+    </Item>
+    <Item>
+      <Source>bgmusic_fast.wav</Source>
+      <Name>bgmusic_fast</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\bgmusic_fast.xnb</Output>
+      <Time>2009-04-04T20:59:51.81-07:00</Time>
+    </Item>
+    <Item>
+      <Source>titlemusic_intro.wav</Source>
+      <Name>titlemusic_intro</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\titlemusic_intro.xnb</Output>
+      <Time>2009-04-04T20:58:45.591-07:00</Time>
+    </Item>
+    <Item>
+      <Source>titlemusic_main.wav</Source>
+      <Name>titlemusic_main</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\titlemusic_main.xnb</Output>
+      <Time>2009-04-04T20:59:19.595-07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu.wav</Source>
+      <Name>menu</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\menu.xnb</Output>
+      <Time>2009-04-02T00:08:15.997375-07:00</Time>
+    </Item>
+    <Item>
+      <Source>pause.wav</Source>
+      <Name>pause</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\pause.xnb</Output>
+      <Time>2009-04-02T00:18:16.813-07:00</Time>
     </Item>
     <Item>
       <Source>chest_locked.wav</Source>
@@ -232,8 +223,17 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\chest_locked.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\chest_locked.xnb</Output>
       <Time>2009-04-04T21:01:03.354125-07:00</Time>
+    </Item>
+    <Item>
+      <Source>game_over.wav</Source>
+      <Name>game_over</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\game_over.xnb</Output>
+      <Time>2009-04-04T21:00:07.471-07:00</Time>
     </Item>
     <Item>
       <Source>congrats.wav</Source>
@@ -241,7 +241,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\congrats.xnb</Output>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\congrats.xnb</Output>
       <Time>2009-04-04T21:00:21.9-07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -249,35 +249,35 @@
       <TargetPlatform>Xbox360</TargetPlatform>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>true</CompressContent>
-      <RootDirectory>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\Content\</RootDirectory>
-      <LoggerRootDirectory>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\Content\obj\Xbox 360\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\Content\</RootDirectory>
+      <LoggerRootDirectory>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\Content\obj\Xbox 360\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\Xbox 360\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
         <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
-        <Value>2008-10-10T18:42:32-07:00</Value>
+        <Value>2009-05-14T11:13:52-07:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
-        <Value>2008-10-10T18:43:28-07:00</Value>
+        <Value>2009-05-14T11:13:52-07:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
-        <Value>2008-10-10T18:43:18-07:00</Value>
+        <Value>2009-05-14T11:13:52-07:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
-        <Value>2008-10-10T18:48:18-07:00</Value>
+        <Value>2009-05-14T11:13:52-07:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
-        <Value>2008-10-10T18:48:50-07:00</Value>
+        <Value>2009-05-14T11:13:52-07:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\WINDOWS\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\3.0.0.0__6d5c3888ef60e27d\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2008-12-26T09:23:53.71875-08:00</Value>
+        <Value>2009-07-15T23:01:27.5429987-07:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

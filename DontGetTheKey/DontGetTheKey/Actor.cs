@@ -28,7 +28,7 @@ namespace DontGetTheKey
         private Dictionary<string, object> properties;
         private Dictionary<string, Action> methods;
 
-        public void Init(string actorName, SpriteBatch sb, ContentManager contentManager)
+        public Actor(string actorName, SpriteBatch sb, ContentManager contentManager)
         { 
             components = new Dictionary<string,Component>();
             properties = new Dictionary<string, object>();

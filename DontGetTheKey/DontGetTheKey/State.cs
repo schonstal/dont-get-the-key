@@ -16,7 +16,7 @@ namespace DontGetTheKey
 {
     public class State
     {
-        private List<Actor> actors;
+        protected List<Actor> actors;
 
         public State()
         {

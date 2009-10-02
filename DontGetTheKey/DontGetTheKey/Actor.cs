@@ -15,12 +15,15 @@ using System.Text;
 
 namespace DontGetTheKey
 {
-    //Actors are defined by collections of components, rather than type
     public class Actor
     {
         protected string name;
         protected SpriteBatch spriteBatch;
         protected ContentManager content;
+
+        protected Sprite sprite;
+        protected Vector2 position;
+        protected Rectangle hitBox;
 
         public Actor(string actorName, SpriteBatch sb, ContentManager contentManager)
         { 

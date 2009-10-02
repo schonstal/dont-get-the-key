@@ -58,6 +58,9 @@
   <ItemGroup>
     <Compile Include="Actor.cs" />
     <Compile Include="Animation.cs" />
+    <Compile Include="Character.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="GameState.cs" />
     <Compile Include="Intro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

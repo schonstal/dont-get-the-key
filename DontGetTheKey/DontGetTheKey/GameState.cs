@@ -26,6 +26,9 @@ namespace DontGetTheKey
         private SpriteBatch spriteBatch;
         private ContentManager content;
 
+        //Which controller start was pressed on
+        private PlayerIndex player;
+
         private GameState() 
         {
             states = new Stack<State>();

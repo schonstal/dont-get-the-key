@@ -14,7 +14,7 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace DontGetTheKey
 {
-    class Sprite : Component
+    class Sprite
     {
         #region Component Members
 

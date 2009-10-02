@@ -9,17 +9,17 @@ namespace DontGetTheKey
     {
         public void Update()
         {
-            actors.ForEach(a => a.Update());
+            base.Update();
         }
 
         public void Draw()
         {
-            actors.ForEach(a => a.Draw());
+            base.Update();
         }
 
         public void Register(Actor a)
         {
-            actors.Add(a);
+            base.Update();
         }
     }
 }

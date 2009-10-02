@@ -16,23 +16,19 @@ namespace DontGetTheKey
 {
     class Sprite
     {
-        #region Component Members
-
-        public override void Update()
+        public void Update()
         {
             throw new NotImplementedException();
         }
 
-        public override void Draw()
+        public void Draw()
         {
             throw new NotImplementedException();
         }
 
-        public override void LoadContent()
+        public void LoadContent()
         {
             throw new NotImplementedException();
         }
-
-        #endregion
     }
 }

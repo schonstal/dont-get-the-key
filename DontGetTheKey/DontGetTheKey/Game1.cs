@@ -45,6 +45,19 @@ namespace DontGetTheKey
             spriteBatch = new SpriteBatch(GraphicsDevice);
         }
 
+        protected override void Update(GameTime gameTime)
+        {
+            base.Update(gameTime);
+        }
+
+        protected override void Draw(GameTime gameTime)
+        {
+            GraphicsDevice.Clear(Color.Black);
+            spriteBatch.Begin();
+            spriteBatch.End();
+            base.Draw(gameTime);
+        }
+
         /*
         SpriteFont font;
         GameState state;

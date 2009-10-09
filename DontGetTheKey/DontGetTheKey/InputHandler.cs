@@ -28,7 +28,11 @@ namespace DontGetTheKey
         public bool pressed(string button)
         {
             if ((buttonMap(button, GamePad.GetState(player)) == ButtonState.Pressed) && (buttonMap(button, prev) == ButtonState.Released))
+            {
+                prev = GamePad.GetState(player);
                 return true;
+            }
+            prev = GamePad.GetState(player);
             return false;
         }
 

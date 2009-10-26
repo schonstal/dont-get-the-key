@@ -9,7 +9,7 @@ namespace DontGetTheKey
     {
         public Intro() : base() 
         {
-            
+            throw new NotImplementedException();
         }
 
     }

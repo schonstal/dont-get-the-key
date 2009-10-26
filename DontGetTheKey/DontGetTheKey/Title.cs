@@ -16,6 +16,12 @@ namespace DontGetTheKey
 {
     public class Title : State
     {
+        public Title(SpriteBatch sb, ContentManager content)
+            : base(sb, content)
+        {
+        }
+
+        /*
         public void Update(GameTime gameTime)
         {
             base.Update(gameTime);
@@ -25,10 +31,6 @@ namespace DontGetTheKey
         {
             base.Update(gameTime);
         }
-
-        public void Register(Actor a)
-        {
-            throw new NotImplementedException();
-        }
+        */
     }
 }

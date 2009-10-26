@@ -22,10 +22,6 @@ namespace DontGetTheKey
         //So we can keep previous state data if necessary
         private Stack<State> states;
 
-        //Use the same spritebatch and content manager for all states
-        private SpriteBatch spriteBatch;
-        private ContentManager content;
-
         private GameState()
         {
             states = new Stack<State>();
@@ -40,22 +36,6 @@ namespace DontGetTheKey
                 return instance;
             }
         }
-
-        public SpriteBatch Batch 
-        {
-            get
-            {
-                return spriteBatch;
-            }
-        }
-
-        public ContentManager Content
-        {
-            get
-            {
-                return content;
-            }
-        }
         
         //Quick access to the current state (can be avoided?)
         public State Current
@@ -64,12 +44,6 @@ namespace DontGetTheKey
             {
                 return states.Peek();
             }
-        }
-
-        public void Init(SpriteBatch batch, ContentManager manager)
-        {
-            spriteBatch = batch;
-            content = manager;
         }
 
         public void Update(GameTime gameTime)

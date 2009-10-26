@@ -17,9 +17,13 @@ namespace DontGetTheKey
     public class State
     {
         protected List<Actor> actors;
+        protected SpriteBatch spriteBatch;
+        protected ContentManager contentManager;
 
-        public State()
+        public State(SpriteBatch sb, ContentManager content)
         {
+            spriteBatch = sb;
+            contentManager = content;
             actors = new List<Actor>();
         }
 

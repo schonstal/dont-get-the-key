@@ -31,12 +31,8 @@ namespace DontGetTheKey
 
         protected override void Initialize()
         {
-            GameState.Instance.Enter(new State());
-
-            string[] intro = { "background", "logo", "character", "subtext" };
-            foreach (string s in intro)
-                GameState.Instance.Current.Register(new Actor(s, spriteBatch, Content));
-
+            GameState.Instance.Enter(new Intro());
+            //GameState.Instance.Current.Register(new Actor(s, spriteBatch, Content));
             base.Initialize();
         }
 
@@ -47,6 +43,7 @@ namespace DontGetTheKey
 
         protected override void Update(GameTime gameTime)
         {
+            GameState.Instance.Update(gameTime);
             base.Update(gameTime);
         }
 

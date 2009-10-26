@@ -72,14 +72,15 @@ namespace DontGetTheKey
             content = manager;
         }
 
-        public void Update()
+        public void Update(GameTime gameTime)
         { 
-            states.Peek().Update();
+            //Handle pausing
+            states.Peek().Update(gameTime);
         }
 
-        public void Draw() 
+        public void Draw(GameTime gameTime) 
         { 
-            states.Peek().Draw(); 
+            states.Peek().Draw(gameTime); 
         }
 
         //Return to the previous state.

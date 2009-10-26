@@ -17,7 +17,7 @@ namespace DontGetTheKey
 {
     public class Actor
     {
-        protected string name;
+        protected String name;
         protected SpriteBatch spriteBatch;
         protected ContentManager content;
 
@@ -25,19 +25,19 @@ namespace DontGetTheKey
         protected Vector2 position;
         protected Rectangle hitBox;
 
-        public Actor(string actorName, SpriteBatch sb, ContentManager contentManager)
+        public Actor(String actorName, SpriteBatch sb, ContentManager contentManager)
         { 
             name = actorName;
             spriteBatch = sb;
             content = contentManager;
         }
 
-        public void Update()
+        public void Update(GameTime gameTime)
         {
             throw new NotImplementedException();
         }
 
-        public void Draw() 
+        public void Draw(GameTime gameTime) 
         {
             throw new NotImplementedException();
         }

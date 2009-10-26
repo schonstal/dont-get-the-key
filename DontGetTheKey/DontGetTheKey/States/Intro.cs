@@ -7,5 +7,10 @@ namespace DontGetTheKey
 {
     public class Intro : State
     {
+        public Intro() : base() 
+        {
+            
+        }
+
     }
 }

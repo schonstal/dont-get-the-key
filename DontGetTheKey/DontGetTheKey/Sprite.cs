@@ -16,12 +16,12 @@ namespace DontGetTheKey
 {
     public class Sprite
     {
-        public void Update()
+        public void Update(GameTime gameTime)
         {
             throw new NotImplementedException();
         }
 
-        public void Draw()
+        public void Draw(GameTime gameTime)
         {
             throw new NotImplementedException();
         }

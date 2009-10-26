@@ -23,14 +23,14 @@ namespace DontGetTheKey
             actors = new List<Actor>();
         }
 
-        public void Update()
+        public void Update(GameTime gameTime)
         {
-            actors.ForEach(a => a.Update());
+            actors.ForEach(a => a.Update(gameTime));
         }
 
-        public void Draw()
+        public void Draw(GameTime gameTime)
         {
-            actors.ForEach(a => a.Draw());
+            actors.ForEach(a => a.Draw(gameTime));
         }
 
         public void Register(Actor a)

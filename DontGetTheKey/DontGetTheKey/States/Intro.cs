@@ -17,9 +17,11 @@ namespace DontGetTheKey
 {
     public class Intro : State
     {
-        public Intro(SpriteBatch sb, ContentManager content) : base(sb, content) 
+        public Intro(SpriteBatch sb, ContentManager contentManager) : base(sb, contentManager) 
         {
+            spriteBatch = sb;
+            content = contentManager;
+            Register(new Character("main", sb, content));
         }
-
     }
 }

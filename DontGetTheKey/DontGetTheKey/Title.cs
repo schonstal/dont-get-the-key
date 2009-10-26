@@ -19,6 +19,7 @@ namespace DontGetTheKey
         public Title(SpriteBatch sb, ContentManager content)
             : base(sb, content)
         {
+            Register(new Character("main", spriteBatch, content));
         }
 
         /*

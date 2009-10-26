@@ -21,7 +21,7 @@ namespace DontGetTheKey
         protected SpriteBatch spriteBatch;
         protected ContentManager content;
 
-        protected Sprite sprite;
+        protected Texture2D sprite;
         protected Vector2 position;
         protected Rectangle hitBox;
 
@@ -33,18 +33,15 @@ namespace DontGetTheKey
         }
 
         public void Update(GameTime gameTime)
-        {
-            throw new NotImplementedException();
+        {   
         }
 
         public void Draw(GameTime gameTime) 
         {
-            throw new NotImplementedException();
         }
 
         public void LoadContent() 
         {
-            throw new NotImplementedException();
         }
     }
 }

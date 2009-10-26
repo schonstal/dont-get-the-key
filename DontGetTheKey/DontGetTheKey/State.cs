@@ -18,12 +18,12 @@ namespace DontGetTheKey
     {
         protected List<Actor> actors;
         protected SpriteBatch spriteBatch;
-        protected ContentManager contentManager;
+        protected ContentManager content;
 
-        public State(SpriteBatch sb, ContentManager content)
+        public State(SpriteBatch sb, ContentManager contentManager)
         {
             spriteBatch = sb;
-            contentManager = content;
+            content = contentManager;
             actors = new List<Actor>();
         }
 

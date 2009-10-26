@@ -32,7 +32,6 @@ namespace DontGetTheKey
         protected override void Initialize()
         {
             GameState.Instance.Enter(new Intro(spriteBatch, Content));
-            //GameState.Instance.Current.Register(new Actor(s, spriteBatch, Content));
             base.Initialize();
         }
 

@@ -16,8 +16,9 @@ namespace DontGetTheKey
 {
     public class Character : Actor
     {
-        public Character(string actorName, SpriteBatch sb, ContentManager contentManager)
-            : base(actorName, sb, contentManager)
+        public Character(string actorName, SpriteBatch sb, ContentManager contentManager,
+            Vector2 pos, Texture2D texture, Rectangle box)
+            : base(actorName, sb, contentManager, pos, texture, box)
         {
             return;
         }

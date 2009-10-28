@@ -20,16 +20,19 @@ namespace DontGetTheKey
         protected String name;
         protected SpriteBatch spriteBatch;
         protected ContentManager content;
-
         protected Texture2D sprite;
         protected Vector2 position;
         protected Rectangle hitBox;
 
-        public Actor(String actorName, SpriteBatch sb, ContentManager contentManager)
+        public Actor(String actorName, SpriteBatch sb, ContentManager contentManager, 
+            Vector2 pos, Texture2D texture, Rectangle box)
         { 
             name = actorName;
             spriteBatch = sb;
             content = contentManager;
+            position = pos;
+            sprite = texture;
+            hitBox = box;
         }
 
         public void Update(GameTime gameTime)
@@ -38,6 +41,7 @@ namespace DontGetTheKey
 
         public void Draw(GameTime gameTime) 
         {
+            spriteBatch.Draw(sprite, position, Color.White);
         }
 
         public void LoadContent() 

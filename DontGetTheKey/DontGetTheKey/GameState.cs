@@ -18,8 +18,7 @@ namespace DontGetTheKey
     public sealed class GameState
     {
         private static GameState instance;
-        
-        //So we can keep previous state data if necessary
+        //For Deterministic Finite Autobots
         private Stack<State> states;
 
         private GameState()

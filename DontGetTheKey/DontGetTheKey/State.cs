@@ -34,7 +34,9 @@ namespace DontGetTheKey
 
         public void Draw(GameTime gameTime)
         {
+            spriteBatch.Begin();
             actors.ForEach(a => a.Draw(gameTime));
+            spriteBatch.End();
         }
 
         public void Register(Actor a)

@@ -18,10 +18,18 @@ namespace DontGetTheKey
     public class Intro : State
     {
         public Intro(SpriteBatch sb, ContentManager contentManager) : base(sb, contentManager) 
-        {
-            spriteBatch = sb;
-            content = contentManager;
-            Register(new Character("main", sb, content));
+        {         
+            //Main PC
+            Register(
+                new Character(
+                    "main", 
+                    sb, 
+                    content,
+                    new Vector2(0,0),
+                    content.Load<Texture2D>("character"),
+                    new Rectangle(0,0,15,15)
+                    )
+                );
         }
     }
 }

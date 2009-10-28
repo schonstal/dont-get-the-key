@@ -31,13 +31,14 @@ namespace DontGetTheKey
 
         protected override void Initialize()
         {
+            spriteBatch = new SpriteBatch(GraphicsDevice);
             GameState.Instance.Enter(new Intro(spriteBatch, Content));
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
-            spriteBatch = new SpriteBatch(GraphicsDevice);
+
         }
 
         protected override void Update(GameTime gameTime)
@@ -49,8 +50,7 @@ namespace DontGetTheKey
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
-            spriteBatch.Begin();
-            spriteBatch.End();
+            GameState.Instance.Draw(gameTime);
             base.Draw(gameTime);
         }
 

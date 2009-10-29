@@ -39,9 +39,10 @@ namespace DontGetTheKey
             spriteBatch.End();
         }
 
-        public void Register(Actor a)
+        public Actor Register(Actor a)
         {
             actors.Add(a);
+            return a;
         }
     }
 }

@@ -35,16 +35,16 @@ namespace DontGetTheKey
             hitBox = box;
         }
 
-        public void Update(GameTime gameTime)
-        {   
+        public virtual void Update(GameTime gameTime)
+        {
         }
 
-        public void Draw(GameTime gameTime) 
+        public virtual void Draw(GameTime gameTime) 
         {
             spriteBatch.Draw(sprite, position, Color.White);
         }
 
-        public void LoadContent() 
+        public virtual void LoadContent() 
         {
         }
     }

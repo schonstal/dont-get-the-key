@@ -27,7 +27,7 @@ namespace DontGetTheKey
                     content,
                     new Vector2(0,0),
                     content.Load<Texture2D>("character"),
-                    new Rectangle(0,0,15,15)
+                    new Rectangle(152, 136, 16, 16)
                     )
                 );
         }

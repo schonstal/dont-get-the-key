@@ -16,11 +16,18 @@ namespace DontGetTheKey
 {
     public class Character : Actor
     {
+        Rectangle target;
         public Character(string actorName, SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, Texture2D texture, Rectangle box)
             : base(actorName, sb, contentManager, pos, texture, box)
         {
+            target = new Rectangle(0, 0, 16, 16);
             return;
+        }
+
+        public override void Draw(GameTime gameTime)
+        {
+            spriteBatch.Draw(sprite, position, target, Color.White);
         }
     }
 }

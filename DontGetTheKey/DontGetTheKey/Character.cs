@@ -48,20 +48,22 @@ namespace DontGetTheKey
         }
 
         public override void Update(GameTime gameTime) {
-            if (input.held("Right") || input.LeftStick.X > sensitivity) {
-                walking = true;
-                state = State.right;
-            } else if (input.held("Left") || input.LeftStick.X < -sensitivity) {
-                walking = true;
-                state = State.left;
-            } else if (input.held("Up") || input.LeftStick.Y > sensitivity) {
-                walking = true;
-                state = State.up;
-            } else if (input.held("Down") || input.LeftStick.Y < -sensitivity) {
-                walking = true;
-                state = State.down;
-            } else {
-                walking = false;
+            if (playerControlled) {
+                if (input.held("Right") || input.LeftStick.X > sensitivity) {
+                    walking = true;
+                    state = State.right;
+                } else if (input.held("Left") || input.LeftStick.X < -sensitivity) {
+                    walking = true;
+                    state = State.left;
+                } else if (input.held("Up") || input.LeftStick.Y > sensitivity) {
+                    walking = true;
+                    state = State.up;
+                } else if (input.held("Down") || input.LeftStick.Y < -sensitivity) {
+                    walking = true;
+                    state = State.down;
+                } else {
+                    walking = false;
+                }
             }
 
             //I hate MSVS's curly brace on next line enforcement

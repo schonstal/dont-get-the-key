@@ -22,7 +22,6 @@ namespace DontGetTheKey
         float sensitivity = 0.3f;
         int frame = 0;
 
-
         bool playerControlled = true;
         bool walking = true;
 

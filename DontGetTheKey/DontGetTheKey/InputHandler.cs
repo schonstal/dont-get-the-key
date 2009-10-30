@@ -19,6 +19,22 @@ namespace DontGetTheKey
         private PlayerIndex player;
         private GamePadState prev;
 
+        public Vector2 RightStick
+        {
+            get
+            {
+                return GamePad.GetState(player).ThumbSticks.Right;
+            }
+        }
+
+        public Vector2 LeftStick
+        {
+            get
+            {
+                return GamePad.GetState(player).ThumbSticks.Left;
+            }
+        }
+
         public InputHandler(PlayerIndex p1)
         {
             player = p1;
@@ -71,6 +87,14 @@ namespace DontGetTheKey
                     return state.Buttons.RightStick;
                 case "Start":
                     return state.Buttons.Start;
+                case "Up":
+                    return state.DPad.Up;
+                case "Down":
+                    return state.DPad.Down;
+                case "Left":
+                    return state.DPad.Left;
+                case "Right":
+                    return state.DPad.Right;
                 default:
                     return ButtonState.Released;
             }

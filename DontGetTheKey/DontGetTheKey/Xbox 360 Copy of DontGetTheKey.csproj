@@ -57,7 +57,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Actor.cs" />
-    <Compile Include="Animation.cs" />
     <Compile Include="Character.cs">
       <SubType>Code</SubType>
     </Compile>

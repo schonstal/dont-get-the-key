@@ -20,27 +20,23 @@ namespace DontGetTheKey
         protected SpriteBatch spriteBatch;
         protected ContentManager content;
 
-        public State(SpriteBatch sb, ContentManager contentManager)
-        {
+        public State(SpriteBatch sb, ContentManager contentManager) {
             spriteBatch = sb;
             content = contentManager;
             actors = new List<Actor>();
         }
 
-        public void Update(GameTime gameTime)
-        {
+        public void Update(GameTime gameTime) {
             actors.ForEach(a => a.Update(gameTime));
         }
 
-        public void Draw(GameTime gameTime)
-        {
+        public void Draw(GameTime gameTime) {
             spriteBatch.Begin();
             actors.ForEach(a => a.Draw(gameTime));
             spriteBatch.End();
         }
 
-        public Actor Register(Actor a)
-        {
+        public Actor Register(Actor a) {
             actors.Add(a);
             return a;
         }

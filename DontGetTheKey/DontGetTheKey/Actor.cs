@@ -24,9 +24,8 @@ namespace DontGetTheKey
         protected Vector2 position;
         protected Rectangle hitBox;
 
-        public Actor(String actorName, SpriteBatch sb, ContentManager contentManager, 
-            Vector2 pos, Texture2D texture, Rectangle box)
-        { 
+        public Actor(String actorName, SpriteBatch sb, ContentManager contentManager,
+            Vector2 pos, Texture2D texture, Rectangle box) {
             name = actorName;
             spriteBatch = sb;
             content = contentManager;
@@ -35,17 +34,14 @@ namespace DontGetTheKey
             hitBox = box;
         }
 
-        public virtual void Update(GameTime gameTime)
-        {
+        public virtual void Update(GameTime gameTime) {
         }
 
-        public virtual void Draw(GameTime gameTime) 
-        {
+        public virtual void Draw(GameTime gameTime) {
             spriteBatch.Draw(sprite, position, Color.White);
         }
 
-        public virtual void LoadContent() 
-        {
+        public virtual void LoadContent() {
         }
     }
 }

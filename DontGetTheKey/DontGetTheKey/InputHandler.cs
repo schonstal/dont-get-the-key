@@ -19,32 +19,25 @@ namespace DontGetTheKey
         private PlayerIndex player;
         private GamePadState prev;
 
-        public Vector2 RightStick
-        {
-            get
-            {
+        public Vector2 RightStick {
+            get {
                 return GamePad.GetState(player).ThumbSticks.Right;
             }
         }
 
-        public Vector2 LeftStick
-        {
-            get
-            {
+        public Vector2 LeftStick {
+            get {
                 return GamePad.GetState(player).ThumbSticks.Left;
             }
         }
 
-        public InputHandler(PlayerIndex p1)
-        {
+        public InputHandler(PlayerIndex p1) {
             player = p1;
         }
 
         //We needn't worry about multibutton
-        public bool pressed(string button)
-        {
-            if ((buttonMap(button, GamePad.GetState(player)) == ButtonState.Pressed) && (buttonMap(button, prev) == ButtonState.Released))
-            {
+        public bool pressed(string button) {
+            if ((buttonMap(button, GamePad.GetState(player)) == ButtonState.Pressed) && (buttonMap(button, prev) == ButtonState.Released)) {
                 prev = GamePad.GetState(player);
                 return true;
             }
@@ -53,18 +46,15 @@ namespace DontGetTheKey
         }
 
 
-        public bool held(string button)
-        {
+        public bool held(string button) {
             if (buttonMap(button, GamePad.GetState(player)) == ButtonState.Pressed)
                 return true;
             return false;
         }
 
         //I'll have some dynamic programming, please. No? :(
-        private ButtonState buttonMap(string button, GamePadState state)
-        {
-            switch (button)
-            {
+        private ButtonState buttonMap(string button, GamePadState state) {
+            switch (button) {
                 case "A":
                     return state.Buttons.A;
                 case "B":

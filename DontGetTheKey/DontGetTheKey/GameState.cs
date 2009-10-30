@@ -21,51 +21,42 @@ namespace DontGetTheKey
         //For Deterministic Finite Autobots
         private Stack<State> states;
 
-        private GameState()
-        {
+        private GameState() {
             states = new Stack<State>();
         }
-        
-        public static GameState Instance
-        {
-            get
-            {
+
+        public static GameState Instance {
+            get {
                 if (instance == null)
                     instance = new GameState();
                 return instance;
             }
         }
-        
+
         //Quick access to the current state (can be avoided?)
-        public State Current
-        {
-            get
-            {
+        public State Current {
+            get {
                 return states.Peek();
             }
         }
 
-        public void Update(GameTime gameTime)
-        { 
+        public void Update(GameTime gameTime) {
             //Handle pausing
             states.Peek().Update(gameTime);
         }
 
-        public void Draw(GameTime gameTime) 
-        { 
-            states.Peek().Draw(gameTime); 
+        public void Draw(GameTime gameTime) {
+            states.Peek().Draw(gameTime);
         }
 
         //Return to the previous state.
-        public void Previous() 
-        { 
-            states.Pop(); 
+        public void Previous() {
+            states.Pop();
         }
 
         //Enter a new state
-        public void Enter(State state) 
-        { 
-            states.Push(state); 
+        public void Enter(State state) {
+            states.Push(state);
         }
     }
 }

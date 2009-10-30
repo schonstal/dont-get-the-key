@@ -17,15 +17,15 @@ namespace DontGetTheKey
 {
     public class Intro : State
     {
-        public Intro(SpriteBatch sb, ContentManager contentManager) : base(sb, contentManager) 
-        {         
+        public Intro(SpriteBatch sb, ContentManager contentManager)
+            : base(sb, contentManager) {
             //Main PC
             Register(
                 new Character(
-                    "main", 
-                    sb, 
+                    "main",
+                    sb,
                     content,
-                    new Vector2(0,0),
+                    new Vector2(0, 0),
                     content.Load<Texture2D>("character"),
                     new Rectangle(152, 136, 16, 16)
                     )

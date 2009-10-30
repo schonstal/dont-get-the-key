@@ -17,8 +17,7 @@ namespace DontGetTheKey
     public class Title : State
     {
         public Title(SpriteBatch sb, ContentManager content)
-            : base(sb, content)
-        {
+            : base(sb, content) {
             //Register(new Character("main", spriteBatch, content));
         }
 

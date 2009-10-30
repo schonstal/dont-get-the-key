@@ -21,34 +21,29 @@ namespace DontGetTheKey
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        public Game1()
-        {
+        public Game1() {
             graphics = new GraphicsDeviceManager(this);
             graphics.PreferredBackBufferWidth = 320;
             graphics.PreferredBackBufferHeight = 240;
             Content.RootDirectory = "Content";
         }
 
-        protected override void Initialize()
-        {
+        protected override void Initialize() {
             spriteBatch = new SpriteBatch(GraphicsDevice);
             GameState.Instance.Enter(new Intro(spriteBatch, Content));
             base.Initialize();
         }
 
-        protected override void LoadContent()
-        {
+        protected override void LoadContent() {
 
         }
 
-        protected override void Update(GameTime gameTime)
-        {
+        protected override void Update(GameTime gameTime) {
             GameState.Instance.Update(gameTime);
             base.Update(gameTime);
         }
 
-        protected override void Draw(GameTime gameTime)
-        {
+        protected override void Draw(GameTime gameTime) {
             GraphicsDevice.Clear(Color.Black);
             GameState.Instance.Draw(gameTime);
             base.Draw(gameTime);

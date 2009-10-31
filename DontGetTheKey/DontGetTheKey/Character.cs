@@ -20,10 +20,11 @@ namespace DontGetTheKey
         Rectangle target;
         float velocity = 30;
         float sensitivity = 0.3f;
-        int frame = 0;
 
-        bool playerControlled = true;
-        bool walking = true;
+        float rootbeer = 0;
+        float fps = 8;
+        int frame = 0;
+        int offset = 0;
 
         //He would pick you up if I asked him to
         InputHandler input;
@@ -38,6 +39,8 @@ namespace DontGetTheKey
         }
 
         State state = State.right;
+        bool playerControlled = true;
+        bool walking = true;
 
         public Character(string actorName, SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, Texture2D texture, Rectangle box)
@@ -48,6 +51,7 @@ namespace DontGetTheKey
         }
 
         public override void Update(GameTime gameTime) {
+            //Check inputs
             if (playerControlled) {
                 if (input.held("Right") || input.LeftStick.X > sensitivity) {
                     walking = true;
@@ -66,10 +70,9 @@ namespace DontGetTheKey
                 }
             }
 
-            //I hate MSVS's curly brace on next line enforcement
+            //Perform actions based on state (primitive is nice sometimes)
             if (walking == true) {
-                //Next walking frame, then move the guy :smugdog:
-                frame = (frame + 1) % 2;
+                Animate(gameTime);
                 switch (state) {
                     case State.right:
                         position.X += (velocity * (float)gameTime.ElapsedGameTime.Milliseconds) / 1000;
@@ -90,8 +93,18 @@ namespace DontGetTheKey
         }
 
         public override void Draw(GameTime gameTime) {
+            target.X = 16 * frame + offset;
             spriteBatch.Draw(sprite, position, target, Color.White);
         }
 
+        private void Animate(GameTime gameTime) {
+            rootbeer += gameTime.ElapsedGameTime.Milliseconds;
+            if (1000 / fps <= rootbeer) {
+                frame = (frame + 1) % 2;
+                //Play the walking sound here.
+                rootbeer = 0;
+            }
+
+        }
     }
 }

@@ -22,7 +22,7 @@ namespace DontGetTheKey
         float sensitivity = 0.3f;
 
         float rootbeer = 0;
-        float fps = 8;
+        float fps = 4;
         int frame = 0;
         int offset = 0;
 
@@ -104,7 +104,6 @@ namespace DontGetTheKey
                 //Play the walking sound here.
                 rootbeer = 0;
             }
-
         }
     }
 }

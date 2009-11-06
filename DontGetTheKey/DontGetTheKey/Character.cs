@@ -56,15 +56,19 @@ namespace DontGetTheKey
                 if (input.held("Right") || input.LeftStick.X > sensitivity) {
                     walking = true;
                     state = State.right;
+                    offset = 0;
                 } else if (input.held("Left") || input.LeftStick.X < -sensitivity) {
                     walking = true;
                     state = State.left;
+                    offset = 7;
                 } else if (input.held("Up") || input.LeftStick.Y > sensitivity) {
                     walking = true;
                     state = State.up;
+                    offset = 2;
                 } else if (input.held("Down") || input.LeftStick.Y < -sensitivity) {
                     walking = true;
                     state = State.down;
+                    offset = 4;
                 } else {
                     walking = false;
                 }
@@ -93,7 +97,7 @@ namespace DontGetTheKey
         }
 
         public override void Draw(GameTime gameTime) {
-            target.X = 16 * frame + offset;
+            target.X = 16 * (frame + offset);
             spriteBatch.Draw(sprite, position, target, Color.White);
         }
 

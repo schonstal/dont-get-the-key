@@ -54,21 +54,13 @@ namespace DontGetTheKey
             //Check inputs
             if (playerControlled) {
                 if (input.held("Right") || input.LeftStick.X > sensitivity) {
-                    walking = true;
-                    state = State.right;
-                    offset = 0;
+                    setWalk(State.right, 0);
                 } else if (input.held("Left") || input.LeftStick.X < -sensitivity) {
-                    walking = true;
-                    state = State.left;
-                    offset = 7;
+                    setWalk(State.left, 7);
                 } else if (input.held("Up") || input.LeftStick.Y > sensitivity) {
-                    walking = true;
-                    state = State.up;
-                    offset = 2;
+                    setWalk(State.up, 2);
                 } else if (input.held("Down") || input.LeftStick.Y < -sensitivity) {
-                    walking = true;
-                    state = State.down;
-                    offset = 4;
+                    setWalk(State.down, 4);
                 } else {
                     walking = false;
                 }
@@ -108,6 +100,12 @@ namespace DontGetTheKey
                 //Play the walking sound here.
                 rootbeer = 0;
             }
+        }
+
+        private void setWalk(State direction, int frameOffset) {
+            walking = true;
+            state = direction;
+            offset = frameOffset;
         }
     }
 }

@@ -17,11 +17,12 @@ namespace DontGetTheKey
     //So cool
     public class Character : Actor
     {
+        SoundEffectInstance[] walk;
         Rectangle target;
-        float velocity = 30;
+        float velocity = 45;
         float sensitivity = 0.3f;
 
-        float rootbeer = 0;
+        float rootbeer = 0; //elapsed
         float fps = 4;
         int frame = 0;
         int offset = 0;
@@ -45,8 +46,14 @@ namespace DontGetTheKey
         public Character(string actorName, SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, Texture2D texture, Rectangle box)
             : base(actorName, sb, contentManager, pos, texture, box) {
+            //Player Input
             input = new InputHandler(PlayerIndex.One);
             target = new Rectangle(0, 0, 16, 16);
+
+            //walking sounds
+            walk = new SoundEffectInstance[2];
+            walk[0] = load(contentManager, "walk1");
+            walk[1] = load(contentManager, "walk2");
             return;
         }
 
@@ -66,7 +73,7 @@ namespace DontGetTheKey
                 }
             }
 
-            //Perform actions based on state (primitive is nice sometimes)
+            //Perform actions based on state -- don't do it in setWalk because there is no dynamic progamming :(
             if (walking == true) {
                 Animate(gameTime);
                 switch (state) {
@@ -93,11 +100,15 @@ namespace DontGetTheKey
             spriteBatch.Draw(sprite, position, target, Color.White);
         }
 
+
+        ////////////
+        //Helpers
+        ////////////
         private void Animate(GameTime gameTime) {
             rootbeer += gameTime.ElapsedGameTime.Milliseconds;
             if (1000 / fps <= rootbeer) {
                 frame = (frame + 1) % 2;
-                //Play the walking sound here.
+                walk[frame].Play();
                 rootbeer = 0;
             }
         }
@@ -106,6 +117,15 @@ namespace DontGetTheKey
             walking = true;
             state = direction;
             offset = frameOffset;
+        }
+
+
+        SoundEffectInstance load(ContentManager contentManager, string name) {
+            SoundEffect sound = contentManager.Load<SoundEffect>(name);
+            SoundEffectInstance instance = sound.Play(0, 0, 0, false);
+            instance.Stop();
+            instance.Volume = 0.8f;
+            return instance;
         }
     }
 }

@@ -65,11 +65,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
-    <Compile Include="StartPressed.cs" />
     <Compile Include="State.cs" />
     <Compile Include="States\Intro.cs" />
-    <Compile Include="Title.cs" />
-    <Compile Include="WalkingOver.cs" />
+    <Compile Include="States\StartPressed.cs" />
+    <Compile Include="States\Title.cs" />
+    <Compile Include="States\WalkingOver.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

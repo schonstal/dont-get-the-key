@@ -39,6 +39,17 @@ namespace DontGetTheKey
         State state = State.right;
         bool playerControlled = false;
         bool walking = false;
+        bool playing = true;
+
+        public bool Walking {
+            get { return walking; }
+            set { walking = value; playing = value; }
+        }
+
+        public bool Playing {
+            get { return playing; }
+            set { playing = value; }
+        }
 
         public Character(SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, Texture2D texture, Rectangle box)
@@ -64,13 +75,15 @@ namespace DontGetTheKey
                 } else if (InputHandler.Instance.held("Down") || InputHandler.Instance.LeftStick.Y < -sensitivity) {
                     setWalk(State.down, 4);
                 } else {
-                    walking = false;
+                    Walking = false;
                 }
             }
 
+            if (playing)
+                Animate(gameTime);
+
             //Perform actions based on state -- don't do it in setWalk because there is no dynamic progamming :(
             if (walking == true) {
-                Animate(gameTime);
                 switch (state) {
                     case State.right:
                         position.X += (velocity * (float)gameTime.ElapsedGameTime.Milliseconds) / 1000;
@@ -85,7 +98,7 @@ namespace DontGetTheKey
                         position.Y += (velocity * (float)gameTime.ElapsedGameTime.Milliseconds) / 1000;
                         break;
                 }
-            } else if (state != State.up && state != State.down) {
+            } else if (state != State.up && state != State.down && !playing) {
                 frame = 0;
             }
         }
@@ -94,7 +107,6 @@ namespace DontGetTheKey
             target.X = 16 * (frame + offset);
             spriteBatch.Draw(sprite, position, target, Color.White);
         }
-
 
         ////////////
         //Helpers
@@ -109,7 +121,7 @@ namespace DontGetTheKey
         }
 
         private void setWalk(State direction, int frameOffset) {
-            walking = true;
+            Walking = true;
             state = direction;
             offset = frameOffset;
         }

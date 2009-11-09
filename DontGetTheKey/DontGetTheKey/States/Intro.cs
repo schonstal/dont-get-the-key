@@ -51,6 +51,8 @@ namespace DontGetTheKey
                 intro = content.Load<SoundEffect>("titlemusic_intro").Play();
             } else if (intro.State == SoundState.Stopped) {
                 intro.Dispose();
+                Character main = (Character)actors["main"];
+                main.Playing = false;
                 GameState.Instance.Enter(new Title(spriteBatch, content, actors));
             }
             base.Update(gameTime);

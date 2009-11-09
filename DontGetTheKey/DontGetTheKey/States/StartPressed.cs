@@ -27,6 +27,7 @@ namespace DontGetTheKey
         public override void Update(GameTime gameTime) {
             if (start.State == SoundState.Stopped) {
                 start.Dispose();
+                GameState.Instance.Enter(new WalkingOver(spriteBatch, content, actors));
             }
             base.Update(gameTime);
         }

@@ -18,8 +18,6 @@ namespace DontGetTheKey
     public class Intro : State
     {
         SoundEffectInstance intro;
-        SoundEffectInstance title;
-        SoundEffectInstance menu;
 
         public Intro(SpriteBatch sb, ContentManager contentManager)
             : base(sb, contentManager) {
@@ -31,17 +29,6 @@ namespace DontGetTheKey
                     content,
                     new Vector2(150, 56),
                     content.Load<Texture2D>("background"),
-                    new Rectangle(0, 0, 0, 0)
-                    )
-                );
-
-            Register(
-                "title",
-                new Actor(
-                    sb,
-                    content,
-                    new Vector2(-400, -400),
-                    content.Load<Texture2D>("title"),
                     new Rectangle(0, 0, 0, 0)
                     )
                 );
@@ -62,36 +49,11 @@ namespace DontGetTheKey
         public override void Update(GameTime gameTime) {
             if (intro == null) {
                 intro = content.Load<SoundEffect>("titlemusic_intro").Play();
-            } else if (intro.State == SoundState.Stopped && title == null) {
-                //Play whoosh
-                menu = content.Load<SoundEffect>("menu").Play();
-                //Show title
-                actors["title"].Transpose(new Vector2(32, 8));
-                //Play song
-                title = content.Load<SoundEffect>("titlemusic_main").Play(1.0f, 0, 0, true);
-            } else {
-                pokeInput(PlayerIndex.One);
-                pokeInput(PlayerIndex.Two);
-                pokeInput(PlayerIndex.Three);
-                pokeInput(PlayerIndex.Four);
+            } else if (intro.State == SoundState.Stopped) {
+                intro.Dispose();
+                GameState.Instance.Enter(new Title(spriteBatch, content, actors));
             }
             base.Update(gameTime);
-        }
-
-        private void pokeInput(PlayerIndex p) {
-            InputHandler.Instance.Player = p;
-            if (InputHandler.Instance.pressed("Start")) {
-                content.Load<SoundEffect>("start").Play();
-                changeState();
-                return;
-            }
-        }
-
-        private void changeState() {
-            intro.Dispose();
-            menu.Dispose();
-            title.Dispose();
-            GameState.Instance.Enter(new StartPressed(spriteBatch, content, actors));
         }
     }
 }

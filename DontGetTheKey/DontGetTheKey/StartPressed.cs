@@ -16,12 +16,18 @@ namespace DontGetTheKey
 {
     class StartPressed : State
     {
-        public StartPressed(SpriteBatch sb, ContentManager contentManager, Dictionary<string, Actor> actors)
+        SoundEffectInstance start;
+        public StartPressed(SpriteBatch sb, ContentManager contentManager, 
+            Dictionary<string, Actor> actors, SoundEffectInstance start)
             : base(sb, contentManager) {
             this.actors = actors;
+            this.start = start;
         }
 
         public override void Update(GameTime gameTime) {
+            if (start.State == SoundState.Stopped) {
+                start.Dispose();
+            }
             base.Update(gameTime);
         }
     }

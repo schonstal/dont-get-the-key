@@ -14,25 +14,34 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace DontGetTheKey
 {
+    //Singleton
     class InputHandler
     {
+        private static InputHandler instance;
+        public static InputHandler Instance {
+            get {
+                if (instance == null)
+                    instance = new InputHandler();
+                return instance;
+            }
+        }
+        private InputHandler() {
+        }
+
         private PlayerIndex player;
         private GamePadState prev;
 
         public Vector2 RightStick {
-            get {
-                return GamePad.GetState(player).ThumbSticks.Right;
-            }
+            get { return GamePad.GetState(player).ThumbSticks.Right; }
         }
 
         public Vector2 LeftStick {
-            get {
-                return GamePad.GetState(player).ThumbSticks.Left;
-            }
+            get { return GamePad.GetState(player).ThumbSticks.Left; }
         }
 
-        public InputHandler(PlayerIndex p1) {
-            player = p1;
+        public PlayerIndex Player {
+            set { player = value; }
+            get { return player; }
         }
 
         //We needn't worry about multibutton

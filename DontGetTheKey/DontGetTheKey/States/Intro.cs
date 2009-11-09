@@ -62,8 +62,10 @@ namespace DontGetTheKey
             if (intro == null) {
                 intro = content.Load<SoundEffect>("titlemusic_intro").Play();
             } else if (intro.State == SoundState.Stopped && title == null) {
-                content.Load<SoundEffect>("start").Play();
-                title = content.Load<SoundEffect>("titlemusic_main").Play();
+                content.Load<SoundEffect>("menu").Play();
+                actors["title"].Transpose(new Vector2(32, 8));
+                title = content.Load<SoundEffect>("titlemusic_main").Play(1.0f, 0, 0, true);
+            } else {
 
             }
             base.Update(gameTime);

@@ -27,9 +27,6 @@ namespace DontGetTheKey
         int frame = 0;
         int offset = 0;
 
-        //He would pick you up if I asked him to
-        InputHandler input;
-
         enum State
         {
             left,
@@ -47,7 +44,7 @@ namespace DontGetTheKey
             Vector2 pos, Texture2D texture, Rectangle box)
             : base(sb, contentManager, pos, texture, box) {
             //Player Input
-            input = new InputHandler(PlayerIndex.One);
+            InputHandler.Instance.Player = PlayerIndex.One;
             target = new Rectangle(0, 0, 16, 16);
 
             //walking sounds
@@ -60,13 +57,13 @@ namespace DontGetTheKey
         public override void Update(GameTime gameTime) {
             //Check inputs
             if (playerControlled) {
-                if (input.held("Right") || input.LeftStick.X > sensitivity) {
+                if (InputHandler.Instance.held("Right") || InputHandler.Instance.LeftStick.X > sensitivity) {
                     setWalk(State.right, 0);
-                } else if (input.held("Left") || input.LeftStick.X < -sensitivity) {
+                } else if (InputHandler.Instance.held("Left") || InputHandler.Instance.LeftStick.X < -sensitivity) {
                     setWalk(State.left, 7);
-                } else if (input.held("Up") || input.LeftStick.Y > sensitivity) {
+                } else if (InputHandler.Instance.held("Up") || InputHandler.Instance.LeftStick.Y > sensitivity) {
                     setWalk(State.up, 2);
-                } else if (input.held("Down") || input.LeftStick.Y < -sensitivity) {
+                } else if (InputHandler.Instance.held("Down") || InputHandler.Instance.LeftStick.Y < -sensitivity) {
                     setWalk(State.down, 4);
                 } else {
                     walking = false;

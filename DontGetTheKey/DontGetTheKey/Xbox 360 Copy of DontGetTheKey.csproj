@@ -69,6 +69,7 @@
     <Compile Include="State.cs" />
     <Compile Include="States\Intro.cs" />
     <Compile Include="Title.cs" />
+    <Compile Include="WalkingOver.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

@@ -37,14 +37,12 @@ namespace DontGetTheKey
         }
 
         State state = State.right;
-        bool playerControlled = true;
-        bool walking = true;
+        bool playerControlled = false;
+        bool walking = false;
 
         public Character(SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, Texture2D texture, Rectangle box)
             : base(sb, contentManager, pos, texture, box) {
-            //Player Input
-            InputHandler.Instance.Player = PlayerIndex.One;
             target = new Rectangle(0, 0, 16, 16);
 
             //walking sounds

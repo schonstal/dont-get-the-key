@@ -17,16 +17,14 @@ namespace DontGetTheKey
 {
     public class Actor
     {
-        protected String name;
         protected SpriteBatch spriteBatch;
         protected ContentManager content;
         protected Texture2D sprite;
         protected Vector2 position;
         protected Rectangle hitBox;
 
-        public Actor(String actorName, SpriteBatch sb, ContentManager contentManager,
+        public Actor(SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, Texture2D texture, Rectangle box) {
-            name = actorName;
             spriteBatch = sb;
             content = contentManager;
             position = pos;
@@ -42,6 +40,14 @@ namespace DontGetTheKey
         }
 
         public virtual void LoadContent() {
+        }
+
+        public virtual void Move(Vector2 amount) {
+            position += amount;
+        }
+
+        public virtual void Transpose(Vector2 location) {
+            position = location;
         }
     }
 }

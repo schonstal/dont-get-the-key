@@ -43,17 +43,17 @@ namespace DontGetTheKey
         bool playerControlled = true;
         bool walking = true;
 
-        public Character(string actorName, SpriteBatch sb, ContentManager contentManager,
+        public Character(SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, Texture2D texture, Rectangle box)
-            : base(actorName, sb, contentManager, pos, texture, box) {
+            : base(sb, contentManager, pos, texture, box) {
             //Player Input
             input = new InputHandler(PlayerIndex.One);
             target = new Rectangle(0, 0, 16, 16);
 
             //walking sounds
             walk = new SoundEffectInstance[2];
-            walk[0] = load(contentManager, "walk1");
-            walk[1] = load(contentManager, "walk2");
+            walk[0] = loadSound(contentManager, "walk1");
+            walk[1] = loadSound(contentManager, "walk2");
             return;
         }
 
@@ -119,8 +119,8 @@ namespace DontGetTheKey
             offset = frameOffset;
         }
 
-
-        SoundEffectInstance load(ContentManager contentManager, string name) {
+        //Weird that SEI doesn't have something like this
+        SoundEffectInstance loadSound(ContentManager contentManager, string name) {
             SoundEffect sound = contentManager.Load<SoundEffect>(name);
             SoundEffectInstance instance = sound.Play(0, 0, 0, false);
             instance.Stop();

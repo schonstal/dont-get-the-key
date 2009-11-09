@@ -16,28 +16,30 @@ namespace DontGetTheKey
 {
     public class State
     {
-        protected List<Actor> actors;
+        protected Dictionary<string, Actor> actors;
         protected SpriteBatch spriteBatch;
         protected ContentManager content;
 
         public State(SpriteBatch sb, ContentManager contentManager) {
             spriteBatch = sb;
             content = contentManager;
-            actors = new List<Actor>();
+            actors = new Dictionary<string,Actor>();
         }
 
-        public void Update(GameTime gameTime) {
-            actors.ForEach(a => a.Update(gameTime));
+        public virtual void Update(GameTime gameTime) {
+            foreach(KeyValuePair<string,Actor> kvp in actors)
+                kvp.Value.Update(gameTime);
         }
 
-        public void Draw(GameTime gameTime) {
+        public virtual void Draw(GameTime gameTime) {
             spriteBatch.Begin();
-            actors.ForEach(a => a.Draw(gameTime));
+            foreach (KeyValuePair<string, Actor> kvp in actors)
+                kvp.Value.Draw(gameTime);
             spriteBatch.End();
         }
 
-        public Actor Register(Actor a) {
-            actors.Add(a);
+        public Actor Register(string name, Actor a) {
+            actors.Add(name, a);
             return a;
         }
     }

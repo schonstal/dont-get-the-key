@@ -17,19 +17,56 @@ namespace DontGetTheKey
 {
     public class Intro : State
     {
+        SoundEffectInstance intro;
+        SoundEffectInstance title;
+
         public Intro(SpriteBatch sb, ContentManager contentManager)
             : base(sb, contentManager) {
-            //Main PC
+            //Background
             Register(
-                new Character(
-                    "main",
+                "background",
+                new Actor(
                     sb,
                     content,
-                    new Vector2(0, 0),
+                    new Vector2(150, 56),
+                    content.Load<Texture2D>("background"),
+                    new Rectangle(0, 0, 0, 0)
+                    )
+                );
+
+            Register(
+                "title",
+                new Actor(
+                    sb,
+                    content,
+                    new Vector2(-400, -400),
+                    content.Load<Texture2D>("title"),
+                    new Rectangle(0, 0, 0, 0)
+                    )
+                );
+            
+            //Main PC
+            Register(
+                "main",
+                new Character(
+                    sb,
+                    content,
+                    new Vector2(152, 136),
                     content.Load<Texture2D>("character"),
                     new Rectangle(152, 136, 16, 16)
                     )
                 );
+        }
+
+        public override void Update(GameTime gameTime) {
+            if (intro == null) {
+                intro = content.Load<SoundEffect>("titlemusic_intro").Play();
+            } else if (intro.State == SoundState.Stopped && title == null) {
+                content.Load<SoundEffect>("start").Play();
+                title = content.Load<SoundEffect>("titlemusic_main").Play();
+
+            }
+            base.Update(gameTime);
         }
     }
 }

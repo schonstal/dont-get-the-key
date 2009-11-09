@@ -87,7 +87,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actor.cs" />
-    <Compile Include="Character.cs" />
+    <Compile Include="Actors\Character.cs" />
+    <Compile Include="Actors\TitleBar.cs" />
     <Compile Include="GameState.cs" />
     <Compile Include="InputHandler.cs" />
     <Compile Include="States\StartPressed.cs" />

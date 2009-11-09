@@ -24,7 +24,7 @@ namespace DontGetTheKey
             this.actors = actors;
             Register(
                 "title",
-                new Actor(
+                new TitleBar(
                     sb,
                     content,
                     new Vector2(32, 8),

@@ -64,7 +64,7 @@ namespace DontGetTheKey
                 sei[effectName].Dispose();
         }
 
-        public void loadSound(string assetName) {
+        public void load(string assetName) {
             soundEffects[assetName] = content.Load<SoundEffect>(assetName);
         }
     }

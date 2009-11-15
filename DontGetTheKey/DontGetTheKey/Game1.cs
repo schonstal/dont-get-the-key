@@ -39,36 +39,36 @@ namespace DontGetTheKey
         protected override void LoadContent()
         {
             //A perfect opporunity to use Map :(
-            SoundBank.Instance.loadSound("pickup_key");
-            SoundBank.Instance.loadSound("door_close");
-            SoundBank.Instance.loadSound("game_over");
-            SoundBank.Instance.loadSound("start");
-            SoundBank.Instance.loadSound("menu");
-            SoundBank.Instance.loadSound("congrats");
+            SoundBank.Instance.load("pickup_key");
+            SoundBank.Instance.load("door_close");
+            SoundBank.Instance.load("game_over");
+            SoundBank.Instance.load("start");
+            SoundBank.Instance.load("menu");
+            SoundBank.Instance.load("congrats");
 
-            SoundBank.Instance.loadSound("titlemusic_intro");
-            SoundBank.Instance.loadSound("titlemusic_main");
-            SoundBank.Instance.loadSound("bgmusic_fast");
-            SoundBank.Instance.loadSound("bgmusic");
+            SoundBank.Instance.load("titlemusic_intro");
+            SoundBank.Instance.load("titlemusic_main");
+            SoundBank.Instance.load("bgmusic_fast");
+            SoundBank.Instance.load("bgmusic");
 
-            SoundBank.Instance.loadSound("pause");
-            SoundBank.Instance.loadSound("hit_wall");
-            SoundBank.Instance.loadSound("door_locked");
-            SoundBank.Instance.loadSound("walk1");
-            SoundBank.Instance.loadSound("walk2");
-            SoundBank.Instance.loadSound("chest_locked");
+            SoundBank.Instance.load("pause");
+            SoundBank.Instance.load("hit_wall");
+            SoundBank.Instance.load("door_locked");
+            SoundBank.Instance.load("walk1");
+            SoundBank.Instance.load("walk2");
+            SoundBank.Instance.load("chest_locked");
 
             ImageBank.Instance.loadFont("PressStart");
 
-            ImageBank.Instance.loadTexture("character");
-            ImageBank.Instance.loadTexture("background");
-            ImageBank.Instance.loadTexture("door");
-            ImageBank.Instance.loadTexture("title");
-            ImageBank.Instance.loadTexture("key_shadow");
-            ImageBank.Instance.loadTexture("lives");
-            ImageBank.Instance.loadTexture("chest");
-            ImageBank.Instance.loadTexture("gravestone");
-            ImageBank.Instance.loadTexture("key");
+            ImageBank.Instance.load("character");
+            ImageBank.Instance.load("background");
+            ImageBank.Instance.load("door");
+            ImageBank.Instance.load("title");
+            ImageBank.Instance.load("key_shadow");
+            ImageBank.Instance.load("lives");
+            ImageBank.Instance.load("chest");
+            ImageBank.Instance.load("gravestone");
+            ImageBank.Instance.load("key");
         }
 
         protected override void Update(GameTime gameTime) {

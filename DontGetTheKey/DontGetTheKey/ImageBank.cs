@@ -50,7 +50,7 @@ namespace DontGetTheKey
             get { return spriteFont; }
         }
 
-        public void loadTexture(string assetName) {
+        public void load(string assetName) {
             textures[assetName] = content.Load<Texture2D>(assetName);
         }
 

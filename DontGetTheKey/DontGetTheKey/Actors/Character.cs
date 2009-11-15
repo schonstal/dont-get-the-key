@@ -17,7 +17,6 @@ namespace DontGetTheKey
     //So cool
     public class Character : Actor
     {
-        SoundEffectInstance[] walk;
         Rectangle target;
         float velocity = 45;
         float sensitivity = 0.3f;
@@ -55,11 +54,6 @@ namespace DontGetTheKey
             Vector2 pos, Texture2D texture, Rectangle box)
             : base(sb, contentManager, pos, texture, box) {
             target = new Rectangle(0, 0, 16, 16);
-
-            //walking sounds
-            walk = new SoundEffectInstance[2];
-            walk[0] = loadSound(contentManager, "walk1");
-            walk[1] = loadSound(contentManager, "walk2");
             return;
         }
 
@@ -115,7 +109,7 @@ namespace DontGetTheKey
             rootbeer += gameTime.ElapsedGameTime.Milliseconds;
             if (1000 / fps <= rootbeer) {
                 frame = (frame + 1) % 2;
-                walk[frame].Play();
+                Asset.Instance.play((frame==0?"walk1":"walk2"));
                 rootbeer = 0;
             }
         }

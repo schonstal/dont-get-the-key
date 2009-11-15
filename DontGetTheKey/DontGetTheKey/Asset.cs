@@ -31,6 +31,7 @@ namespace DontGetTheKey
         private Asset() {
             textures = new Dictionary<string, Texture2D>();
             soundEffects = new Dictionary<string, SoundEffect>();
+            sei = new Dictionary<string, SoundEffectInstance>();
         }
 
         public static Asset Instance {
@@ -50,7 +51,7 @@ namespace DontGetTheKey
         }
 
         //There should only be one instance of a sound effect at a time.
-        public void playSound(string effectName) {
+        public void play(string effectName) {
             if (!sei.ContainsKey(effectName) && soundEffects.ContainsKey(effectName))
                 sei[effectName] = soundEffects[effectName].Play();
             else

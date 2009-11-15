@@ -23,6 +23,8 @@ namespace DontGetTheKey
         Dictionary<string, Texture2D> textures;
         Dictionary<string, SoundEffect> soundEffects;
         Dictionary<string, SoundEffectInstance> sei;
+        //only need one, it can be changed
+        SpriteFont spriteFont; 
 
         private Asset() {
             textures = new Dictionary<string, Texture2D>();
@@ -49,12 +51,20 @@ namespace DontGetTheKey
                 sei[effectName].Play();
         }
 
+        public SpriteFont font {
+            get { return spriteFont; }
+        }
+
         public void loadTexture(string assetName, ContentManager content) {
             textures[assetName] = content.Load<Texture2D>(assetName);
         }
 
         public void loadSound(string assetName, ContentManager content) {
             soundEffects[assetName] = content.Load<SoundEffect>(assetName);
+        }
+
+        public void loadFont(string assetName, ContentManager content) {
+            spriteFont = content.Load<SpriteFont>(assetName);
         }
     }
 }

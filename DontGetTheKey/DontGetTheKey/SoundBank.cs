@@ -12,42 +12,28 @@ using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Net;
 using Microsoft.Xna.Framework.Storage;
 
-
 namespace DontGetTheKey
 {
-    //Lazy lagged
-    class Asset
+    class SoundBank
     {
-        static Asset instance;
+        static SoundBank instance;
 
         ContentManager content;
 
-        Dictionary<string, Texture2D> textures;
         Dictionary<string, SoundEffect> soundEffects;
         Dictionary<string, SoundEffectInstance> sei;
-        //only need one, it can be changed
-        SpriteFont spriteFont;
 
-        private Asset() {
-            textures = new Dictionary<string, Texture2D>();
+        private SoundBank() {
             soundEffects = new Dictionary<string, SoundEffect>();
             sei = new Dictionary<string, SoundEffectInstance>();
         }
 
-        public static Asset Instance {
+        public static SoundBank Instance {
             get {
                 if (instance == null)
-                    instance = new Asset();
+                    instance = new SoundBank();
                 return instance; 
             }
-        }
-
-        public ContentManager Content {
-            set { content = value; }
-        }
-
-        public Texture2D texture(string tex) {
-            return textures[tex];
         }
 
         //There should only be one instance of a sound effect at a time.
@@ -58,20 +44,24 @@ namespace DontGetTheKey
                 sei[effectName].Play();
         }
 
-        public SpriteFont font {
-            get { return spriteFont; }
+        public void play(string effectName, float volume, float pitch, float pan, bool loop) {
+            if (!sei.ContainsKey(effectName) && soundEffects.ContainsKey(effectName)) {
+                sei[effectName] = soundEffects[effectName].Play(volume, pitch, pan, loop);
+            } else {
+                sei[effectName].Volume = volume;
+                sei[effectName].Pitch = pitch;
+                sei[effectName].Pan = pan;
+                sei[effectName].Play(); //Can't loop except when starting
+            }
         }
 
-        public void loadTexture(string assetName) {
-            textures[assetName] = content.Load<Texture2D>(assetName);
+        public void stop(string effectName) {
+            if (sei.ContainsKey(effectName))
+                sei[effectName].Dispose();
         }
 
         public void loadSound(string assetName) {
             soundEffects[assetName] = content.Load<SoundEffect>(assetName);
-        }
-
-        public void loadFont(string assetName) {
-            spriteFont = content.Load<SpriteFont>(assetName);
         }
     }
 }

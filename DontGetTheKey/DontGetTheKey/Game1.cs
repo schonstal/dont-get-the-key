@@ -31,43 +31,43 @@ namespace DontGetTheKey
         protected override void Initialize() {
             spriteBatch = new SpriteBatch(GraphicsDevice);
             GameState.Instance.Enter(new Intro(spriteBatch, Content));
-            Asset.Instance.Content = Content;
+            ImageBank.Instance.Content = Content;
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
+            //A perfect opporunity to use Map :(
+            SoundBank.Instance.loadSound("pickup_key");
+            SoundBank.Instance.loadSound("door_close");
+            SoundBank.Instance.loadSound("game_over");
+            SoundBank.Instance.loadSound("start");
+            SoundBank.Instance.loadSound("menu");
+            SoundBank.Instance.loadSound("congrats");
 
-            Asset.Instance.loadFont("PressStart");
+            SoundBank.Instance.loadSound("titlemusic_intro");
+            SoundBank.Instance.loadSound("titlemusic_main");
+            SoundBank.Instance.loadSound("bgmusic_fast");
+            SoundBank.Instance.loadSound("bgmusic");
 
-            Asset.Instance.loadSound("pickup_key");
-            Asset.Instance.loadSound("door_close");
-            Asset.Instance.loadSound("game_over");
-            Asset.Instance.loadSound("start");
-            Asset.Instance.loadSound("menu");
-            Asset.Instance.loadSound("congrats");
+            SoundBank.Instance.loadSound("pause");
+            SoundBank.Instance.loadSound("hit_wall");
+            SoundBank.Instance.loadSound("door_locked");
+            SoundBank.Instance.loadSound("walk1");
+            SoundBank.Instance.loadSound("walk2");
+            SoundBank.Instance.loadSound("chest_locked");
 
-            Asset.Instance.loadSound("titlemusic_intro");
-            Asset.Instance.loadSound("titlemusic_main");
-            Asset.Instance.loadSound("bgmusic_fast");
-            Asset.Instance.loadSound("bgmusic");
+            ImageBank.Instance.loadFont("PressStart");
 
-            Asset.Instance.loadSound("pause");
-            Asset.Instance.loadSound("hit_wall");
-            Asset.Instance.loadSound("door_locked");
-            Asset.Instance.loadSound("walk1");
-            Asset.Instance.loadSound("walk2");
-            Asset.Instance.loadSound("chest_locked");
-
-            Asset.Instance.loadTexture("character");
-            Asset.Instance.loadTexture("background");
-            Asset.Instance.loadTexture("door");
-            Asset.Instance.loadTexture("title");
-            Asset.Instance.loadTexture("key_shadow");
-            Asset.Instance.loadTexture("lives");
-            Asset.Instance.loadTexture("chest");
-            Asset.Instance.loadTexture("gravestone");
-            Asset.Instance.loadTexture("key");
+            ImageBank.Instance.loadTexture("character");
+            ImageBank.Instance.loadTexture("background");
+            ImageBank.Instance.loadTexture("door");
+            ImageBank.Instance.loadTexture("title");
+            ImageBank.Instance.loadTexture("key_shadow");
+            ImageBank.Instance.loadTexture("lives");
+            ImageBank.Instance.loadTexture("chest");
+            ImageBank.Instance.loadTexture("gravestone");
+            ImageBank.Instance.loadTexture("key");
         }
 
         protected override void Update(GameTime gameTime) {

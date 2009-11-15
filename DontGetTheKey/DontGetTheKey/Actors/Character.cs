@@ -109,7 +109,7 @@ namespace DontGetTheKey
             rootbeer += gameTime.ElapsedGameTime.Milliseconds;
             if (1000 / fps <= rootbeer) {
                 frame = (frame + 1) % 2;
-                Asset.Instance.play((frame==0?"walk1":"walk2"));
+                SoundBank.Instance.play((frame==0?"walk1":"walk2"));
                 rootbeer = 0;
             }
         }

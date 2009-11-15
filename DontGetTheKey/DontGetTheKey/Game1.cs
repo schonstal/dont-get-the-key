@@ -31,11 +31,43 @@ namespace DontGetTheKey
         protected override void Initialize() {
             spriteBatch = new SpriteBatch(GraphicsDevice);
             GameState.Instance.Enter(new Intro(spriteBatch, Content));
+            Asset.Instance.Content = Content;
             base.Initialize();
         }
 
-        protected override void LoadContent() {
+        protected override void LoadContent()
+        {
 
+            Asset.Instance.loadFont("PressStart");
+
+            Asset.Instance.loadSound("pickup_key");
+            Asset.Instance.loadSound("door_close");
+            Asset.Instance.loadSound("game_over");
+            Asset.Instance.loadSound("start");
+            Asset.Instance.loadSound("menu");
+            Asset.Instance.loadSound("congrats");
+
+            Asset.Instance.loadSound("titlemusic_intro");
+            Asset.Instance.loadSound("titlemusic_main");
+            Asset.Instance.loadSound("bgmusic_fast");
+            Asset.Instance.loadSound("bgmusic");
+
+            Asset.Instance.loadSound("pause");
+            Asset.Instance.loadSound("hit_wall");
+            Asset.Instance.loadSound("door_locked");
+            Asset.Instance.loadSound("walk1");
+            Asset.Instance.loadSound("walk2");
+            Asset.Instance.loadSound("chest_locked");
+
+            Asset.Instance.loadTexture("character");
+            Asset.Instance.loadTexture("background");
+            Asset.Instance.loadTexture("door");
+            Asset.Instance.loadTexture("title");
+            Asset.Instance.loadTexture("key_shadow");
+            Asset.Instance.loadTexture("lives");
+            Asset.Instance.loadTexture("chest");
+            Asset.Instance.loadTexture("gravestone");
+            Asset.Instance.loadTexture("key");
         }
 
         protected override void Update(GameTime gameTime) {

@@ -89,9 +89,10 @@
     <Compile Include="Actor.cs" />
     <Compile Include="Actors\Character.cs" />
     <Compile Include="Actors\TitleBar.cs" />
-    <Compile Include="Asset.cs" />
+    <Compile Include="ImageBank.cs" />
     <Compile Include="GameState.cs" />
     <Compile Include="InputHandler.cs" />
+    <Compile Include="SoundBank.cs" />
     <Compile Include="States\StartPressed.cs" />
     <Compile Include="States\Intro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

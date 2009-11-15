@@ -36,6 +36,10 @@ namespace DontGetTheKey
             }
         }
 
+        public ContentManager Content {
+            set { content = value; }
+        }
+
         //There should only be one instance of a sound effect at a time.
         public void play(string effectName) {
             if (!sei.ContainsKey(effectName) && soundEffects.ContainsKey(effectName))

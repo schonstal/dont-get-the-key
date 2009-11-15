@@ -32,6 +32,7 @@ namespace DontGetTheKey
             spriteBatch = new SpriteBatch(GraphicsDevice);
             GameState.Instance.Enter(new Intro(spriteBatch, Content));
             ImageBank.Instance.Content = Content;
+            SoundBank.Instance.Content = Content;
             base.Initialize();
         }
 

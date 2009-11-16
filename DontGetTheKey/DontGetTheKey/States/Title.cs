@@ -16,9 +16,6 @@ namespace DontGetTheKey
 {
     public class Title : State
     {
-        SoundEffectInstance menu;
-        SoundEffectInstance title;
-
         public Title(SpriteBatch sb, ContentManager content, Dictionary<string, Actor> actors)
             : base(sb, content) {
             this.actors = actors;

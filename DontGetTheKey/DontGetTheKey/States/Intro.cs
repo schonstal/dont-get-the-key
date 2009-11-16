@@ -17,8 +17,6 @@ namespace DontGetTheKey
 {
     public class Intro : State
     {
-        SoundEffectInstance intro;
-
         public Intro(SpriteBatch sb, ContentManager contentManager)
             : base(sb, contentManager) {
             //Background

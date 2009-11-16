@@ -16,7 +16,6 @@ namespace DontGetTheKey
 {
     class StartPressed : State
     {
-        SoundEffectInstance start;
         public StartPressed(SpriteBatch sb, ContentManager contentManager, 
             Dictionary<string, Actor> actors)
             : base(sb, contentManager) {

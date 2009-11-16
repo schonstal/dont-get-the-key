@@ -16,10 +16,12 @@ namespace DontGetTheKey
 {
     class StartPressed : State
     {
+
         public StartPressed(SpriteBatch sb, ContentManager contentManager, 
             Dictionary<string, Actor> actors)
             : base(sb, contentManager) {
             this.actors = actors;
+            ((PushStart)this.actors["push_start"]).Rate = 60;
         }
 
         public override void Update(GameTime gameTime) {
@@ -28,6 +30,11 @@ namespace DontGetTheKey
                 GameState.Instance.Enter(new WalkingOver(spriteBatch, content, actors));
             }
             base.Update(gameTime);
+        }
+
+        public override void Draw(GameTime gameTime) {
+            base.Draw(gameTime);
+
         }
     }
 }

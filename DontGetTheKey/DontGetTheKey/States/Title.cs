@@ -29,9 +29,21 @@ namespace DontGetTheKey
                     new Rectangle(0, 0, 0, 0)
                     )
                 );
+
+            Register(
+                "push_start",
+                new PushStart(
+                    sb,
+                    content,
+                    new Vector2(92, 183),
+                    "",
+                    new Rectangle(0, 0, 0, 0)
+                    )
+                );
         }
 
         public override void Update(GameTime gameTime) {
+
             if (SoundBank.Instance.effect("menu") == null &&
                 SoundBank.Instance.effect("titlemusic_main") == null) {
                 SoundBank.Instance.play("menu");
@@ -41,6 +53,7 @@ namespace DontGetTheKey
             pokeInput(PlayerIndex.Two);
             pokeInput(PlayerIndex.Three);
             pokeInput(PlayerIndex.Four);
+
             base.Update(gameTime);
         }
 

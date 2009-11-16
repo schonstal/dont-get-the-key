@@ -22,7 +22,7 @@ namespace DontGetTheKey
             //Background
             Register(
                 "background",
-                new Actor(
+                new Background(
                     sb,
                     content,
                     new Vector2(150, 56),

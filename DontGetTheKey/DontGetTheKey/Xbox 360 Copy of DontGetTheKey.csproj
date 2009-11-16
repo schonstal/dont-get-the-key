@@ -57,6 +57,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Actor.cs" />
+    <Compile Include="Actors\Background.cs" />
     <Compile Include="Actors\Character.cs" />
     <Compile Include="Actors\PushStart.cs" />
     <Compile Include="Actors\TitleBar.cs" />

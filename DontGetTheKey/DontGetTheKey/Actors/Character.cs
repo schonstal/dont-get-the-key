@@ -51,7 +51,7 @@ namespace DontGetTheKey
         }
 
         public Character(SpriteBatch sb, ContentManager contentManager,
-            Vector2 pos, Texture2D texture, Rectangle box)
+            Vector2 pos, string texture, Rectangle box)
             : base(sb, contentManager, pos, texture, box) {
             target = new Rectangle(0, 0, 16, 16);
             return;
@@ -99,7 +99,7 @@ namespace DontGetTheKey
 
         public override void Draw(GameTime gameTime) {
             target.X = 16 * (frame + offset);
-            spriteBatch.Draw(sprite, position, target, Color.White);
+            spriteBatch.Draw(ImageBank.Instance.texture(sprite), position, target, Color.White);
         }
 
         ////////////

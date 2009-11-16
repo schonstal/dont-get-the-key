@@ -29,7 +29,7 @@ namespace DontGetTheKey
         Rectangle target;
 
         public TitleBar(SpriteBatch sb, ContentManager contentManager,
-            Vector2 pos, Texture2D texture, Rectangle box)
+            Vector2 pos, string texture, Rectangle box)
             : base(sb, contentManager, pos, texture, box) {
             target = new Rectangle(0, 0, 256, 128);
         }
@@ -55,7 +55,7 @@ namespace DontGetTheKey
         public override void Draw(GameTime gameTime) {
             target.X = 256 * frame;
             target.Y = 128 * row;
-            spriteBatch.Draw(sprite, position, target, Color.White);
+            spriteBatch.Draw(ImageBank.Instance.texture(sprite), position, target, Color.White);
         }
     }
 }

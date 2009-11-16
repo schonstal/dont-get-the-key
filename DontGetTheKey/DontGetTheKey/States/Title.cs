@@ -28,7 +28,7 @@ namespace DontGetTheKey
                     sb,
                     content,
                     new Vector2(32, 8),
-                    content.Load<Texture2D>("title"),
+                    "title",
                     new Rectangle(0, 0, 0, 0)
                     )
                 );

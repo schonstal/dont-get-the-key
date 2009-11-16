@@ -28,7 +28,7 @@ namespace DontGetTheKey
                     sb,
                     content,
                     new Vector2(150, 56),
-                    content.Load<Texture2D>("background"),
+                    "background",
                     new Rectangle(0, 0, 0, 0)
                     )
                 );
@@ -40,7 +40,7 @@ namespace DontGetTheKey
                     sb,
                     content,
                     new Vector2(152, 136),
-                    content.Load<Texture2D>("character"),
+                    "character",
                     new Rectangle(152, 136, 16, 16)
                     )
                 );

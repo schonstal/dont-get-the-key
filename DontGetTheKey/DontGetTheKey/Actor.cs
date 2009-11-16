@@ -19,12 +19,12 @@ namespace DontGetTheKey
     {
         protected SpriteBatch spriteBatch;
         protected ContentManager content;
-        protected Texture2D sprite;
+        protected string sprite;
         protected Vector2 position;
         protected Rectangle hitBox;
 
         public Actor(SpriteBatch sb, ContentManager contentManager,
-            Vector2 pos, Texture2D texture, Rectangle box) {
+            Vector2 pos, string texture, Rectangle box) {
             spriteBatch = sb;
             content = contentManager;
             position = pos;
@@ -36,7 +36,7 @@ namespace DontGetTheKey
         }
 
         public virtual void Draw(GameTime gameTime) {
-            spriteBatch.Draw(sprite, position, Color.White);
+            spriteBatch.Draw(ImageBank.Instance.texture(sprite), position, Color.White);
         }
 
         public virtual void LoadContent() {

@@ -119,14 +119,5 @@ namespace DontGetTheKey
             state = direction;
             offset = frameOffset;
         }
-
-        //Weird that SEI doesn't have something like this
-        SoundEffectInstance loadSound(ContentManager contentManager, string name) {
-            SoundEffect sound = contentManager.Load<SoundEffect>(name);
-            SoundEffectInstance instance = sound.Play(0, 0, 0, false);
-            instance.Stop();
-            instance.Volume = 0.8f;
-            return instance;
-        }
     }
 }

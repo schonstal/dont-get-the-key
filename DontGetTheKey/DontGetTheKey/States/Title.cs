@@ -52,7 +52,7 @@ namespace DontGetTheKey
             if (InputHandler.Instance.pressed("Start")) {
                 SoundBank.Instance.play("start");
                 SoundBank.Instance.stop("menu");
-                SoundBank.Instance.stop("title");
+                SoundBank.Instance.stop("titlemusic_main");
                 GameState.Instance.Enter(new StartPressed(spriteBatch, content, actors));
                 return;
             }

@@ -47,12 +47,11 @@ namespace DontGetTheKey
         }
 
         public override void Update(GameTime gameTime) {
-            if (intro == null) {
-                intro = content.Load<SoundEffect>("titlemusic_intro").Play();
-            } else if (intro.State == SoundState.Stopped) {
-                intro.Dispose();
-                Character main = (Character)actors["main"];
-                main.Playing = false;
+            if (SoundBank.Instance.effect("titlemusic_intro") == null) {
+                SoundBank.Instance.play("titlemusic_intro");
+            } else if (SoundBank.Instance.effect("titlemusic_intro").State == SoundState.Stopped) {
+                SoundBank.Instance.stop("titlemusic_intro");
+                ((Character)actors["main"]).Playing = false;
                 GameState.Instance.Enter(new Title(spriteBatch, content, actors));
             }
             base.Update(gameTime);

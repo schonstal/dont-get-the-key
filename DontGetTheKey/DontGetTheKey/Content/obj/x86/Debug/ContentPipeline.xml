@@ -244,6 +244,51 @@
       <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\congrats.xnb</Output>
       <Time>2009-11-14T20:06:44.6875-08:00</Time>
     </Item>
+    <Item>
+      <Source>button_a.png</Source>
+      <Name>button_a</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\button_a.xnb</Output>
+      <Time>2009-11-15T15:33:33.390625-08:00</Time>
+    </Item>
+    <Item>
+      <Source>item_bikelock.png</Source>
+      <Name>item_bikelock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_bikelock.xnb</Output>
+      <Time>2009-11-15T15:33:33.390625-08:00</Time>
+    </Item>
+    <Item>
+      <Source>item_journal.png</Source>
+      <Name>item_journal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_journal.xnb</Output>
+      <Time>2009-11-15T15:33:33.390625-08:00</Time>
+    </Item>
+    <Item>
+      <Source>item_lockbox.png</Source>
+      <Name>item_lockbox</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_lockbox.xnb</Output>
+      <Time>2009-11-15T15:33:33.390625-08:00</Time>
+    </Item>
+    <Item>
+      <Source>item_locket.png</Source>
+      <Name>item_locket</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_locket.xnb</Output>
+      <Time>2009-11-15T15:33:33.390625-08:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

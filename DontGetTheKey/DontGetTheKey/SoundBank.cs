@@ -14,6 +14,7 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace DontGetTheKey
 {
+    //Sort of fakes one of the good aspects of dynamic programming
     class SoundBank
     {
         static SoundBank instance;
@@ -55,13 +56,21 @@ namespace DontGetTheKey
                 sei[effectName].Volume = volume;
                 sei[effectName].Pitch = pitch;
                 sei[effectName].Pan = pan;
-                sei[effectName].Play(); //Can't loop except when starting
+                sei[effectName].Play(); //Can't change loop except when starting
             }
         }
 
         public void stop(string effectName) {
-            if (sei.ContainsKey(effectName))
+            if (sei.ContainsKey(effectName)) {
                 sei[effectName].Dispose();
+                sei.Remove(effectName);
+            }
+        }
+
+        public SoundEffectInstance effect(string effectName) {
+            if (sei.ContainsKey(effectName))
+                return sei[effectName];
+            return null;
         }
 
         public void load(string assetName) {

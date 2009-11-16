@@ -18,15 +18,14 @@ namespace DontGetTheKey
     {
         SoundEffectInstance start;
         public StartPressed(SpriteBatch sb, ContentManager contentManager, 
-            Dictionary<string, Actor> actors, SoundEffectInstance start)
+            Dictionary<string, Actor> actors)
             : base(sb, contentManager) {
             this.actors = actors;
-            this.start = start;
         }
 
         public override void Update(GameTime gameTime) {
-            if (start.State == SoundState.Stopped) {
-                start.Dispose();
+            if (SoundBank.Instance.effect("start").State == SoundState.Stopped) {
+                SoundBank.Instance.stop("start");
                 GameState.Instance.Enter(new WalkingOver(spriteBatch, content, actors));
             }
             base.Update(gameTime);

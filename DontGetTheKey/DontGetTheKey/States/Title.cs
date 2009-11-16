@@ -35,9 +35,10 @@ namespace DontGetTheKey
         }
 
         public override void Update(GameTime gameTime) {
-            if (menu == null && title == null) {
-                menu = content.Load<SoundEffect>("menu").Play();
-                title = content.Load<SoundEffect>("titlemusic_main").Play(1.0f, 0, 0, true);
+            if (SoundBank.Instance.effect("menu") == null &&
+                SoundBank.Instance.effect("titlemusic_main") == null) {
+                SoundBank.Instance.play("menu");
+                SoundBank.Instance.play("titlemusic_main", 1.0f, 0, 0, true);
             }
             pokeInput(PlayerIndex.One);
             pokeInput(PlayerIndex.Two);
@@ -49,10 +50,10 @@ namespace DontGetTheKey
         private void pokeInput(PlayerIndex p) {
             InputHandler.Instance.Player = p;
             if (InputHandler.Instance.pressed("Start")) {
-                SoundEffectInstance start = content.Load<SoundEffect>("start").Play();
-                menu.Dispose();
-                title.Dispose();
-                GameState.Instance.Enter(new StartPressed(spriteBatch, content, actors, start));
+                SoundBank.Instance.play("start");
+                SoundBank.Instance.stop("menu");
+                SoundBank.Instance.stop("title");
+                GameState.Instance.Enter(new StartPressed(spriteBatch, content, actors));
                 return;
             }
         }

@@ -17,6 +17,7 @@ namespace DontGetTheKey
 {
     public class Intro : State
     {
+        float elapsed;
         public Intro(SpriteBatch sb, ContentManager contentManager)
             : base(sb, contentManager) {
             //Background
@@ -45,11 +46,13 @@ namespace DontGetTheKey
         }
 
         public override void Update(GameTime gameTime) {
+            elapsed += gameTime.ElapsedGameTime.Milliseconds;
+            if (elapsed >= 5100)
+                ((Character)actors["main"]).Playing = false;
             if (SoundBank.Instance.effect("titlemusic_intro") == null) {
                 SoundBank.Instance.play("titlemusic_intro");
             } else if (SoundBank.Instance.effect("titlemusic_intro").State == SoundState.Stopped) {
                 SoundBank.Instance.stop("titlemusic_intro");
-                ((Character)actors["main"]).Playing = false;
                 GameState.Instance.Enter(new Title(spriteBatch, content, actors));
             }
             base.Update(gameTime);

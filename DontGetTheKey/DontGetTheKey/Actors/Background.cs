@@ -19,7 +19,7 @@ namespace DontGetTheKey
         public Background(SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, string texture, Rectangle box)
             : base(sb, contentManager, pos, texture, box) {
-            Transpose(new Vector2(30, -184), 6.8);
+            Tween(new Vector2(30, -184), 6.8);
         }
 
         public override void Update(GameTime gameTime) {

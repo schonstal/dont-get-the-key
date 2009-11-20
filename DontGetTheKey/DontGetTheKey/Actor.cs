@@ -66,7 +66,7 @@ namespace DontGetTheKey
             position = destination;
         }
 
-        public virtual void Transpose(Vector2 destination, double duration) {
+        public virtual void Tween(Vector2 destination, double duration) {
             frames = (int)Math.Floor(60*duration);
             dv = (destination - position)/frames;
         }

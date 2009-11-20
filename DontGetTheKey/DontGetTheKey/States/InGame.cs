@@ -21,9 +21,11 @@ namespace DontGetTheKey
             : base(sb, contentManager) {
             this.actors = actors;
             ((Character)actors["main"]).PlayerControlled = true;
+            SoundBank.Instance.play("bgmusic", 1, 0, 0, true);
         }
 
         public override void Update(GameTime gameTime) {
+            base.Update(gameTime);
         }
     }
 }

@@ -49,23 +49,25 @@ namespace DontGetTheKey
                 SoundBank.Instance.play("menu");
                 SoundBank.Instance.play("titlemusic_main", 1.0f, 0, 0, true);
             }
-            pokeInput(PlayerIndex.One);
-            pokeInput(PlayerIndex.Two);
-            pokeInput(PlayerIndex.Three);
-            pokeInput(PlayerIndex.Four);
+            
+            if(!pokeInput(PlayerIndex.One))
+                if(!pokeInput(PlayerIndex.Two))
+                    if(!pokeInput(PlayerIndex.Three))
+                        pokeInput(PlayerIndex.Four);
 
             base.Update(gameTime);
         }
 
-        private void pokeInput(PlayerIndex p) {
+        private bool pokeInput(PlayerIndex p) {
             InputHandler.Instance.Player = p;
             if (InputHandler.Instance.pressed("Start")) {
                 SoundBank.Instance.play("start");
                 SoundBank.Instance.stop("menu");
                 SoundBank.Instance.stop("titlemusic_main");
                 GameState.Instance.Enter(new StartPressed(spriteBatch, content, actors));
-                return;
+                return true;
             }
+            return false;
         }
     }
 }

@@ -23,5 +23,10 @@ namespace DontGetTheKey
             ((Character)this.actors["main"]).Walking = true;
         }
 
+        public override void Update(GameTime gameTime) {
+            if(actors["main"].Position.X >= 240)
+                ((Character)actors["main"]).Walking = false;
+            base.Update(gameTime);
+        }
     }
 }

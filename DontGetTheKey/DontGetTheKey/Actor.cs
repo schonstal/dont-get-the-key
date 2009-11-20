@@ -41,6 +41,10 @@ namespace DontGetTheKey
             hitBox = box;
         }
 
+        public Vector2 Position {
+            get { return position; }
+        }
+
         //only really need to call this if you're moving the sprite.
         public virtual void Update(GameTime gameTime) {
             elapsed += gameTime.ElapsedGameTime.Milliseconds;

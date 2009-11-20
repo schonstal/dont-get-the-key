@@ -20,6 +20,8 @@ namespace DontGetTheKey
             Dictionary<string, Actor> actors)
             : base(sb, contentManager) {
             this.actors = actors;
+            ((Character)this.actors["main"]).Walking = true;
         }
+
     }
 }

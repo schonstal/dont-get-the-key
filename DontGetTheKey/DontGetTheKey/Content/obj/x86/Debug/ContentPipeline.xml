@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\character.xnb</Output>
-      <Time>2009-04-01T00:25:44.397-07:00</Time>
+      <Time>2009-11-19T21:10:35.484375-08:00</Time>
     </Item>
     <Item>
       <Source>title.png</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\title.xnb</Output>
-      <Time>2009-11-15T17:55:50.25-08:00</Time>
+      <Time>2009-11-19T21:10:35.5-08:00</Time>
     </Item>
     <Item>
       <Source>key_shadow.png</Source>
@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\lives.xnb</Output>
-      <Time>2009-04-02T21:32:03.212-07:00</Time>
+      <Time>2009-11-19T21:10:35.5-08:00</Time>
     </Item>
     <Item>
       <Source>chest.png</Source>
@@ -80,7 +80,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\chest.xnb</Output>
-      <Time>2009-04-02T22:32:22.385-07:00</Time>
+      <Time>2009-11-19T21:10:35.5-08:00</Time>
     </Item>
     <Item>
       <Source>gravestone.png</Source>
@@ -314,7 +314,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_lockofhair.xnb</Output>
-      <Time>2009-11-15T21:51:18.40625-08:00</Time>
+      <Time>2009-11-19T21:10:35.5-08:00</Time>
     </Item>
     <Item>
       <Source>item_lockpicks.png</Source>

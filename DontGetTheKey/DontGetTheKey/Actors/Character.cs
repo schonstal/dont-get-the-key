@@ -50,6 +50,11 @@ namespace DontGetTheKey
             set { playing = value; }
         }
 
+        public bool PlayerControlled {
+            get { return playerControlled; }
+            set { playerControlled = value; }
+        }
+
         public Character(SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, string texture, Rectangle box)
             : base(sb, contentManager, pos, texture, box) {

@@ -69,7 +69,10 @@
     <Compile Include="Game1.cs" />
     <Compile Include="SoundBank.cs" />
     <Compile Include="State.cs" />
+    <Compile Include="States\EnterGame.cs" />
+    <Compile Include="States\InGame.cs" />
     <Compile Include="States\Intro.cs" />
+    <Compile Include="States\ScrollRight.cs" />
     <Compile Include="States\StartPressed.cs" />
     <Compile Include="States\Title.cs" />
     <Compile Include="States\WalkingOver.cs" />

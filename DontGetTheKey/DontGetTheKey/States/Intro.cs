@@ -43,6 +43,8 @@ namespace DontGetTheKey
                     new Rectangle(152, 136, 16, 16)
                     )
                 );
+
+            actors["background"].Tween(new Vector2(30, -184), 5.14);
         }
 
         public override void Update(GameTime gameTime) {

@@ -14,22 +14,22 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace DontGetTheKey
 {
-    class WalkingOver : State
+    class ScrollRight : State
     {
-        public WalkingOver(SpriteBatch sb, ContentManager contentManager, 
+        public ScrollRight(SpriteBatch sb, ContentManager contentManager, 
             Dictionary<string, Actor> actors)
             : base(sb, contentManager) {
             this.actors = actors;
-            ((Character)this.actors["main"]).Walking = true;
-            actors.Remove("title");
-            actors.Remove("push_start");
+            actors["background"].Tween(new Vector2(-220, -184), 1.5);
+            actors["main"].Transpose(new Vector2(-500, -500));
         }
 
         public override void Update(GameTime gameTime) {
-            if (actors["main"].Position.X >= 240) {
-                ((Character)actors["main"]).Walking = false;
-                GameState.Instance.Enter(new ScrollRight(spriteBatch, content, actors));
+            if (actors["background"].Position.X <= -219) {
+                actors["main"].Transpose(new Vector2(55, 136));
+                GameState.Instance.Enter(new EnterGame(spriteBatch, content, actors));
             }
+
             base.Update(gameTime);
         }
     }

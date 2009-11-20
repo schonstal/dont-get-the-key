@@ -14,19 +14,21 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace DontGetTheKey
 {
-    class Background : Actor
+    class EnterGame : State
     {
-        public Background(SpriteBatch sb, ContentManager contentManager,
-            Vector2 pos, string texture, Rectangle box)
-            : base(sb, contentManager, pos, texture, box) {
+        public EnterGame(SpriteBatch sb, ContentManager contentManager, 
+            Dictionary<string, Actor> actors)
+            : base(sb, contentManager) {
+            this.actors = actors;
+            ((Character)actors["main"]).Walking = true;
         }
 
         public override void Update(GameTime gameTime) {
+            if (actors["main"].Position.X >= 70) {
+                ((Character)actors["main"]).Walking = false;
+                GameState.Instance.Enter(new InGame(spriteBatch, content, actors));
+            }
             base.Update(gameTime);
-        }
-
-        public override void Draw(GameTime gameTime) {
-            spriteBatch.Draw(ImageBank.Instance.texture(sprite), position, Color.White);
         }
     }
 }

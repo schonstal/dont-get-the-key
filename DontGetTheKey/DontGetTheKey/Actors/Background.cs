@@ -16,25 +16,13 @@ namespace DontGetTheKey
 {
     class Background : Actor
     {
-        float elapsed = 0;
-        float fps = 0.212f;
-
         public Background(SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, string texture, Rectangle box)
             : base(sb, contentManager, pos, texture, box) {
-        }
-
-        public float Rate {
-            get { return fps; }
-            set { fps = value; }
+            Transpose(new Vector2(30, -184), 6.8);
         }
 
         public override void Update(GameTime gameTime) {
-            elapsed += gameTime.ElapsedGameTime.Milliseconds;
-            if (1000 / fps <= elapsed) {
-                position.X -= 1;
-            }
-
             base.Update(gameTime);
         }
 

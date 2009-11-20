@@ -179,13 +179,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="dead.PNG">
-      <Name>dead</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="chest_locked.wav">
       <Name>chest_locked</Name>
       <Importer>WavImporter</Importer>
@@ -236,6 +229,48 @@
     </Compile>
     <Compile Include="item_locket.png">
       <Name>item_locket</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="item_binoculars.png">
+      <Name>item_binoculars</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="item_goldpouch.png">
+      <Name>item_goldpouch</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="item_keyrings.png">
+      <Name>item_keyrings</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="item_lockofhair.png">
+      <Name>item_lockofhair</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="item_lockpicks.png">
+      <Name>item_lockpicks</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="item_padlock.png">
+      <Name>item_padlock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="item_rope.png">
+      <Name>item_rope</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="selector.png">
+      <Name>selector</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

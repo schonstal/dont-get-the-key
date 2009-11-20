@@ -7,7 +7,6 @@ Content\key_shadow.xnb
 Content\door.xnb
 Content\lives.xnb
 Content\chest.xnb
-Content\dead.xnb
 Content\gravestone.xnb
 Content\door_locked.xnb
 Content\pickup_key.xnb
@@ -30,3 +29,11 @@ Content\item_bikelock.xnb
 Content\item_journal.xnb
 Content\item_lockbox.xnb
 Content\item_locket.xnb
+Content\item_binoculars.xnb
+Content\item_goldpouch.xnb
+Content\item_keyrings.xnb
+Content\item_lockofhair.xnb
+Content\item_lockpicks.xnb
+Content\item_padlock.xnb
+Content\item_rope.xnb
+Content\selector.xnb

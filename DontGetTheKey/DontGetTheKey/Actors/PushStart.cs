@@ -18,7 +18,6 @@ namespace DontGetTheKey
     {
         bool drawText;
         float fps = 2;
-        float elapsed;
 
         public PushStart(SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, string texture, Rectangle box)

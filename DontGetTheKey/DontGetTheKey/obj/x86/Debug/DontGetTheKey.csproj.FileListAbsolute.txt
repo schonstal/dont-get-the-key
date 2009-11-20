@@ -43,7 +43,6 @@ C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Conten
 C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\door.xnb
 C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\lives.xnb
 C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\chest.xnb
-C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\dead.xnb
 C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\gravestone.xnb
 C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\door_locked.xnb
 C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\pickup_key.xnb
@@ -69,3 +68,11 @@ C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Conten
 C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_journal.xnb
 C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_lockbox.xnb
 C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_locket.xnb
+C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_binoculars.xnb
+C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_goldpouch.xnb
+C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_keyrings.xnb
+C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_lockofhair.xnb
+C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_lockpicks.xnb
+C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_padlock.xnb
+C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_rope.xnb
+C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\selector.xnb

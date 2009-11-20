@@ -40,8 +40,6 @@ namespace DontGetTheKey
                     new Rectangle(0, 0, 0, 0)
                     )
                 );
-            
-            ((Background)this.actors["background"]).Rate = 0;
         }
 
         public override void Update(GameTime gameTime) {

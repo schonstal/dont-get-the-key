@@ -25,7 +25,7 @@ namespace DontGetTheKey
                 new Background(
                     sb,
                     content,
-                    new Vector2(150, 56),
+                    new Vector2(300, -184),
                     "background",
                     new Rectangle(0, 0, 0, 0)
                     )

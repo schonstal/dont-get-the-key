@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\background.xnb</Output>
-      <Time>2009-04-03T14:09:44.042-07:00</Time>
+      <Time>2009-11-19T17:39:45.125-08:00</Time>
     </Item>
     <Item>
       <Source>key.PNG</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\title.xnb</Output>
-      <Time>2009-11-13T13:51:36.25-08:00</Time>
+      <Time>2009-11-15T17:55:50.25-08:00</Time>
     </Item>
     <Item>
       <Source>key_shadow.png</Source>
@@ -81,15 +81,6 @@
       <Options>None</Options>
       <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\chest.xnb</Output>
       <Time>2009-04-02T22:32:22.385-07:00</Time>
-    </Item>
-    <Item>
-      <Source>dead.PNG</Source>
-      <Name>dead</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\dead.xnb</Output>
-      <Time>2009-04-03T14:31:48.4375-07:00</Time>
     </Item>
     <Item>
       <Source>gravestone.png</Source>
@@ -170,7 +161,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\bgmusic.xnb</Output>
-      <Time>2009-11-14T20:06:44.71875-08:00</Time>
+      <Time>2009-11-19T17:39:45.078125-08:00</Time>
     </Item>
     <Item>
       <Source>bgmusic_fast.wav</Source>
@@ -179,7 +170,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\bgmusic_fast.xnb</Output>
-      <Time>2009-11-14T20:06:44.6875-08:00</Time>
+      <Time>2009-11-19T17:39:45.015625-08:00</Time>
     </Item>
     <Item>
       <Source>titlemusic_intro.wav</Source>
@@ -188,7 +179,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\titlemusic_intro.xnb</Output>
-      <Time>2009-11-14T20:06:44.71875-08:00</Time>
+      <Time>2009-11-19T17:39:45.125-08:00</Time>
     </Item>
     <Item>
       <Source>titlemusic_main.wav</Source>
@@ -197,7 +188,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\titlemusic_main.xnb</Output>
-      <Time>2009-11-14T20:06:44.703125-08:00</Time>
+      <Time>2009-11-19T17:39:45.078125-08:00</Time>
     </Item>
     <Item>
       <Source>menu.wav</Source>
@@ -233,7 +224,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\game_over.xnb</Output>
-      <Time>2009-11-14T20:06:44.671875-08:00</Time>
+      <Time>2009-11-19T17:39:44.984375-08:00</Time>
     </Item>
     <Item>
       <Source>congrats.wav</Source>
@@ -242,7 +233,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\congrats.xnb</Output>
-      <Time>2009-11-14T20:06:44.6875-08:00</Time>
+      <Time>2009-11-19T17:39:45.046875-08:00</Time>
     </Item>
     <Item>
       <Source>button_a.png</Source>
@@ -260,7 +251,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_bikelock.xnb</Output>
-      <Time>2009-11-15T15:33:33.390625-08:00</Time>
+      <Time>2009-11-15T21:51:18.40625-08:00</Time>
     </Item>
     <Item>
       <Source>item_journal.png</Source>
@@ -269,7 +260,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_journal.xnb</Output>
-      <Time>2009-11-15T15:33:33.390625-08:00</Time>
+      <Time>2009-11-15T21:51:18.390625-08:00</Time>
     </Item>
     <Item>
       <Source>item_lockbox.png</Source>
@@ -287,7 +278,79 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_locket.xnb</Output>
-      <Time>2009-11-15T15:33:33.390625-08:00</Time>
+      <Time>2009-11-15T21:51:18.40625-08:00</Time>
+    </Item>
+    <Item>
+      <Source>item_binoculars.png</Source>
+      <Name>item_binoculars</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_binoculars.xnb</Output>
+      <Time>2009-11-19T17:39:45.125-08:00</Time>
+    </Item>
+    <Item>
+      <Source>item_goldpouch.png</Source>
+      <Name>item_goldpouch</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_goldpouch.xnb</Output>
+      <Time>2009-11-15T21:51:18.390625-08:00</Time>
+    </Item>
+    <Item>
+      <Source>item_keyrings.png</Source>
+      <Name>item_keyrings</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_keyrings.xnb</Output>
+      <Time>2009-11-19T17:39:44.984375-08:00</Time>
+    </Item>
+    <Item>
+      <Source>item_lockofhair.png</Source>
+      <Name>item_lockofhair</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_lockofhair.xnb</Output>
+      <Time>2009-11-15T21:51:18.40625-08:00</Time>
+    </Item>
+    <Item>
+      <Source>item_lockpicks.png</Source>
+      <Name>item_lockpicks</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_lockpicks.xnb</Output>
+      <Time>2009-11-15T21:51:18.40625-08:00</Time>
+    </Item>
+    <Item>
+      <Source>item_padlock.png</Source>
+      <Name>item_padlock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_padlock.xnb</Output>
+      <Time>2009-11-15T21:51:18.40625-08:00</Time>
+    </Item>
+    <Item>
+      <Source>item_rope.png</Source>
+      <Name>item_rope</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_rope.xnb</Output>
+      <Time>2009-11-15T21:51:18.390625-08:00</Time>
+    </Item>
+    <Item>
+      <Source>selector.png</Source>
+      <Name>selector</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\selector.xnb</Output>
+      <Time>2009-11-19T17:39:45.125-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

@@ -17,11 +17,20 @@ namespace DontGetTheKey
 {
     public class Actor
     {
+        private double frametime = (1000/60);
+
         protected SpriteBatch spriteBatch;
         protected ContentManager content;
         protected string sprite;
         protected Vector2 position;
         protected Rectangle hitBox;
+
+        protected Vector2 destination;
+        protected int frames;
+        //Difference in location for one frame
+        protected Vector2 dv;
+
+        protected double elapsed;
 
         public Actor(SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, string texture, Rectangle box) {
@@ -32,7 +41,14 @@ namespace DontGetTheKey
             hitBox = box;
         }
 
+        //only really need to call this if you're moving the sprite.
         public virtual void Update(GameTime gameTime) {
+            elapsed += gameTime.ElapsedGameTime.Milliseconds;
+            if (frames > 0 && elapsed >= frametime) {
+                position += dv;
+                elapsed = 0;
+                frames--;
+            }
         }
 
         public virtual void Draw(GameTime gameTime) {
@@ -46,8 +62,13 @@ namespace DontGetTheKey
             position += amount;
         }
 
-        public virtual void Transpose(Vector2 location) {
-            position = location;
+        public virtual void Transpose(Vector2 destination) {
+            position = destination;
+        }
+
+        public virtual void Transpose(Vector2 destination, double duration) {
+            frames = (int)Math.Floor(60*duration);
+            dv = (destination - position)/frames;
         }
     }
 }

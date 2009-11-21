@@ -26,7 +26,7 @@ namespace DontGetTheKey
         public override void Update(GameTime gameTime) {
             if (actors["main"].Position.X >= 70) {
                 ((Character)actors["main"]).Walking = false;
-                GameState.Instance.Enter(new InGame(spriteBatch, content, actors));
+                GameState.Instance.Enter(new DoorClose(spriteBatch, content, actors));
             }
             base.Update(gameTime);
         }

@@ -22,10 +22,10 @@ namespace DontGetTheKey
             this.actors = actors;
             Register(
                 "door",
-                new Actor(
+                new Door(
                     sb,
                     contentManager,
-                    new Vector2(40,120),
+                    new Vector2(48,128),
                     "door",
                     new Rectangle(0,0,0,0)
                     )

@@ -89,6 +89,7 @@
     <Compile Include="Actor.cs" />
     <Compile Include="Actors\Background.cs" />
     <Compile Include="Actors\Character.cs" />
+    <Compile Include="Actors\Door.cs" />
     <Compile Include="Actors\PushStart.cs" />
     <Compile Include="Actors\TitleBar.cs" />
     <Compile Include="ImageBank.cs" />

@@ -65,6 +65,8 @@ namespace DontGetTheKey
         }
 
         public override void Update(GameTime gameTime) {
+            Vector2 chunk;
+
             //Check inputs
             if (playerControlled) {
                 if (InputHandler.Instance.held("Right") || InputHandler.Instance.LeftStick.X > sensitivity) {
@@ -103,22 +105,9 @@ namespace DontGetTheKey
                 frame = 0;
             }
 
-            if (Math.Floor(ptm.Y) > 0) {
-                position.Y++;
-                ptm.Y -= 1;
-            }
-            if (Math.Floor(ptm.Y) < 0) {
-                position.Y--;
-                ptm.Y += 1;
-            }
-            if (Math.Floor(ptm.X) > 0) {
-                position.X++;
-                ptm.X -= 1;
-            } 
-            if (Math.Floor(ptm.X) < 0) {
-                position.X--;
-                ptm.X += 1;
-            }
+            chunk = new Vector2((float)Math.Floor(ptm.X), (float)Math.Floor(ptm.Y));
+            position += chunk;
+            ptm -= chunk;
         }
 
         public override void Draw(GameTime gameTime) {

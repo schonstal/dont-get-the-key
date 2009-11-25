@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\background.xnb</Output>
-      <Time>2009-11-19T17:39:45.125-08:00</Time>
+      <Time>2009-11-25T14:37:15.984375-08:00</Time>
     </Item>
     <Item>
       <Source>key.PNG</Source>
@@ -360,6 +360,15 @@
       <Options>None</Options>
       <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\blackbar.xnb</Output>
       <Time>2009-11-25T14:05:13.96875-08:00</Time>
+    </Item>
+    <Item>
+      <Source>statcover.PNG</Source>
+      <Name>statcover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\statcover.xnb</Output>
+      <Time>2009-11-25T14:48:13.703125-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

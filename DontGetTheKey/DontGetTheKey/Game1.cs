@@ -70,6 +70,7 @@ namespace DontGetTheKey
             ImageBank.Instance.load("gravestone");
             ImageBank.Instance.load("key");
             ImageBank.Instance.load("blackbar");
+            ImageBank.Instance.load("statcover");
         }
 
         protected override void Update(GameTime gameTime) {

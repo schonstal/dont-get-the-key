@@ -22,6 +22,16 @@ namespace DontGetTheKey
             this.actors = actors;
             actors["background"].Tween(new Vector2(-224, -184), 1.5);
             actors["main"].Transpose(new Vector2(-500, -500));
+            Register(
+                "statcover",
+                new Actor(
+                    sb,
+                    content,
+                    new Vector2(32, 0),
+                    "statcover",
+                    new Rectangle(0, 0, 0, 0)
+                    )
+                );
         }
 
         public override void Update(GameTime gameTime) {

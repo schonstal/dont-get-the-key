@@ -21,6 +21,7 @@ namespace DontGetTheKey
             : base(sb, contentManager) {
             this.actors = actors;
             ((Character)actors["main"]).PlayerControlled = true;
+            actors.Remove("statcover");
             SoundBank.Instance.play("bgmusic", 1, 0, 0, true);
         }
 

@@ -20,12 +20,12 @@ namespace DontGetTheKey
             Dictionary<string, Actor> actors)
             : base(sb, contentManager) {
             this.actors = actors;
-            actors["background"].Tween(new Vector2(-220, -184), 1.5);
+            actors["background"].Tween(new Vector2(-224, -184), 1.5);
             actors["main"].Transpose(new Vector2(-500, -500));
         }
 
         public override void Update(GameTime gameTime) {
-            if (actors["background"].Position.X <= -219) {
+            if (actors["background"].Position.X <= -223) {
                 actors["main"].Transpose(new Vector2(55, 136));
                 GameState.Instance.Enter(new EnterGame(spriteBatch, content, actors));
             }

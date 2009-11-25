@@ -21,6 +21,7 @@ namespace DontGetTheKey
         float velocity = 45;
         float sensitivity = 0.3f;
 
+        Vector2 ptm; //for walking
         float rootbeer = 0; //elapsed
         float fps = 4;
         int frame = 0;
@@ -59,6 +60,7 @@ namespace DontGetTheKey
             Vector2 pos, string texture, Rectangle box)
             : base(sb, contentManager, pos, texture, box) {
             target = new Rectangle(0, 0, 16, 16);
+            ptm = new Vector2(0, 0);
             return;
         }
 
@@ -85,20 +87,37 @@ namespace DontGetTheKey
             if (walking == true) {
                 switch (state) {
                     case State.right:
-                        position.X += (velocity * (float)gameTime.ElapsedGameTime.Milliseconds) / 1000;
+                        ptm.X += (velocity * (float)gameTime.ElapsedGameTime.Milliseconds) / 1000;
                         break;
                     case State.left:
-                        position.X -= (velocity * (float)gameTime.ElapsedGameTime.Milliseconds) / 1000;
+                        ptm.X -= (velocity * (float)gameTime.ElapsedGameTime.Milliseconds) / 1000;
                         break;
                     case State.up:
-                        position.Y -= (velocity * (float)gameTime.ElapsedGameTime.Milliseconds) / 1000;
+                        ptm.Y -= (velocity * (float)gameTime.ElapsedGameTime.Milliseconds) / 1000;
                         break;
                     case State.down:
-                        position.Y += (velocity * (float)gameTime.ElapsedGameTime.Milliseconds) / 1000;
+                        ptm.Y += (velocity * (float)gameTime.ElapsedGameTime.Milliseconds) / 1000;
                         break;
                 }
             } else if (state != State.up && state != State.down && !playing) {
                 frame = 0;
+            }
+
+            if (Math.Floor(ptm.Y) > 0) {
+                position.Y++;
+                ptm.Y -= 1;
+            }
+            if (Math.Floor(ptm.Y) < 0) {
+                position.Y--;
+                ptm.Y += 1;
+            }
+            if (Math.Floor(ptm.X) > 0) {
+                position.X++;
+                ptm.X -= 1;
+            } 
+            if (Math.Floor(ptm.X) < 0) {
+                position.X--;
+                ptm.X += 1;
             }
         }
 

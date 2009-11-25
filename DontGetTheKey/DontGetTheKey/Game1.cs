@@ -69,6 +69,7 @@ namespace DontGetTheKey
             ImageBank.Instance.load("chest");
             ImageBank.Instance.load("gravestone");
             ImageBank.Instance.load("key");
+            ImageBank.Instance.load("blackbar");
         }
 
         protected override void Update(GameTime gameTime) {
@@ -79,6 +80,11 @@ namespace DontGetTheKey
         protected override void Draw(GameTime gameTime) {
             GraphicsDevice.Clear(Color.Black);
             GameState.Instance.Draw(gameTime);
+            //Needs to be on top of everything.
+            spriteBatch.Begin();
+            spriteBatch.Draw(ImageBank.Instance.texture("blackbar"), new Vector2(0, 0), Color.White);
+            spriteBatch.Draw(ImageBank.Instance.texture("blackbar"), new Vector2(288, 0), Color.White);
+            spriteBatch.End();
             base.Draw(gameTime);
         }
         

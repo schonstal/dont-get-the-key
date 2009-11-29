@@ -40,7 +40,7 @@ namespace DontGetTheKey
                     content,
                     new Vector2(152, 136),
                     "character",
-                    new Rectangle(152, 136, 16, 16)
+                    new Rectangle(0, 0, 16, 16)
                     )
                 );
 

@@ -14,7 +14,7 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace DontGetTheKey
 {
-    //So cool
+    //Disgusting
     public class Character : Actor
     {
         Rectangle target;
@@ -26,6 +26,8 @@ namespace DontGetTheKey
         float fps = 4;
         int frame = 0;
         int offset = 0;
+
+        Rectangle boundingBox;
 
         enum State
         {
@@ -56,11 +58,24 @@ namespace DontGetTheKey
             set { playerControlled = value; }
         }
 
+        public Rectangle HitBox {
+            get {
+                return new Rectangle(
+                    hitBox.X + (int)position.X,
+                    hitBox.Y + (int)position.Y,
+                    hitBox.Width,
+                    hitBox.Height
+                    );
+            }
+        }
+
         public Character(SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, string texture, Rectangle box)
             : base(sb, contentManager, pos, texture, box) {
             target = new Rectangle(0, 0, 16, 16);
             ptm = new Vector2(0, 0);
+
+            boundingBox = new Rectangle(64, 78, 192, 121);
             return;
         }
 
@@ -106,7 +121,12 @@ namespace DontGetTheKey
             }
 
             chunk = new Vector2((float)Math.Floor(ptm.X), (float)Math.Floor(ptm.Y));
-            position += chunk;
+            if (playerControlled == false || boundingBox.Contains(
+                new Rectangle(HitBox.X + (int)chunk.X, HitBox.Y + (int)chunk.Y,
+                    HitBox.Width, HitBox.Height)
+                    )) {
+                position += chunk;
+            }
             ptm -= chunk;
         }
 

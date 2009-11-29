@@ -16,6 +16,9 @@ namespace DontGetTheKey
 {
     class InGame : State
     {
+        Vector2 lives;
+        Vector2 keys;
+
         public InGame(SpriteBatch sb, ContentManager contentManager, 
             Dictionary<string, Actor> actors)
             : base(sb, contentManager) {
@@ -34,10 +37,28 @@ namespace DontGetTheKey
                     new Rectangle(0, 0, 16, 16)
                     )
                 );
+
+            Register(
+                "timer",
+                new TimeLeft(
+                    sb,
+                    contentManager,
+                    new Vector2(256, 40),
+                    "timer",
+                    new Rectangle(0, 0, 0, 0)
+                    )
+                );
+
         }
 
         public override void Update(GameTime gameTime) {
             base.Update(gameTime);
+        }
+
+        public override void Draw(GameTime gameTime) {
+            //spriteBatch.DrawString(ImageBank.Instance.font, "0"
+
+            base.Draw(gameTime);
         }
     }
 }

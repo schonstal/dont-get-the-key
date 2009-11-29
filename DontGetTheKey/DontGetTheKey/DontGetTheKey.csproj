@@ -91,6 +91,7 @@
     <Compile Include="Actors\Character.cs" />
     <Compile Include="Actors\Door.cs" />
     <Compile Include="Actors\PushStart.cs" />
+    <Compile Include="Actors\TimeLeft.cs" />
     <Compile Include="Actors\TitleBar.cs" />
     <Compile Include="ImageBank.cs" />
     <Compile Include="GameState.cs" />

@@ -56,9 +56,11 @@ namespace DontGetTheKey
         }
 
         public override void Draw(GameTime gameTime) {
-            //spriteBatch.DrawString(ImageBank.Instance.font, "0"
-
             base.Draw(gameTime);
+            spriteBatch.Begin();
+            spriteBatch.DrawString(ImageBank.Instance.font, "01", new Vector2(145, 40), Color.White);
+            spriteBatch.DrawString(ImageBank.Instance.font, "00", new Vector2(145, 24), Color.White);
+            spriteBatch.End();
         }
     }
 }

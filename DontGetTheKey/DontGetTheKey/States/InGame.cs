@@ -31,7 +31,7 @@ namespace DontGetTheKey
                     contentManager,
                     new Vector2(240, 136),
                     "chest",
-                    new Rectangle(0, 0, 0, 0)
+                    new Rectangle(0, 0, 16, 16)
                     )
                 );
         }

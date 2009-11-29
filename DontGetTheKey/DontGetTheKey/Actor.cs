@@ -41,6 +41,17 @@ namespace DontGetTheKey
             hitBox = box;
         }
 
+        public Rectangle HitBox {
+            get {
+                return new Rectangle(
+                    hitBox.X + (int)position.X,
+                    hitBox.Y + (int)position.Y,
+                    hitBox.Width,
+                    hitBox.Height
+                    );
+            }
+        }
+
         public Vector2 Position {
             get { return position; }
         }

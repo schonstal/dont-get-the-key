@@ -38,6 +38,10 @@ namespace DontGetTheKey
             spriteBatch.End();
         }
 
+        public bool Collision(Rectangle box, string actor) {
+            return (actors.ContainsKey(actor) && actors[actor].HitBox.Intersects(box));
+        }
+
         public Actor Register(string name, Actor a) {
             actors.Add(name, a);
             return a;

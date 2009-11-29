@@ -58,17 +58,6 @@ namespace DontGetTheKey
             set { playerControlled = value; }
         }
 
-        public Rectangle HitBox {
-            get {
-                return new Rectangle(
-                    hitBox.X + (int)position.X,
-                    hitBox.Y + (int)position.Y,
-                    hitBox.Width,
-                    hitBox.Height
-                    );
-            }
-        }
-
         public Character(SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, string texture, Rectangle box)
             : base(sb, contentManager, pos, texture, box) {
@@ -81,6 +70,7 @@ namespace DontGetTheKey
 
         public override void Update(GameTime gameTime) {
             Vector2 chunk;
+            Rectangle next;
 
             //Check inputs
             if (playerControlled) {
@@ -121,10 +111,10 @@ namespace DontGetTheKey
             }
 
             chunk = new Vector2((float)Math.Floor(ptm.X), (float)Math.Floor(ptm.Y));
-            if (playerControlled == false || boundingBox.Contains(
-                new Rectangle(HitBox.X + (int)chunk.X, HitBox.Y + (int)chunk.Y,
-                    HitBox.Width, HitBox.Height)
-                    )) {
+            next = new Rectangle(HitBox.X + (int)chunk.X, HitBox.Y + (int)chunk.Y,
+                    HitBox.Width, HitBox.Height);
+            if (playerControlled == false || boundingBox.Contains(next) 
+                && !GameState.Instance.Current.Collision(next, "chest")) {
                 position += chunk;
             }
             ptm -= chunk;

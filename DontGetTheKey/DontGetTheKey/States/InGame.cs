@@ -49,6 +49,17 @@ namespace DontGetTheKey
                     )
                 );
 
+            Register(
+                "key",
+                new Key(
+                    sb,
+                    contentManager,
+                    new Vector2(152, 128),
+                    "key",
+                    new Rectangle(0, 0, 16, 16)
+                    )
+                );
+
         }
 
         public override void Update(GameTime gameTime) {

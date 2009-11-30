@@ -72,6 +72,10 @@ namespace DontGetTheKey
             Vector2 chunk;
             Rectangle next;
 
+            if (GameState.Instance.Current.Collision(HitBox, "key") && state != State.key) {
+                getKey();
+            }
+
             //Check inputs
             if (playerControlled) {
                 if (InputHandler.Instance.held("Right") || InputHandler.Instance.LeftStick.X > sensitivity) {
@@ -87,6 +91,7 @@ namespace DontGetTheKey
                 }
             }
 
+            //Animate
             if (playing)
                 Animate(gameTime);
 
@@ -141,6 +146,16 @@ namespace DontGetTheKey
             Walking = true;
             state = direction;
             offset = frameOffset;
+        }
+
+        private void getKey() {
+            state = State.key;
+            playing = false;
+            playerControlled = false;
+            walking = false;
+            offset = 6;
+            frame = 0;
+            SoundBank.Instance.play("pickup_key");
         }
     }
 }

@@ -29,6 +29,17 @@ namespace DontGetTheKey
         }
 
         public override void Update(GameTime gameTime) {
+            if(!GameState.Instance.Current.Collision(HitBox, "main")) {
+                Animate(gameTime);
+            }
+        }
+
+        public override void Draw(GameTime gameTime) {
+            spriteBatch.Draw(ImageBank.Instance.texture("key_shadow"), shadow, Color.White);
+            spriteBatch.Draw(ImageBank.Instance.texture(sprite), position, Color.White);          
+        }
+
+        public void Animate(GameTime gameTime) {
             elapsed += gameTime.ElapsedGameTime.Milliseconds;
             if (1000 / fps <= elapsed) {
                 if (frame == 0)
@@ -39,11 +50,6 @@ namespace DontGetTheKey
                 frame = (frame + 1) % 2;
                 elapsed = 0;
             }
-        }
-
-        public override void Draw(GameTime gameTime) {
-            spriteBatch.Draw(ImageBank.Instance.texture("key_shadow"), shadow, Color.White);
-            spriteBatch.Draw(ImageBank.Instance.texture(sprite), position, Color.White);          
         }
     }
 }

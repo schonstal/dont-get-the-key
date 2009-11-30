@@ -42,6 +42,11 @@ namespace DontGetTheKey
             return (actors.ContainsKey(actor) && actors[actor].HitBox.Intersects(box));
         }
 
+        public bool Collision(string first, string second) {
+            return (actors.ContainsKey(first) && actors.ContainsKey(second)
+                && actors[first].HitBox.Intersects(actors[second].HitBox));
+        }
+
         public Actor Register(string name, Actor a) {
             actors.Add(name, a);
             return a;

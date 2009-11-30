@@ -44,12 +44,12 @@ namespace DontGetTheKey
         public void Animate(GameTime gameTime) {
             elapsed += gameTime.ElapsedGameTime.Milliseconds;
             if (1000 / fps <= elapsed) {
-                if (frame == 0)
+                if (frame <= 1)
                     position.Y++;
-                else if (frame == 1)
+                else if (frame <= 3)
                     position.Y--;
 
-                frame = (frame + 1) % 2;
+                frame = (frame + 1) % 4;
                 elapsed = 0;
             }
         }

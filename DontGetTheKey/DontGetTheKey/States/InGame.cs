@@ -63,11 +63,15 @@ namespace DontGetTheKey
         }
 
         public override void Update(GameTime gameTime) {
+            if (GameState.Instance.Current.Collision("key", "main")) {
+                GameState.Instance.Enter(new GotKey(spriteBatch, content, actors));
+            }
             base.Update(gameTime);
         }
 
         public override void Draw(GameTime gameTime) {
             base.Draw(gameTime);
+            //haaaaaaaack
             spriteBatch.Begin();
             spriteBatch.DrawString(ImageBank.Instance.font, "01", new Vector2(145, 40), Color.White);
             spriteBatch.DrawString(ImageBank.Instance.font, "00", new Vector2(145, 24), Color.White);

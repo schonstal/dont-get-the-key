@@ -89,6 +89,7 @@
     <Compile Include="Actor.cs" />
     <Compile Include="Actors\Background.cs" />
     <Compile Include="Actors\Character.cs" />
+    <Compile Include="Actors\Message.cs" />
     <Compile Include="Actors\Door.cs" />
     <Compile Include="Actors\Key.cs" />
     <Compile Include="Actors\PushStart.cs" />
@@ -99,6 +100,7 @@
     <Compile Include="InputHandler.cs" />
     <Compile Include="SoundBank.cs" />
     <Compile Include="States\DoorClose.cs" />
+    <Compile Include="States\GotKey.cs" />
     <Compile Include="States\InGame.cs" />
     <Compile Include="States\EnterGame.cs" />
     <Compile Include="States\ScrollRight.cs" />

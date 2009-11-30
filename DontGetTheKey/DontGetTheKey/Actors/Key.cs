@@ -29,13 +29,15 @@ namespace DontGetTheKey
         }
 
         public override void Update(GameTime gameTime) {
-            if(!GameState.Instance.Current.Collision(HitBox, "main")) {
+            if (!GameState.Instance.Current.Collision(HitBox, "main")) {
                 Animate(gameTime);
             }
         }
 
         public override void Draw(GameTime gameTime) {
-            spriteBatch.Draw(ImageBank.Instance.texture("key_shadow"), shadow, Color.White);
+            if (!GameState.Instance.Current.Collision(HitBox, "main")) {
+                spriteBatch.Draw(ImageBank.Instance.texture("key_shadow"), shadow, Color.White);
+            }
             spriteBatch.Draw(ImageBank.Instance.texture(sprite), position, Color.White);          
         }
 

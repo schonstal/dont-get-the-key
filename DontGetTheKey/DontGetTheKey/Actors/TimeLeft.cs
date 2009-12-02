@@ -14,13 +14,14 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace DontGetTheKey
 {
-    class TimeLeft : Actor
+    //Formerly "TimeLeft"
+    class Stats : Actor
     {
         float fps = 2;
         double remaining = 30000;
         Color color = Color.White;
 
-        public TimeLeft(SpriteBatch sb, ContentManager contentManager,
+        public Stats(SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, string texture, Rectangle box)
             : base(sb, contentManager, pos, texture, box) {
         }
@@ -46,6 +47,10 @@ namespace DontGetTheKey
         public override void Draw(GameTime gameTime) {
             spriteBatch.DrawString(ImageBank.Instance.font, 
                 ((int)remaining/1000).ToString("00"), position, color);
+            spriteBatch.DrawString(ImageBank.Instance.font, "01", new Vector2(144, 40), Color.White);
+            spriteBatch.DrawString(ImageBank.Instance.font, 
+                (GameState.Instance.Current.Collision("main", "key")?"01":"00"),
+                new Vector2(144, 24), Color.White);
         }
     }
 }

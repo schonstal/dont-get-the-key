@@ -39,12 +39,12 @@ namespace DontGetTheKey
                 );
 
             Register(
-                "timer",
-                new TimeLeft(
+                "stats",
+                new Stats(
                     sb,
                     contentManager,
                     new Vector2(256, 40),
-                    "timer",
+                    "stats",
                     new Rectangle(0, 0, 0, 0)
                     )
                 );
@@ -71,11 +71,6 @@ namespace DontGetTheKey
 
         public override void Draw(GameTime gameTime) {
             base.Draw(gameTime);
-            //haaaaaaaack
-            spriteBatch.Begin();
-            spriteBatch.DrawString(ImageBank.Instance.font, "01", new Vector2(145, 40), Color.White);
-            spriteBatch.DrawString(ImageBank.Instance.font, "00", new Vector2(145, 24), Color.White);
-            spriteBatch.End();
         }
     }
 }

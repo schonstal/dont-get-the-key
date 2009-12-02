@@ -20,15 +20,7 @@ namespace DontGetTheKey
             Dictionary<string, Actor> actors)
             : base(sb, contentManager) {
             this.actors = actors;
-            Register(
-                "got_key",
-                new Message(
-                    sb,
-                    contentManager,
-                    new Vector2(48,128),
-                    "YOU GOT THE KEY!"
-                    )
-                );
+            Register("got_key", new Message(sb, contentManager, "YOU GOT THE KEY!"));
         }
 
         public override void Update(GameTime gameTime) {

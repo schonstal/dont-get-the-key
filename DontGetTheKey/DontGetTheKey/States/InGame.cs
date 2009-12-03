@@ -56,7 +56,7 @@ namespace DontGetTheKey
                     contentManager,
                     new Vector2(152, 128),
                     "key",
-                    new Rectangle(0, 0, 16, 16)
+                    new Rectangle(6, 10, 6, 6)
                     )
                 );
 

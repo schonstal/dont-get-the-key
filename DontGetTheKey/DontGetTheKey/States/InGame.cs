@@ -64,6 +64,7 @@ namespace DontGetTheKey
 
         public override void Update(GameTime gameTime) {
             if (GameState.Instance.Current.Collision("key", "main")) {
+                actors["key"].Transpose(new Vector2(actors["main"].Position.X, actors["main"].Position.Y - 15));
                 GameState.Instance.Enter(new GotKey(spriteBatch, content, actors));
             }
             base.Update(gameTime);

@@ -33,15 +33,20 @@ namespace DontGetTheKey
 
         public override void Update(GameTime gameTime) {
             base.Update(gameTime);
-            if (1000 / fps <= elapsed) {
-                if (remaining < 5000 && (color == Color.White))
-                    color = Color.Red;
-                else
-                    color = Color.White;
-                elapsed = 0;
-            }
-            if(GameState.Instance.Current.GetType().Name == "InGame")
+
+            if (GameState.Instance.Current.GetType().Name == "InGame") {
                 remaining -= gameTime.ElapsedGameTime.Milliseconds;
+
+                if (1000 / fps <= elapsed) {
+                    if (remaining < 5000 && (color == Color.White))
+                        color = Color.Red;
+                    else
+                        color = Color.White;
+                    elapsed = 0;
+                }
+            } else {
+                color = Color.White;
+            }
         }
 
         public override void Draw(GameTime gameTime) {

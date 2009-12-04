@@ -123,6 +123,8 @@ namespace DontGetTheKey
                 position += chunk;
             }
             ptm -= chunk;
+
+            base.Update(gameTime);
         }
 
         public override void Draw(GameTime gameTime) {

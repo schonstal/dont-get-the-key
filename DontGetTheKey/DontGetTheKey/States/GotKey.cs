@@ -20,6 +20,7 @@ namespace DontGetTheKey
             Dictionary<string, Actor> actors)
             : base(sb, contentManager) {
             this.actors = actors;
+            actors.Remove("key_shadow");
             Register("got_key", new Message(sb, contentManager, "YOU GOT THE KEY!"));
             SoundBank.Instance.stop("bgmusic");
         }

@@ -50,6 +50,17 @@ namespace DontGetTheKey
                 );
 
             Register(
+                "key_shadow",
+                new Actor(
+                    sb,
+                    contentManager,
+                    new Vector2(152, 136),
+                    "key_shadow",
+                    new Rectangle(0, 0, 0, 0)
+                    )
+                );
+
+            Register(
                 "key",
                 new Key(
                     sb,
@@ -67,6 +78,8 @@ namespace DontGetTheKey
                 actors["key"].Transpose(new Vector2(actors["main"].Position.X, actors["main"].Position.Y - 15));
                 GameState.Instance.Enter(new GotKey(spriteBatch, content, actors));
             }
+            if(InputHandler.Instance.pressed("Start"))
+                GameState.Instance.Enter(new InventoryUp(spriteBatch, content, actors));
             base.Update(gameTime);
         }
 

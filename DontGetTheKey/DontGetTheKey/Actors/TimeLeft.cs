@@ -32,7 +32,7 @@ namespace DontGetTheKey
         }
 
         public override void Update(GameTime gameTime) {
-            elapsed += gameTime.ElapsedGameTime.Milliseconds;
+            base.Update(gameTime);
             if (1000 / fps <= elapsed) {
                 if (remaining < 5000 && (color == Color.White))
                     color = Color.Red;
@@ -47,10 +47,11 @@ namespace DontGetTheKey
         public override void Draw(GameTime gameTime) {
             spriteBatch.DrawString(ImageBank.Instance.font, 
                 ((int)remaining/1000).ToString("00"), position, color);
-            spriteBatch.DrawString(ImageBank.Instance.font, "01", new Vector2(144, 40), Color.White);
+            spriteBatch.DrawString(ImageBank.Instance.font, "01", 
+                new Vector2(position.X - 112, position.Y), Color.White);
             spriteBatch.DrawString(ImageBank.Instance.font, 
                 (GameState.Instance.Current.Collision("main", "key")?"01":"00"),
-                new Vector2(144, 24), Color.White);
+                new Vector2(position.X - 112, position.Y - 16), Color.White);
         }
     }
 }

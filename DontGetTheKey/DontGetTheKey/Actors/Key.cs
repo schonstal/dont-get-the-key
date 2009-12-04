@@ -17,14 +17,12 @@ namespace DontGetTheKey
     //Disgusting
     public class Key : Actor
     {
-        Vector2 shadow;
         float fps = 2;
         int frame = 0;
 
         public Key(SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, string texture, Rectangle box)
             : base(sb, contentManager, pos, texture, box) {
-            shadow = new Vector2(pos.X, pos.Y + 8);
             return;
         }
 
@@ -35,14 +33,11 @@ namespace DontGetTheKey
         }
 
         public override void Draw(GameTime gameTime) {
-            if (!GameState.Instance.Current.Collision(HitBox, "main")) {
-                spriteBatch.Draw(ImageBank.Instance.texture("key_shadow"), shadow, Color.White);
-            }
             spriteBatch.Draw(ImageBank.Instance.texture(sprite), position, Color.White);          
         }
 
         public void Animate(GameTime gameTime) {
-            elapsed += gameTime.ElapsedGameTime.Milliseconds;
+            base.Update(gameTime);
             if (1000 / fps <= elapsed) {
                 if (frame <= 1)
                     position.Y++;

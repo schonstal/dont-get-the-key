@@ -71,6 +71,20 @@ namespace DontGetTheKey
             ImageBank.Instance.load("key");
             ImageBank.Instance.load("blackbar");
             ImageBank.Instance.load("statcover");
+
+            ImageBank.Instance.load("item_bikelock");
+            ImageBank.Instance.load("item_binoculars");
+            ImageBank.Instance.load("item_goldpouch");
+            ImageBank.Instance.load("item_journal");
+            ImageBank.Instance.load("item_keyrings");
+            ImageBank.Instance.load("item_lockbox");
+            ImageBank.Instance.load("item_locket");
+            ImageBank.Instance.load("item_lockofhair");
+            ImageBank.Instance.load("item_lockpicks");
+            ImageBank.Instance.load("item_padlock");
+            ImageBank.Instance.load("item_rope");
+
+            ImageBank.Instance.load("selector");
         }
 
         protected override void Update(GameTime gameTime) {

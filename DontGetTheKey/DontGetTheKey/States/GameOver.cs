@@ -14,19 +14,22 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace DontGetTheKey
 {
-    class GotKey : State
+    class GameOver : State
     {
-        public GotKey(SpriteBatch sb, ContentManager contentManager, 
+        public GameOver(SpriteBatch sb, ContentManager contentManager, 
             Dictionary<string, Actor> actors)
             : base(sb, contentManager) {
             this.actors = actors;
-            Register("got_key", new Message(sb, contentManager, "YOU GOT THE KEY!"));
-            SoundBank.Instance.stop("bgmusic");
+            actors.Remove("background");
+            actors.Remove("chest");
+            actors.Remove("door");
+            actors.Remove("got_key");
+            actors.Remove("stats");
+            Register("game_over", new Message(sb, contentManager, "GAME OVER"));
+            SoundBank.Instance.play("game_over");
         }
 
         public override void Update(GameTime gameTime) {
-            if(InputHandler.Instance.pressed("A") || InputHandler.Instance.pressed("Start"))
-                GameState.Instance.Enter(new GameOver(spriteBatch, content, actors));
             base.Update(gameTime);
         }
     }

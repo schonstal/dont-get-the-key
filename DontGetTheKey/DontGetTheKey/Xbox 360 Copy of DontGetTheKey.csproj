@@ -73,6 +73,7 @@
     <Compile Include="Game1.cs" />
     <Compile Include="SoundBank.cs" />
     <Compile Include="State.cs" />
+    <Compile Include="States\GameOver.cs" />
     <Compile Include="States\GotKey.cs" />
     <Compile Include="States\DoorClose.cs" />
     <Compile Include="States\EnterGame.cs" />

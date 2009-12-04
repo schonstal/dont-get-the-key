@@ -99,6 +99,7 @@
     <Compile Include="GameState.cs" />
     <Compile Include="InputHandler.cs" />
     <Compile Include="SoundBank.cs" />
+    <Compile Include="States\Congrats.cs" />
     <Compile Include="States\InventoryUp.cs" />
     <Compile Include="States\DoorClose.cs" />
     <Compile Include="States\GameOver.cs" />

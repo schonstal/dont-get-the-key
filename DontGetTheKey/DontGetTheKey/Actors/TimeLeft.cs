@@ -31,6 +31,10 @@ namespace DontGetTheKey
             set { fps = value; }
         }
 
+        public double Remaining {
+            get { return remaining; }
+        }
+
         public override void Update(GameTime gameTime) {
             base.Update(gameTime);
 

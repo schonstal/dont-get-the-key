@@ -80,6 +80,8 @@ namespace DontGetTheKey
             }
             if(InputHandler.Instance.pressed("Start"))
                 GameState.Instance.Enter(new InventoryUp(spriteBatch, content, actors));
+            if(((Stats)actors["stats"]).Remaining <= 0)
+                GameState.Instance.Enter(new Congrats(spriteBatch, content, actors));
             base.Update(gameTime);
         }
 

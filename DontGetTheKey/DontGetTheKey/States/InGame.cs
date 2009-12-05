@@ -16,9 +16,6 @@ namespace DontGetTheKey
 {
     class InGame : State
     {
-        Vector2 lives;
-        Vector2 keys;
-
         public InGame(SpriteBatch sb, ContentManager contentManager, 
             Dictionary<string, Actor> actors)
             : base(sb, contentManager) {

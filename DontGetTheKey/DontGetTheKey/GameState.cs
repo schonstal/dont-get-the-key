@@ -20,6 +20,7 @@ namespace DontGetTheKey
         private static GameState instance;
         //For Deterministic Finite Autobots
         private Stack<State> states;
+        private bool terminate = false;
 
         private GameState() {
             states = new Stack<State>();
@@ -35,9 +36,11 @@ namespace DontGetTheKey
 
         //Quick access to the current state (can be avoided?)
         public State Current {
-            get {
-                return states.Peek();
-            }
+            get { return states.Peek(); }
+        }
+
+        public bool Terminate {
+            get { return terminate; }
         }
 
         public void Update(GameTime gameTime) {
@@ -57,6 +60,10 @@ namespace DontGetTheKey
         //Enter a new state
         public void Enter(State state) {
             states.Push(state);
+        }
+
+        public void Exit() {
+            terminate = true;
         }
     }
 }

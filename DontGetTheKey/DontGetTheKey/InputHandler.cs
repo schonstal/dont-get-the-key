@@ -26,10 +26,11 @@ namespace DontGetTheKey
             }
         }
         private InputHandler() {
+            prev = new Dictionary<string, ButtonState>();
         }
 
         private PlayerIndex player;
-        private GamePadState prev;
+        private Dictionary<string, ButtonState> prev;
 
         public Vector2 RightStick {
             get { return GamePad.GetState(player).ThumbSticks.Right; }
@@ -46,11 +47,11 @@ namespace DontGetTheKey
 
         //We needn't worry about multibutton
         public bool pressed(string button) {
-            if ((buttonMap(button, GamePad.GetState(player)) == ButtonState.Pressed) && (buttonMap(button, prev) == ButtonState.Released)) {
-                prev = GamePad.GetState(player);
+            if ((buttonMap(button, GamePad.GetState(player)) == ButtonState.Pressed) && (prev[button] == ButtonState.Released)) {
+                prev[button] = buttonMap(button, GamePad.GetState(player));
                 return true;
             }
-            prev = GamePad.GetState(player);
+            prev[button] = buttonMap(button, GamePad.GetState(player));
             return false;
         }
 

@@ -30,6 +30,8 @@ namespace DontGetTheKey
         }
 
         public override void Update(GameTime gameTime) {
+            if (SoundBank.Instance.effect("game_over").State == SoundState.Stopped)
+                GameState.Instance.Enter(new Restart(spriteBatch, content, actors));
             base.Update(gameTime);
         }
     }

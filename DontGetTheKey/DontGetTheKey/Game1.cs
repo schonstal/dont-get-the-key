@@ -57,6 +57,7 @@ namespace DontGetTheKey
             SoundBank.Instance.load("walk1");
             SoundBank.Instance.load("walk2");
             SoundBank.Instance.load("chest_locked");
+            SoundBank.Instance.load("select");
 
             ImageBank.Instance.loadFont("PressStart");
 
@@ -89,6 +90,11 @@ namespace DontGetTheKey
 
         protected override void Update(GameTime gameTime) {
             GameState.Instance.Update(gameTime);
+            
+            //Hack :)
+            if (GameState.Instance.Terminate)
+                this.Exit();
+
             base.Update(gameTime);
         }
 

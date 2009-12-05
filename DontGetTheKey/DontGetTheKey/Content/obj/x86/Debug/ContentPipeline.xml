@@ -370,6 +370,15 @@
       <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\statcover.xnb</Output>
       <Time>2009-11-25T14:48:13.703125-08:00</Time>
     </Item>
+    <Item>
+      <Source>select.wav</Source>
+      <Name>select</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\select.xnb</Output>
+      <Time>2009-12-04T19:44:55.24925-08:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

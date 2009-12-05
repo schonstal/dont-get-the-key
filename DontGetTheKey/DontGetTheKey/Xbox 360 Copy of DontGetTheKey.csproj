@@ -81,6 +81,7 @@
     <Compile Include="States\InGame.cs" />
     <Compile Include="States\Intro.cs" />
     <Compile Include="States\InventoryUp.cs" />
+    <Compile Include="States\Restart.cs" />
     <Compile Include="States\ScrollRight.cs" />
     <Compile Include="States\StartPressed.cs" />
     <Compile Include="States\Title.cs" />

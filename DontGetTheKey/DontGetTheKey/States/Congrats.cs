@@ -25,6 +25,7 @@ namespace DontGetTheKey
             Register("grats", new Message(sb, contentManager, "CONGRATULATIONS!!!"));
 
             ((Character)actors["main"]).PlayerControlled = false;
+            ((Character)actors["main"]).Walking = false;
         }
 
         public override void Update(GameTime gameTime) {

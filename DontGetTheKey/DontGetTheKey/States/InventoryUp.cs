@@ -25,6 +25,7 @@ namespace DontGetTheKey
                 kvp.Value.Tween(new Vector2(kvp.Value.Position.X, kvp.Value.Position.Y + 184), 1.5);
 
             ((Character)actors["main"]).PlayerControlled = false;
+            ((Character)actors["main"]).Walking = false;
         }
 
         public override void Update(GameTime gameTime) {

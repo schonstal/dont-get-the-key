@@ -24,8 +24,7 @@ namespace DontGetTheKey
             SoundBank.Instance.play("congrats", 1, 0, 0, true);
             Register("grats", new Message(sb, contentManager, "CONGRATULATIONS!!!"));
 
-            ((Character)actors["main"]).PlayerControlled = false;
-            ((Character)actors["main"]).Walking = false;
+            ((Character)actors["main"]).Celebrate();
         }
 
         public override void Update(GameTime gameTime) {

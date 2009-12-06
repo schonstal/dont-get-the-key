@@ -14,7 +14,8 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace DontGetTheKey
 {
-    //Disgusting
+    //Disgusting -- this ended up having so much special stuff 
+    //should not have been an actor
     public class Character : Actor
     {
         Rectangle target;
@@ -26,6 +27,7 @@ namespace DontGetTheKey
         float fps = 4;
         int frame = 0;
         int offset = 0;
+        int[] offsets;
 
         Rectangle boundingBox;
 
@@ -35,7 +37,8 @@ namespace DontGetTheKey
             right,
             up,
             down,
-            key
+            key,
+            dance
         }
 
         State state = State.right;
@@ -64,6 +67,8 @@ namespace DontGetTheKey
             target = new Rectangle(0, 0, 16, 16);
             ptm = new Vector2(0, 0);
 
+            offsets = new int[4] {0,2,7,4};
+
             boundingBox = new Rectangle(64, 78, 192, 121);
             return;
         }
@@ -81,11 +86,11 @@ namespace DontGetTheKey
                 if (InputHandler.Instance.held("Right") || InputHandler.Instance.LeftStick.X > sensitivity) {
                     setWalk(State.right, 0);
                 } else if (InputHandler.Instance.held("Left") || InputHandler.Instance.LeftStick.X < -sensitivity) {
-                    setWalk(State.left, 7);
+                    setWalk(State.left, 2);
                 } else if (InputHandler.Instance.held("Up") || InputHandler.Instance.LeftStick.Y > sensitivity) {
-                    setWalk(State.up, 2);
+                    setWalk(State.up, 1);
                 } else if (InputHandler.Instance.held("Down") || InputHandler.Instance.LeftStick.Y < -sensitivity) {
-                    setWalk(State.down, 4);
+                    setWalk(State.down, 3);
                 } else {
                     Walking = false;
                 }
@@ -111,7 +116,7 @@ namespace DontGetTheKey
                         ptm.Y += (velocity * (float)gameTime.ElapsedGameTime.Milliseconds) / 1000;
                         break;
                 }
-            } else if (state != State.up && state != State.down && !playing) {
+            } else if (state != State.up && state != State.down && !playing && (state != State.dance)) {
                 frame = 0;
             }
 
@@ -124,22 +129,44 @@ namespace DontGetTheKey
             }
             ptm -= chunk;
 
+            if (state == State.dance)
+                Dance(gameTime);
+
             base.Update(gameTime);
         }
 
         public override void Draw(GameTime gameTime) {
-            target.X = 16 * (frame + offset);
+            target.X = 16 * (frame + offsets[offset]);
             spriteBatch.Draw(ImageBank.Instance.texture(sprite), position, target, Color.White);
+        }
+
+        public void Celebrate() {
+            walking = false;
+            playing = false;
+            playerControlled = false;
+            state = State.dance;
+            fps = 5.6f;
+            frame = 1;
         }
 
         ////////////
         //Helpers
         ////////////
         private void Animate(GameTime gameTime) {
+            //I really wouldn't have had to do this every time if I had just made a method that
+            //takes in a delegate... oh well.
             rootbeer += gameTime.ElapsedGameTime.Milliseconds;
             if (1000 / fps <= rootbeer) {
                 frame = (frame + 1) % 2;
                 SoundBank.Instance.play((frame == 0 ? "walk1" : "walk2"), 0.4f, 0, 0, false);
+                rootbeer = 0;
+            }
+        }
+
+        private void Dance(GameTime gameTime) {
+            rootbeer += gameTime.ElapsedGameTime.Milliseconds;
+            if (1000 / fps <= rootbeer) {
+                offset = (offset + 1) % 4;
                 rootbeer = 0;
             }
         }

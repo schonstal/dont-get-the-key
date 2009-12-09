@@ -47,7 +47,7 @@ namespace DontGetTheKey
 
         //We needn't worry about multibutton
         public bool pressed(string button) {
-            if ((buttonMap(button, GamePad.GetState(player)) == ButtonState.Pressed) && (prev[button] == ButtonState.Released)) {
+            if ((buttonMap(button, GamePad.GetState(player)) == ButtonState.Pressed) && prev != null && prev.ContainsKey(button) && (prev[button] == ButtonState.Released)) {
                 prev[button] = buttonMap(button, GamePad.GetState(player));
                 return true;
             }

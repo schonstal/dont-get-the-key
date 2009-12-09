@@ -67,7 +67,7 @@ namespace DontGetTheKey
             target = new Rectangle(0, 0, 16, 16);
             ptm = new Vector2(0, 0);
 
-            offsets = new int[4] {0,2,7,4};
+            offsets = new int[5] {0,2,7,4,6};
 
             boundingBox = new Rectangle(64, 78, 192, 121);
             return;
@@ -137,16 +137,17 @@ namespace DontGetTheKey
 
         public override void Draw(GameTime gameTime) {
             target.X = 16 * (frame + offsets[offset]);
-            spriteBatch.Draw(ImageBank.Instance.texture(sprite), position, target, Color.White);
+            spriteBatch.Draw(ImageBank.Instance.texture(sprite), position, target, color);
         }
 
-        public void Celebrate() {
+        public override void Celebrate() {
             walking = false;
             playing = false;
             playerControlled = false;
             state = State.dance;
             fps = 5.6f;
             frame = 1;
+            base.Celebrate();
         }
 
         ////////////
@@ -182,7 +183,7 @@ namespace DontGetTheKey
             playing = false;
             playerControlled = false;
             walking = false;
-            offset = 6;
+            offset = 4;
             frame = 0;
             SoundBank.Instance.play("pickup_key");
         }

@@ -32,6 +32,13 @@ namespace DontGetTheKey
 
         protected double elapsed;
 
+        protected Color color = Color.White;
+        protected bool celebrate = false;
+        protected float rfps = 5.6f;
+        protected float relapsed;
+        protected List<Color> colors;
+        protected int cframe;
+        
         public Actor(SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, string texture, Rectangle box) {
             spriteBatch = sb;
@@ -39,6 +46,7 @@ namespace DontGetTheKey
             position = pos;
             sprite = texture;
             hitBox = box;
+            colors = new List<Color>() {Color.Violet, Color.Yellow, Color.Tomato, Color.Green, Color.HotPink, Color.Blue, Color.Orange};
         }
 
         public Rectangle HitBox {
@@ -64,10 +72,14 @@ namespace DontGetTheKey
                 elapsed = 0;
                 frames--;
             }
+
+            if (celebrate) {
+                Rave(gameTime);
+            }
         }
 
         public virtual void Draw(GameTime gameTime) {
-            spriteBatch.Draw(ImageBank.Instance.texture(sprite), position, Color.White);
+            spriteBatch.Draw(ImageBank.Instance.texture(sprite), position, color);
         }
 
         public virtual void LoadContent() {
@@ -84,6 +96,19 @@ namespace DontGetTheKey
         public virtual void Tween(Vector2 destination, double duration) {
             frames = (int)Math.Floor(60*duration);
             dv = (destination - position)/frames;
+        }
+
+        public virtual void Celebrate() {
+            celebrate = true;
+        }
+
+        private void Rave(GameTime gameTime) {
+            relapsed += gameTime.ElapsedGameTime.Milliseconds;
+            if (1000/rfps <= relapsed) {
+                relapsed = 0;
+                cframe = (cframe + 1) % (colors.Count);
+                color = colors[cframe];
+            }
         }
     }
 }

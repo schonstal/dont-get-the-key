@@ -62,6 +62,14 @@ namespace DontGetTheKey
             states.Push(state);
         }
 
+        public void Restart(State state) {
+            //could just do new, but scared of relying on GC
+            while (states.Count != 0) {
+                states.Pop();
+            }
+            states.Push(state);
+        }
+
         public void Exit() {
             terminate = true;
         }

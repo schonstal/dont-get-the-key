@@ -38,8 +38,11 @@ namespace DontGetTheKey
                 SoundBank.Instance.play("select");
             }
 
-            if (!restart && (InputHandler.Instance.pressed("A") || InputHandler.Instance.pressed("Start")))
-                GameState.Instance.Exit();
+            if ((InputHandler.Instance.pressed("A") || InputHandler.Instance.pressed("Start")))
+                if (!restart)
+                    GameState.Instance.Exit();
+                else
+                    GameState.Instance.Restart(new NewGame(spriteBatch, content));
                 
             base.Update(gameTime);
         }

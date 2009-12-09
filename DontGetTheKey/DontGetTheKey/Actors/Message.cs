@@ -31,7 +31,12 @@ namespace DontGetTheKey
         public override void Draw(GameTime gameTime) {
             spriteBatch.DrawString(ImageBank.Instance.font, msg,
                 new Vector2(position.X + 1, position.Y + 1), Color.Black);
-            spriteBatch.DrawString(ImageBank.Instance.font, msg, position, Color.White);
+            spriteBatch.DrawString(ImageBank.Instance.font, msg, position, color);
+        }
+
+        public override void Celebrate() {
+            cframe = 1;
+            base.Celebrate();
         }
     }
 }

@@ -18,8 +18,7 @@ namespace DontGetTheKey
     class Stats : Actor
     {
         float fps = 2;
-        double remaining = 1000;//30000;
-        Color color = Color.White;
+        double remaining = 30000;
 
         public Stats(SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, string texture, Rectangle box)

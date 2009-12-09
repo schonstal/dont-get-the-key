@@ -26,7 +26,7 @@ namespace DontGetTheKey
         }
 
         public override void Draw(GameTime gameTime) {
-            spriteBatch.Draw(ImageBank.Instance.texture(sprite), position, Color.White);
+            spriteBatch.Draw(ImageBank.Instance.texture(sprite), position, color);
         }
     }
 }

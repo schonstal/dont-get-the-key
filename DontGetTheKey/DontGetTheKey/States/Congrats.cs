@@ -24,7 +24,8 @@ namespace DontGetTheKey
             SoundBank.Instance.play("congrats", 1, 0, 0, true);
             Register("grats", new Message(sb, contentManager, "CONGRATULATIONS!!!"));
 
-            ((Character)actors["main"]).Celebrate();
+            foreach (String key in new List<String>() { "main", "background", "chest", "door", "grats" })
+                actors[key].Celebrate();
         }
 
         public override void Update(GameTime gameTime) {

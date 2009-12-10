@@ -111,26 +111,32 @@ namespace DontGetTheKey
         }
 
         public override void Update(GameTime gameTime) {
+            //Get the key
             if (GameState.Instance.Current.Collision("key", "main")) {
                 actors["key"].Transpose(new Vector2(actors["main"].Position.X, actors["main"].Position.Y - 15));
                 GameState.Instance.Enter(new GotKey(spriteBatch, content, actors));
             }
             
+            //Go to inventory
             if(InputHandler.Instance.pressed("Start"))
                 GameState.Instance.Enter(new InventoryUp(spriteBatch, content, actors, inventory));
             
+            //Win the game
             if(((Stats)actors["stats"]).Remaining <= 0)
                 GameState.Instance.Enter(new Congrats(spriteBatch, content, actors));
 
+            //Try the door
             if (GameState.Instance.Current.Collision(actors["main"].HitBox, "door_pad") &&
                 InputHandler.Instance.pressed("A") && (((Character)actors["main"]).Heading == "L")) {
                 GameState.Instance.Enter(new DoorLocked(spriteBatch, content, "DOOR", actors));
             }
 
+            //Try the chest
             if ((ChestPad("U") || ChestPad("D") || ChestPad("R")) && InputHandler.Instance.pressed("A")) {
                 GameState.Instance.Enter(new DoorLocked(spriteBatch, content, "CHEST", actors));
             }
 
+            //Switch to fast music
             if ((SoundBank.Instance.effect("bgmusic") != null) &&
                 (SoundBank.Instance.effect("bgmusic").State == SoundState.Playing) &&
                 ((Stats)actors["stats"]).Remaining <= 5000) {

@@ -100,10 +100,12 @@ namespace DontGetTheKey
         public override void Update(GameTime gameTime) {
             select();
 
+            //Fill the name box
             ((SelectedItem)actors["selected"]).Set(
                 items[((Selector)actors["selector"]).Slot].Texture,
                 items[((Selector)actors["selector"]).Slot].Name);
 
+            //Display description
             if (InputHandler.Instance.pressed("A")) {
                 if (!actors.ContainsKey("description")) {
                     Register("description", new TypingMessage(spriteBatch, content,
@@ -111,10 +113,12 @@ namespace DontGetTheKey
                 }
             }
 
+            //Remove description
             if (InputHandler.Instance.pressed("B")) 
                 if (actors.ContainsKey("description"))
                     actors.Remove("description");
 
+            //Remove description/leave inventory
             if (InputHandler.Instance.pressed("Start"))
                 if (actors.ContainsKey("description"))
                     actors.Remove("description");

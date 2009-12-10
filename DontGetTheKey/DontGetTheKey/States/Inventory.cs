@@ -98,17 +98,14 @@ namespace DontGetTheKey
         }
 
         public override void Update(GameTime gameTime) {
-            if (!actors.ContainsKey("description"))
-                select();
+            select();
 
             ((SelectedItem)actors["selected"]).Set(
                 items[((Selector)actors["selector"]).Slot].Texture,
                 items[((Selector)actors["selector"]).Slot].Name);
 
             if (InputHandler.Instance.pressed("A")) {
-                if (actors.ContainsKey("description")) {
-                    actors.Remove("description");
-                } else {
+                if (!actors.ContainsKey("description")) {
                     Register("description", new TypingMessage(spriteBatch, content,
                         items[((Selector)actors["selector"]).Slot].Info));
                 }
@@ -133,7 +130,7 @@ namespace DontGetTheKey
                     ((Selector)actors["selector"]).Slot--;
                 else
                     ((Selector)actors["selector"]).Slot = items.Count - 1;
-                SoundBank.Instance.play("select");
+                moveEffect();
             }
 
             if (InputHandler.Instance.pressed("Right")) {
@@ -141,22 +138,28 @@ namespace DontGetTheKey
                     ((Selector)actors["selector"]).Slot++;
                 else
                     ((Selector)actors["selector"]).Slot = 0;
-                SoundBank.Instance.play("select");
+                moveEffect();
             }
 
             if (InputHandler.Instance.pressed("Up")) {
                 if (((Selector)actors["selector"]).Slot - 4 >= 0) {
                     ((Selector)actors["selector"]).Slot -= 4;
-                    SoundBank.Instance.play("select");
+                    moveEffect();
                 }
             }
 
             if (InputHandler.Instance.pressed("Down")) {
                 if (((Selector)actors["selector"]).Slot + 4 < items.Count) {
                     ((Selector)actors["selector"]).Slot += 4;
-                    SoundBank.Instance.play("select");
+                    moveEffect();
                 }
             }
+        }
+
+        void moveEffect() {
+            if (actors.ContainsKey("description"))
+                actors.Remove("description");
+            SoundBank.Instance.play("select");
         }
     }
 

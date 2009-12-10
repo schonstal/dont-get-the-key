@@ -17,7 +17,7 @@ namespace DontGetTheKey
     class TypingMessage : Actor
     {
         string msg;
-        float lps = 15.0f;
+        float lps = 30.0f;
         char[] delim = { ' ' };
         string[] parts;
         int part = 0;

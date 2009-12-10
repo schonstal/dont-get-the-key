@@ -62,6 +62,7 @@
     <Compile Include="Actors\Door.cs" />
     <Compile Include="Actors\Key.cs" />
     <Compile Include="Actors\Message.cs" />
+    <Compile Include="Actors\Pad.cs" />
     <Compile Include="Actors\TimeLeft.cs" />
     <Compile Include="Actors\PushStart.cs" />
     <Compile Include="Actors\TitleBar.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="State.cs" />
     <Compile Include="States\Congrats.cs" />
     <Compile Include="States\DiedOf.cs" />
+    <Compile Include="States\DoorLocked.cs" />
     <Compile Include="States\NewGame.cs" />
     <Compile Include="States\GameOver.cs" />
     <Compile Include="States\GotKey.cs" />

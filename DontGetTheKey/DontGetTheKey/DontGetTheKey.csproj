@@ -89,6 +89,7 @@
     <Compile Include="Actor.cs" />
     <Compile Include="Actors\Background.cs" />
     <Compile Include="Actors\Character.cs" />
+    <Compile Include="Actors\Pad.cs" />
     <Compile Include="Actors\Message.cs" />
     <Compile Include="Actors\TitleBar.cs" />
     <Compile Include="Actors\Key.cs" />
@@ -100,6 +101,7 @@
     <Compile Include="InputHandler.cs" />
     <Compile Include="SoundBank.cs" />
     <Compile Include="States\Congrats.cs" />
+    <Compile Include="States\DoorLocked.cs" />
     <Compile Include="States\DiedOf.cs" />
     <Compile Include="States\NewGame.cs" />
     <Compile Include="States\Restart.cs" />

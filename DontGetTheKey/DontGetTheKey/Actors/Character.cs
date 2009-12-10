@@ -64,6 +64,22 @@ namespace DontGetTheKey
             set { playerControlled = value; }
         }
 
+        public String Heading {
+            get {
+                switch (state) {
+                    case State.down:
+                        return "D";
+                    case State.left:
+                        return "L";
+                    case State.up:
+                        return "U";
+                    case State.right:
+                        return "R";
+                }
+                return "";
+            }
+        }
+
         public Character(SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, string texture, Rectangle box)
             : base(sb, contentManager, pos, texture, box) {
@@ -129,8 +145,6 @@ namespace DontGetTheKey
             if (playerControlled == false || boundingBox.Contains(next) 
                 && !GameState.Instance.Current.Collision(next, "chest")) {
                 position += chunk;
-            } else if (GameState.Instance.Current.Collision(next, "door")) {
-                Punt(gameTime); //Enter door state
             } else if (playerControlled != false) {
                 Punt(gameTime);
             }
@@ -149,13 +163,17 @@ namespace DontGetTheKey
         }
 
         public override void Celebrate() {
-            walking = false;
-            playing = false;
-            playerControlled = false;
+            Freeze();
             state = State.dance;
             fps = 5.6f;
             frame = 1;
             base.Celebrate();
+        }
+
+        public void Freeze() {
+            walking = false;
+            playing = false;
+            playerControlled = false;
         }
 
         ////////////
@@ -188,9 +206,7 @@ namespace DontGetTheKey
 
         private void getKey() {
             state = State.key;
-            playing = false;
-            playerControlled = false;
-            walking = false;
+            Freeze();
             offset = 4;
             frame = 0;
             SoundBank.Instance.play("pickup_key");

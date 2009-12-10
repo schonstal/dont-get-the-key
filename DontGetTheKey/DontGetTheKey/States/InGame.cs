@@ -68,6 +68,15 @@ namespace DontGetTheKey
                     )
                 );
 
+            Register("door_pad", 
+                new Pad(
+                    sb, 
+                    contentManager, 
+                    actors["door"].Position,
+                    new Rectangle(16, 12, 6, 6)
+                    )
+                );
+
         }
 
         public override void Update(GameTime gameTime) {
@@ -75,10 +84,17 @@ namespace DontGetTheKey
                 actors["key"].Transpose(new Vector2(actors["main"].Position.X, actors["main"].Position.Y - 15));
                 GameState.Instance.Enter(new GotKey(spriteBatch, content, actors));
             }
+            
             if(InputHandler.Instance.pressed("Start"))
                 GameState.Instance.Enter(new InventoryUp(spriteBatch, content, actors));
+            
             if(((Stats)actors["stats"]).Remaining <= 0)
                 GameState.Instance.Enter(new Congrats(spriteBatch, content, actors));
+
+            if (GameState.Instance.Current.Collision(actors["main"].HitBox, "door_pad") &&
+                InputHandler.Instance.pressed("A") && (((Character)actors["main"]).Heading == "L")) {
+                GameState.Instance.Enter(new DoorLocked(spriteBatch, content, actors));
+            }
             base.Update(gameTime);
         }
 

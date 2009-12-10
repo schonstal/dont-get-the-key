@@ -46,7 +46,7 @@ namespace DontGetTheKey
             position = pos;
             sprite = texture;
             hitBox = box;
-            colors = new List<Color>() {Color.Violet, Color.Yellow, Color.Tomato, Color.Green, Color.HotPink, Color.Blue, Color.Orange};
+            colors = new List<Color>() { Color.Aqua, Color.GreenYellow, Color.Red, Color.Violet };
         }
 
         public Rectangle HitBox {

@@ -32,14 +32,14 @@ namespace DontGetTheKey
             if (slot < 4) {
                 position.X = 48 + (slot * 32);
             } else {
-                position.Y = -112;
                 position.X = 48 + ((slot - 4) * 32);
             }
             base.Update(gameTime);
         }
 
         public override void Draw(GameTime gameTime) {
-            spriteBatch.Draw(ImageBank.Instance.texture(sprite), position, color);
+            spriteBatch.Draw(ImageBank.Instance.texture(sprite), 
+                (slot < 4 ? position : new Vector2(position.X, position.Y + 32)), color);
         }
     }
 }

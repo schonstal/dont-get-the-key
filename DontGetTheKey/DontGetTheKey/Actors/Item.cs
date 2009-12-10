@@ -18,8 +18,9 @@ namespace DontGetTheKey
     class Item : Actor
     {
         List<String> messages;
-        int msg = 0;
+        int msg = -1;
         string name;
+        string file;
 
         public Item(SpriteBatch sb, ContentManager contentManager, String texture, 
             int slot, String name, List<String> messages)
@@ -32,6 +33,7 @@ namespace DontGetTheKey
             }
             this.messages = messages;
             this.name = name;
+            file = texture;
         }
 
         public String Info {
@@ -40,6 +42,10 @@ namespace DontGetTheKey
                     msg++;
                 return messages[msg];
             }
+        }
+
+        public String Texture {
+            get { return file; }
         }
 
         public String Name {

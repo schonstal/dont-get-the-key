@@ -89,6 +89,7 @@ namespace DontGetTheKey
                 Register(i.Name, i);
 
             Register("selector", new Selector(spriteBatch, content));
+            Register("selected", new SelectedItem(spriteBatch, content));
         }
 
         public override void Update(GameTime gameTime) {
@@ -117,9 +118,22 @@ namespace DontGetTheKey
             }
 
             if (InputHandler.Instance.pressed("Down")) {
-                if (((Selector)actors["selector"]).Slot + 4 < items.Count - 1) {
+                if (((Selector)actors["selector"]).Slot + 4 < items.Count) {
                     ((Selector)actors["selector"]).Slot += 4;
                     SoundBank.Instance.play("select");
+                }
+            }
+
+            ((SelectedItem)actors["selected"]).Set(
+                items[((Selector)actors["selector"]).Slot].Texture,
+                items[((Selector)actors["selector"]).Slot].Name);
+
+            if (InputHandler.Instance.pressed("A")) {
+                if (actors.ContainsKey("description")) {
+                    actors.Remove("description");
+                } else {
+                    Register("description", new TypingMessage(spriteBatch, content,
+                        items[((Selector)actors["selector"]).Slot].Info));
                 }
             }
 

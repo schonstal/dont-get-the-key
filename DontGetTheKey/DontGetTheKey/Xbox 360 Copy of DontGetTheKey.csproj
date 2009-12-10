@@ -64,6 +64,7 @@
     <Compile Include="Actors\Key.cs" />
     <Compile Include="Actors\Message.cs" />
     <Compile Include="Actors\Pad.cs" />
+    <Compile Include="Actors\Selector.cs" />
     <Compile Include="Actors\TimeLeft.cs" />
     <Compile Include="Actors\PushStart.cs" />
     <Compile Include="Actors\TitleBar.cs" />

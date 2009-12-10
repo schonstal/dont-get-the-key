@@ -87,6 +87,8 @@ namespace DontGetTheKey
 
             foreach (Item i in items)
                 Register(i.Name, i);
+
+            Register("selector", new Selector(spriteBatch, content));
         }
 
         public override void Update(GameTime gameTime) {

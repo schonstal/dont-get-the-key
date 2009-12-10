@@ -379,6 +379,15 @@
       <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\select.xnb</Output>
       <Time>2009-12-04T19:44:55.24925-08:00</Time>
     </Item>
+    <Item>
+      <Source>typing.wav</Source>
+      <Name>typing</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\typing.xnb</Output>
+      <Time>2009-12-09T17:45:00.28125-08:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

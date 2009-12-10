@@ -66,6 +66,7 @@
     <Compile Include="Actors\TimeLeft.cs" />
     <Compile Include="Actors\PushStart.cs" />
     <Compile Include="Actors\TitleBar.cs" />
+    <Compile Include="Actors\TypingMessage.cs" />
     <Compile Include="GameState.cs" />
     <Compile Include="ImageBank.cs" />
     <Compile Include="InputHandler.cs" />

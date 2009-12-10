@@ -58,6 +58,7 @@ namespace DontGetTheKey
             SoundBank.Instance.load("walk2");
             SoundBank.Instance.load("chest_locked");
             SoundBank.Instance.load("select");
+            SoundBank.Instance.load("typing");
 
             ImageBank.Instance.loadFont("PressStart");
 

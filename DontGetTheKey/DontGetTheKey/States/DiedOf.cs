@@ -25,7 +25,7 @@ namespace DontGetTheKey
             foreach (String key in new List<String>() { "main", "background", "chest", "door", "grats", "stats", "key", "key_shadow" })
                 actors.Remove(key);
 
-            Register("gravestone", new Actor(spriteBatch, content, new Vector2(160, 136), "gravestone", new Rectangle(0, 0, 0, 0)));
+            Register("gravestone", new Actor(spriteBatch, content, new Vector2(144, 120), "gravestone", new Rectangle(0, 0, 0, 0)));
             Register("died", new Message(sb, contentManager, "YOU HAVE DIED OF"));
             Register("reason", new Message(sb, contentManager, reason()));
             actors["reason"].Move(new Vector2(0, 8));

@@ -32,44 +32,49 @@ namespace DontGetTheKey
                     "SURE, YOU SHOULD ALWAYS BE PREPARED, BUT YOU DON'T EVEN HAVE A BIKE"
                 }, name = "BIKE LOCK"}},
                 {"binoculars", new ItemTuple {messages = new List<string>() { 
-                    "AREN'T YOU FORGETTING SOMETHING?", 
-                    "SURE, YOU SHOULD ALWAYS BE PREPARED, BUT YOU DON'T EVEN HAVE A BIKE"
+                    "THE LENS COVERS ARE LOCKED IN PLACE", 
+                    "REMEMBER TO DOUBLE-CHECK THE MERCHANDISE WHEN TRADING WITH PARANOID BIRD WATCHERS"
                 }, name = "BINOCULARS"}},
                 {"goldpouch", new ItemTuple {messages = new List<string>() { 
-                    "AREN'T YOU FORGETTING SOMETHING?", 
-                    "SURE, YOU SHOULD ALWAYS BE PREPARED, BUT YOU DON'T EVEN HAVE A BIKE"
+                    "YOU CAN'T OPEN THIS WITHOUT A KEY",
+                    "AT LEAST YOU'RE FINANCIALLY SECURE"
                 }, name = "GOLD POUCH"}},
                 {"journal", new ItemTuple {messages = new List<string>() { 
-                    "AREN'T YOU FORGETTING SOMETHING?", 
-                    "SURE, YOU SHOULD ALWAYS BE PREPARED, BUT YOU DON'T EVEN HAVE A BIKE"
+                    "IT WON'T OPEN WITHOUT A KEY",
+                    "AREN'T YOU A LITTLE OLD FOR GOSSIP?",
+                    "THE COVER READS \"PROPERTY OF LARRY LOCKSMITH\""
                 }, name = "JOURNAL"}},
                 {"keyrings", new ItemTuple {messages = new List<string>() { 
-                    "AREN'T YOU FORGETTING SOMETHING?", 
-                    "SURE, YOU SHOULD ALWAYS BE PREPARED, BUT YOU DON'T EVEN HAVE A BIKE"
+                    "YOU DON'T HAVE ANY KEYS", 
+                    "YOU CAN'T USE THESE WITHOUT A KEY",
+                    "JUST KEEP TELLING YOURSELF FIFTY KEYRINGS FOR A SINGLE GOLD PIECE WAS A GOOD DEAL"
                 }, name = "KEYRINGS"}},
                 {"lockbox", new ItemTuple {messages = new List<string>() { 
-                    "AREN'T YOU FORGETTING SOMETHING?", 
-                    "SURE, YOU SHOULD ALWAYS BE PREPARED, BUT YOU DON'T EVEN HAVE A BIKE"
+                    "IT'S LOCKED. WHAT A SURPRISE", 
+                    "IF ONLY YOU HAD A KEY...",
+                    "THAT SANDWICH IS PROBABLY MOLDY BY NOW ANYWAY"
                 }, name = "LOCK BOX"}},
                 {"locket", new ItemTuple {messages = new List<string>() { 
-                    "AREN'T YOU FORGETTING SOMETHING?", 
-                    "SURE, YOU SHOULD ALWAYS BE PREPARED, BUT YOU DON'T EVEN HAVE A BIKE"
+                    "IT'S FIRMLY CLOSED SHUT", 
+                    "IF YOU HAD A KEY, YOU MIGHT BE ABLE TO PRY IT OPEN",
+                    "AT THIS RATE, YOU'LL NEVER KNOW IF OLD MAN HAD A HOT WIFE"
                 }, name = "LOCKET"}},
                 {"lockofhair", new ItemTuple {messages = new List<string>() { 
-                    "AREN'T YOU FORGETTING SOMETHING?", 
-                    "SURE, YOU SHOULD ALWAYS BE PREPARED, BUT YOU DON'T EVEN HAVE A BIKE"
-                }, name = "LOCK OF HAIR"}},
+                    "IT'S \"LOCKED\"",
+                    "IT'S A PUN",
+                    "WHAT DID YOU EXPECT IT TO DO?"
+                }, name = "HAIR LOCK"}},
                 {"lockpicks", new ItemTuple {messages = new List<string>() { 
-                    "AREN'T YOU FORGETTING SOMETHING?", 
-                    "SURE, YOU SHOULD ALWAYS BE PREPARED, BUT YOU DON'T EVEN HAVE A BIKE"
+                    "THEY'RE BROKEN", 
+                    "STILL BROKEN..."
                 }, name = "LOCK PICKS"}},
                 {"padlock", new ItemTuple {messages = new List<string>() { 
-                    "AREN'T YOU FORGETTING SOMETHING?", 
-                    "SURE, YOU SHOULD ALWAYS BE PREPARED, BUT YOU DON'T EVEN HAVE A BIKE"
+                    "YOU NEED A KEY TO USE THIS",
+                    "WHY DON'T YOU HAVE A KEY YET?",
                 }, name = "PAD LOCK"}},
                 {"rope", new ItemTuple {messages = new List<string>() { 
-                    "AREN'T YOU FORGETTING SOMETHING?", 
-                    "SURE, YOU SHOULD ALWAYS BE PREPARED, BUT YOU DON'T EVEN HAVE A BIKE"
+                    "IT'S LOCKED?!",
+                    "THAT ROPE DEALER WAS AN ASSHOLE"
                 }, name = "ROPE"}}
             };
 

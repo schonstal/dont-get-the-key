@@ -18,15 +18,26 @@ namespace DontGetTheKey
     {
         string msg;
         float lps = 15.0f;
+        char[] delim = { ' ' };
+        string[] parts;
+        int part = 0;
+        int length = 0;
+        int index = 0;
 
         public TypingMessage(SpriteBatch sb, ContentManager contentManager, string message)
-            : base(sb, contentManager, new Vector2(0,0), "", new Rectangle(0,0,0,0)) {
-            msg = message;
-            position.X = 48;
-            position.Y = 140;
+            : base(sb, contentManager, new Vector2(64,132), "", new Rectangle(0,0,0,0)) {
+            parts = message.Split(delim);
+            msg = "";
         }
 
         public override void Update(GameTime gameTime) {
+            if (1000 / lps <= elapsed && part < parts.Length) {
+                msg += Next();
+                SoundBank.Instance.play("typing");
+                elapsed = 0;
+            }
+
+            base.Update(gameTime);
         }
 
         public override void Draw(GameTime gameTime) {
@@ -36,6 +47,25 @@ namespace DontGetTheKey
         public override void Celebrate() {
             cframe = 1;
             base.Celebrate();
+        }
+
+        private char Next() {
+            char ret = '\n';
+            if (index == 0 && parts[part].Length + length >= 24) {
+                length = 0;
+                ret = '\n';
+            } else {
+                if (index < parts[part].Length) {
+                    ret = parts[part][index];
+                    index++;
+                } else {
+                    index = 0;
+                    part++;
+                    ret = ' ';
+                }
+                length++;
+            }
+            return ret;
         }
     }
 }

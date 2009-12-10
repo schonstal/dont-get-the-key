@@ -39,7 +39,7 @@ namespace DontGetTheKey
         }
 
         private string reason() {
-            return "SOMETHING RANDOM";
+            return "SOMETHING AWFUL";
         }
     }
 }

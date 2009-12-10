@@ -29,6 +29,9 @@ namespace DontGetTheKey
         int offset = 0;
         int[] offsets;
 
+        float ptime = 0;
+        float pfps = 4.0f;
+
         Rectangle boundingBox;
 
         enum State
@@ -126,7 +129,12 @@ namespace DontGetTheKey
             if (playerControlled == false || boundingBox.Contains(next) 
                 && !GameState.Instance.Current.Collision(next, "chest")) {
                 position += chunk;
+            } else if (GameState.Instance.Current.Collision(next, "door")) {
+                Punt(gameTime); //Enter door state
+            } else if (playerControlled != false) {
+                Punt(gameTime);
             }
+
             ptm -= chunk;
 
             if (state == State.dance)
@@ -186,6 +194,29 @@ namespace DontGetTheKey
             offset = 4;
             frame = 0;
             SoundBank.Instance.play("pickup_key");
+        }
+
+        private void Punt(GameTime gameTime) {
+            //I really should have made an animation object
+            ptime += gameTime.ElapsedGameTime.Milliseconds;
+            if (1000 / pfps <= ptime) {
+                switch (state) {
+                    case State.left:
+                        Move(new Vector2(3, 0));
+                        break;
+                    case State.right:
+                        Move(new Vector2(-3, 0));
+                        break;
+                    case State.up:
+                        Move(new Vector2(0, 3));
+                        break;
+                    case State.down:
+                        Move(new Vector2(0, -3));
+                        break;
+                }
+                SoundBank.Instance.play("hit_wall");
+                ptime = 0;
+            }
         }
     }
 }

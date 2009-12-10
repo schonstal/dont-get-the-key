@@ -16,6 +16,8 @@ namespace DontGetTheKey
 {
     class InGame : State
     {
+        Inventory inventory;
+
         public InGame(SpriteBatch sb, ContentManager contentManager, 
             Dictionary<string, Actor> actors)
             : base(sb, contentManager) {
@@ -104,6 +106,8 @@ namespace DontGetTheKey
                     )
                 );
 
+            inventory = new Inventory(spriteBatch, content, actors);
+
         }
 
         public override void Update(GameTime gameTime) {
@@ -113,7 +117,7 @@ namespace DontGetTheKey
             }
             
             if(InputHandler.Instance.pressed("Start"))
-                GameState.Instance.Enter(new InventoryUp(spriteBatch, content, actors));
+                GameState.Instance.Enter(new InventoryUp(spriteBatch, content, actors, inventory));
             
             if(((Stats)actors["stats"]).Remaining <= 0)
                 GameState.Instance.Enter(new Congrats(spriteBatch, content, actors));

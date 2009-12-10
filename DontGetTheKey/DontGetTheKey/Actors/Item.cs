@@ -19,17 +19,19 @@ namespace DontGetTheKey
     {
         List<String> messages;
         int msg = 0;
+        string name;
 
         public Item(SpriteBatch sb, ContentManager contentManager, String texture, 
             int slot, String name, List<String> messages)
-            : base(sb, contentManager, new Vector2(0,0), "item_" + texture, new Rectangle(0,0,0,0)) {
+            : base(sb, contentManager, new Vector2(56,-136), "item_" + texture, new Rectangle(0,0,0,0)) {
             if (slot < 4) {
-                position.X += slot * 16;
+                position.X += slot * 32;
             } else {
-                position.Y += 16;
-                position.X += (slot - 4) * 16;
+                position.Y += 32;
+                position.X += (slot - 4) * 32;
             }
             this.messages = messages;
+            this.name = name;
         }
 
         public String Info {
@@ -38,6 +40,10 @@ namespace DontGetTheKey
                     msg++;
                 return messages[msg];
             }
+        }
+
+        public String Name {
+            get { return name; }
         }
 
         public override void Update(GameTime gameTime) {

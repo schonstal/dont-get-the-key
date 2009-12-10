@@ -16,10 +16,14 @@ namespace DontGetTheKey
 {
     class InventoryUp : State
     {
+        Inventory inventory;
+
         public InventoryUp(SpriteBatch sb, ContentManager contentManager, 
-            Dictionary<string, Actor> actors)
+            Dictionary<string, Actor> actors, Inventory inventory)
             : base(sb, contentManager) {
             this.actors = actors;
+            this.inventory = inventory;
+
             SoundBank.Instance.play("pause");
             foreach (KeyValuePair<string, Actor> kvp in actors)
                 kvp.Value.Tween(new Vector2(kvp.Value.Position.X, kvp.Value.Position.Y + 184), 1.2);
@@ -29,7 +33,8 @@ namespace DontGetTheKey
         }
 
         public override void Update(GameTime gameTime) {
-              
+            if (actors["background"].Position.Y < 1)
+                GameState.Instance.Enter(inventory);
 
             base.Update(gameTime);
         }

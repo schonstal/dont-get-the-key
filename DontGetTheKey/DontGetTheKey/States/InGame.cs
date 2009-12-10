@@ -68,12 +68,39 @@ namespace DontGetTheKey
                     )
                 );
 
-            Register("door_pad", 
+            Register("door_pad",
+                new Pad(
+                    sb,
+                    contentManager,
+                    actors["door"].Position,
+                    new Rectangle(16, 12, 6, 6)
+                    )
+                );
+
+            Register("chest_pad_R", 
                 new Pad(
                     sb, 
                     contentManager, 
-                    actors["door"].Position,
-                    new Rectangle(16, 12, 6, 6)
+                    actors["chest"].Position,
+                    new Rectangle(-16, 0, 3, 16)
+                    )
+                );
+
+            Register("chest_pad_D",
+                new Pad(
+                    sb,
+                    contentManager,
+                    actors["chest"].Position,
+                    new Rectangle(0, -6, 16, 6)
+                    )
+                );
+
+            Register("chest_pad_U",
+                new Pad(
+                    sb,
+                    contentManager,
+                    actors["chest"].Position,
+                    new Rectangle(0, 16, 16, 6)
                     )
                 );
 
@@ -93,13 +120,22 @@ namespace DontGetTheKey
 
             if (GameState.Instance.Current.Collision(actors["main"].HitBox, "door_pad") &&
                 InputHandler.Instance.pressed("A") && (((Character)actors["main"]).Heading == "L")) {
-                GameState.Instance.Enter(new DoorLocked(spriteBatch, content, actors));
+                GameState.Instance.Enter(new DoorLocked(spriteBatch, content, "DOOR", actors));
             }
+
+            if ((ChestPad("U") || ChestPad("D") || ChestPad("R")) && InputHandler.Instance.pressed("A")) {
+                GameState.Instance.Enter(new DoorLocked(spriteBatch, content, "CHEST", actors));
+            }
+
             base.Update(gameTime);
         }
 
         public override void Draw(GameTime gameTime) {
             base.Draw(gameTime);
+        }
+
+        private bool ChestPad(String side) {
+            return GameState.Instance.Current.Collision(actors["main"].HitBox, "chest_pad_" + side) && (((Character)actors["main"]).Heading == side);
         }
     }
 }

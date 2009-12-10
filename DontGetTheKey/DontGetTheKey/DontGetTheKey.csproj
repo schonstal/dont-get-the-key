@@ -105,6 +105,7 @@
     <Compile Include="InputHandler.cs" />
     <Compile Include="SoundBank.cs" />
     <Compile Include="States\Congrats.cs" />
+    <Compile Include="States\InventoryDown.cs" />
     <Compile Include="States\Inventory.cs" />
     <Compile Include="States\DoorLocked.cs" />
     <Compile Include="States\DiedOf.cs" />

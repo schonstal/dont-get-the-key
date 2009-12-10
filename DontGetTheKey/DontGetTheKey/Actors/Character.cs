@@ -213,25 +213,27 @@ namespace DontGetTheKey
         }
 
         private void Punt(GameTime gameTime) {
+            if(GameState.Instance.Current.GetType().Name == "InGame") {
             //I really should have made an animation object
-            ptime += gameTime.ElapsedGameTime.Milliseconds;
-            if (1000 / pfps <= ptime) {
-                switch (state) {
-                    case State.left:
-                        Move(new Vector2(3, 0));
-                        break;
-                    case State.right:
-                        Move(new Vector2(-3, 0));
-                        break;
-                    case State.up:
-                        Move(new Vector2(0, 3));
-                        break;
-                    case State.down:
-                        Move(new Vector2(0, -3));
-                        break;
+                ptime += gameTime.ElapsedGameTime.Milliseconds;
+                if (1000 / pfps <= ptime) {
+                    switch (state) {
+                        case State.left:
+                            Move(new Vector2(3, 0));
+                            break;
+                        case State.right:
+                            Move(new Vector2(-3, 0));
+                            break;
+                        case State.up:
+                            Move(new Vector2(0, 3));
+                            break;
+                        case State.down:
+                            Move(new Vector2(0, -3));
+                            break;
+                    }
+                    SoundBank.Instance.play("hit_wall");
+                    ptime = 0;
                 }
-                SoundBank.Instance.play("hit_wall");
-                ptime = 0;
             }
         }
     }

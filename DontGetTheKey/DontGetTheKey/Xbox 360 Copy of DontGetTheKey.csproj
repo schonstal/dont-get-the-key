@@ -82,6 +82,7 @@
     <Compile Include="States\DiedOf.cs" />
     <Compile Include="States\DoorLocked.cs" />
     <Compile Include="States\Inventory.cs" />
+    <Compile Include="States\InventoryDown.cs" />
     <Compile Include="States\NewGame.cs" />
     <Compile Include="States\GameOver.cs" />
     <Compile Include="States\GotKey.cs" />

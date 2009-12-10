@@ -98,7 +98,36 @@ namespace DontGetTheKey
         }
 
         public override void Update(GameTime gameTime) {
-            //Why do people think this type of strictness is good?  look at copy/paste :(
+            if (!actors.ContainsKey("description"))
+                select();
+
+            ((SelectedItem)actors["selected"]).Set(
+                items[((Selector)actors["selector"]).Slot].Texture,
+                items[((Selector)actors["selector"]).Slot].Name);
+
+            if (InputHandler.Instance.pressed("A")) {
+                if (actors.ContainsKey("description")) {
+                    actors.Remove("description");
+                } else {
+                    Register("description", new TypingMessage(spriteBatch, content,
+                        items[((Selector)actors["selector"]).Slot].Info));
+                }
+            }
+
+            if (InputHandler.Instance.pressed("B")) 
+                if (actors.ContainsKey("description"))
+                    actors.Remove("description");
+
+            if (InputHandler.Instance.pressed("Start"))
+                if (actors.ContainsKey("description"))
+                    actors.Remove("description");
+                else
+                    GameState.Instance.Enter(new InventoryDown(spriteBatch, content, actors));
+
+            base.Update(gameTime);
+        }
+
+        void select() {
             if (InputHandler.Instance.pressed("Left")) {
                 if (((Selector)actors["selector"]).Slot > 0)
                     ((Selector)actors["selector"]).Slot--;
@@ -128,21 +157,6 @@ namespace DontGetTheKey
                     SoundBank.Instance.play("select");
                 }
             }
-
-            ((SelectedItem)actors["selected"]).Set(
-                items[((Selector)actors["selector"]).Slot].Texture,
-                items[((Selector)actors["selector"]).Slot].Name);
-
-            if (InputHandler.Instance.pressed("A")) {
-                if (actors.ContainsKey("description")) {
-                    actors.Remove("description");
-                } else {
-                    Register("description", new TypingMessage(spriteBatch, content,
-                        items[((Selector)actors["selector"]).Slot].Info));
-                }
-            }
-
-            base.Update(gameTime);
         }
     }
 

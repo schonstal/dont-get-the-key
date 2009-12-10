@@ -14,27 +14,24 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace DontGetTheKey
 {
-    class InventoryUp : State
+    class InventoryDown : State
     {
-        Inventory inventory;
-
-        public InventoryUp(SpriteBatch sb, ContentManager contentManager, 
-            Dictionary<string, Actor> actors, Inventory inventory)
+        public InventoryDown(SpriteBatch sb, ContentManager contentManager, 
+            Dictionary<string, Actor> actors)
             : base(sb, contentManager) {
             this.actors = actors;
-            this.inventory = inventory;
 
-            SoundBank.Instance.play("pause");
             foreach (KeyValuePair<string, Actor> kvp in actors)
-                kvp.Value.Tween(new Vector2(kvp.Value.Position.X, kvp.Value.Position.Y + 184), 1.2);
-
-            ((Character)actors["main"]).PlayerControlled = false;
-            ((Character)actors["main"]).Walking = false;
+                kvp.Value.Tween(new Vector2(kvp.Value.Position.X, kvp.Value.Position.Y - 184), 1.2);
         }
 
         public override void Update(GameTime gameTime) {
-            if (actors["background"].Position.Y > -1)
-                GameState.Instance.Enter(inventory);
+            if (actors["background"].Position.Y < -183) {
+                ((Character)actors["main"]).PlayerControlled = true;
+                GameState.Instance.Previous();
+                GameState.Instance.Previous();
+                GameState.Instance.Previous();
+            }
 
             base.Update(gameTime);
         }

@@ -39,7 +39,9 @@ namespace DontGetTheKey
         }
 
         private string reason() {
-            return "SOMETHING AWFUL";
+            Random rand = new Random();
+            List<String> reasons = new List<String>() { "STARVATION", "DYSENTERY", "DEHYDRATION", "OLD AGE", "A HEART ATTACK", "DIABETES", "AIDS", "POLIO", "POISON", "OBESITY", "SUFFOCATION", "SEIZURE" };
+            return reasons[rand.Next(reasons.Count-1)];
         }
     }
 }

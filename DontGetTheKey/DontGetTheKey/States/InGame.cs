@@ -131,7 +131,7 @@ namespace DontGetTheKey
                 (SoundBank.Instance.effect("bgmusic").State == SoundState.Playing) &&
                 ((Stats)actors["stats"]).Remaining <= 5000) {
                 SoundBank.Instance.stop("bgmusic");
-                SoundBank.Instance.play("bgmusic_fast");
+                SoundBank.Instance.play("bgmusic_fast", 1, 0, 0, true);
             }
 
             base.Update(gameTime);

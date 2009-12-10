@@ -92,6 +92,37 @@ namespace DontGetTheKey
         }
 
         public override void Update(GameTime gameTime) {
+            //Why do people think this type of strictness is good?  look at copy/paste :(
+            if (InputHandler.Instance.pressed("Left")) {
+                if (((Selector)actors["selector"]).Slot > 0)
+                    ((Selector)actors["selector"]).Slot--;
+                else
+                    ((Selector)actors["selector"]).Slot = items.Count - 1;
+                SoundBank.Instance.play("select");
+            }
+
+            if (InputHandler.Instance.pressed("Right")) {
+                if (((Selector)actors["selector"]).Slot < items.Count - 1)
+                    ((Selector)actors["selector"]).Slot++;
+                else
+                    ((Selector)actors["selector"]).Slot = 0;
+                SoundBank.Instance.play("select");
+            }
+
+            if (InputHandler.Instance.pressed("Up")) {
+                if (((Selector)actors["selector"]).Slot - 4 >= 0) {
+                    ((Selector)actors["selector"]).Slot -= 4;
+                    SoundBank.Instance.play("select");
+                }
+            }
+
+            if (InputHandler.Instance.pressed("Down")) {
+                if (((Selector)actors["selector"]).Slot + 4 < items.Count - 1) {
+                    ((Selector)actors["selector"]).Slot += 4;
+                    SoundBank.Instance.play("select");
+                }
+            }
+
             base.Update(gameTime);
         }
     }

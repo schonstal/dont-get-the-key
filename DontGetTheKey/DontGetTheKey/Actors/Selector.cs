@@ -23,6 +23,11 @@ namespace DontGetTheKey
             : base(sb, contentManager, new Vector2(48,-144), "selector", new Rectangle(0,0,0,0)) {
         }
 
+        public int Slot {
+            get { return slot; }
+            set { slot = value; }
+        }
+
         public override void Update(GameTime gameTime) {
             if (slot < 4) {
                 position.X = 48 + (slot * 32);

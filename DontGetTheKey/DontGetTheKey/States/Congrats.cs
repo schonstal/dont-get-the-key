@@ -20,7 +20,7 @@ namespace DontGetTheKey
             Dictionary<string, Actor> actors)
             : base(sb, contentManager) {
             this.actors = actors;
-            SoundBank.Instance.stop("bgmusic");
+            SoundBank.Instance.stop("bgmusic_fast");
             SoundBank.Instance.play("congrats", 1, 0, 0, true);
             Register("grats", new Message(sb, contentManager, "CONGRATULATIONS!!!"));
 

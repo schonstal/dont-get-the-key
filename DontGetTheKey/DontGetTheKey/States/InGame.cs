@@ -127,6 +127,13 @@ namespace DontGetTheKey
                 GameState.Instance.Enter(new DoorLocked(spriteBatch, content, "CHEST", actors));
             }
 
+            if ((SoundBank.Instance.effect("bgmusic") != null) &&
+                (SoundBank.Instance.effect("bgmusic").State == SoundState.Playing) &&
+                ((Stats)actors["stats"]).Remaining <= 5000) {
+                SoundBank.Instance.stop("bgmusic");
+                SoundBank.Instance.play("bgmusic_fast");
+            }
+
             base.Update(gameTime);
         }
 

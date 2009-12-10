@@ -23,6 +23,7 @@ namespace DontGetTheKey
             actors.Remove("key_shadow");
             Register("got_key", new Message(sb, contentManager, "YOU GOT THE KEY!"));
             SoundBank.Instance.stop("bgmusic");
+            SoundBank.Instance.stop("bgmusic_fast");
         }
 
         public override void Update(GameTime gameTime) {

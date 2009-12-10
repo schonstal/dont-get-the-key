@@ -14,24 +14,22 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace DontGetTheKey
 {
-    class Message : Actor
+    class TypingMessage : Actor
     {
         string msg;
+        float lps = 15.0f;
 
-        public Message(SpriteBatch sb, ContentManager contentManager, string message)
+        public TypingMessage(SpriteBatch sb, ContentManager contentManager, string message)
             : base(sb, contentManager, new Vector2(0,0), "", new Rectangle(0,0,0,0)) {
             msg = message;
-            position.X = 160 - msg.Length * 4;
-            position.Y = 100;
+            position.X = 48;
+            position.Y = 140;
         }
 
         public override void Update(GameTime gameTime) {
-            base.Update(gameTime);
         }
 
         public override void Draw(GameTime gameTime) {
-            spriteBatch.DrawString(ImageBank.Instance.font, msg,
-                new Vector2(position.X + 1, position.Y + 1), Color.Black);
             spriteBatch.DrawString(ImageBank.Instance.font, msg, position, color);
         }
 

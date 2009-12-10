@@ -29,6 +29,8 @@ namespace DontGetTheKey
         }
 
         public override void Update(GameTime gameTime) {
+            if ((InputHandler.Instance.pressed("A") || InputHandler.Instance.pressed("Start")))
+                GameState.Instance.Enter(new DiedOf(spriteBatch, content, actors));
             base.Update(gameTime);
         }
     }

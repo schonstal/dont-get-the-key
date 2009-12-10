@@ -21,14 +21,12 @@ namespace DontGetTheKey
             Dictionary<string, Actor> actors) 
             : base(sb, contentManager) {
             this.actors = actors;
-            actors.Remove("main"); //Oh snap
-            actors.Remove("game_over");
+            actors.Clear();
 
             Register("restart", new Message(sb, contentManager, "RESTART"));
             Register("quit", new Message(sb, contentManager, "QUIT"));
             actors["quit"].Move(new Vector2(0, 16));
-
-            actors["key"].Transpose(new Vector2(116, 94));
+            Register("key", new Key(sb, content, new Vector2(116, 94), "key", new Rectangle(0, 0, 0, 0)));
         }
 
         public override void Update(GameTime gameTime) {

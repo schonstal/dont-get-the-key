@@ -53,7 +53,6 @@ namespace DontGetTheKey
             char ret = '\n';
             if (index == 0 && parts[part].Length + length >= 24) {
                 length = 0;
-                ret = '\n';
             } else {
                 if (index < parts[part].Length) {
                     ret = parts[part][index];

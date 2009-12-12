@@ -35,6 +35,10 @@ namespace DontGetTheKey
             spriteBatch.Begin();
             foreach (KeyValuePair<string, Actor> kvp in actors)
                 kvp.Value.Draw(gameTime);
+            
+            //Guy needs to be guaranteed to be on top (should have had a draw priority)
+            if (actors.ContainsKey("main"))
+                actors["main"].Draw(gameTime);
             spriteBatch.End();
         }
 

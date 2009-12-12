@@ -20,11 +20,11 @@ namespace DontGetTheKey
             Dictionary<string, Actor> actors)
             : base(sb, contentManager) {
             this.actors = actors;
-            actors.Remove("background");
+            //actors.Remove("background");
             actors.Remove("chest");
             actors.Remove("door");
             actors.Remove("got_key");
-            actors.Remove("stats");
+            //actors.Remove("stats");
             Register("game_over", new Message(sb, contentManager, "GAME OVER"));
             SoundBank.Instance.play("game_over");
         }

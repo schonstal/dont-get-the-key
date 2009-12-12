@@ -73,6 +73,7 @@ namespace DontGetTheKey
             ImageBank.Instance.load("key");
             ImageBank.Instance.load("blackbar");
             ImageBank.Instance.load("statcover");
+            ImageBank.Instance.load("swipe");
 
             ImageBank.Instance.load("item_bikelock");
             ImageBank.Instance.load("item_binoculars");

@@ -388,6 +388,15 @@
       <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\typing.xnb</Output>
       <Time>2009-12-09T17:45:00.28125-08:00</Time>
     </Item>
+    <Item>
+      <Source>swipe.PNG</Source>
+      <Name>swipe</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\swipe.xnb</Output>
+      <Time>2009-12-12T12:17:46.8125-08:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

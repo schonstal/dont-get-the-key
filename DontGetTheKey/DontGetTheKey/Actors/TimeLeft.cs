@@ -41,14 +41,16 @@ namespace DontGetTheKey
                 remaining -= gameTime.ElapsedGameTime.Milliseconds;
 
                 if (1000 / fps <= elapsed) {
-                    if (remaining < 5000 && (color == Color.White))
+                    if (remaining < 5000 && (color == Color.White) || remaining < 100)
                         color = Color.Red;
                     else
                         color = Color.White;
                     elapsed = 0;
+                    fps = (remaining>0?(float)(10000/remaining):1);
                 }
             } else {
-                color = Color.White;
+                if(!celebrate)
+                    color = Color.White;
             }
         }
 
@@ -56,10 +58,10 @@ namespace DontGetTheKey
             spriteBatch.DrawString(ImageBank.Instance.font, 
                 (Math.Ceiling(remaining/1000)).ToString("00"), position, color);
             spriteBatch.DrawString(ImageBank.Instance.font, "01", 
-                new Vector2(position.X - 112, position.Y), Color.White);
+                new Vector2(position.X - 112, position.Y), (celebrate?color:Color.White));
             spriteBatch.DrawString(ImageBank.Instance.font, 
                 (GameState.Instance.Current.Collision("main", "key")?"01":"00"),
-                new Vector2(position.X - 112, position.Y - 16), Color.White);
+                new Vector2(position.X - 112, position.Y - 16), (celebrate?color:Color.White));
         }
     }
 }

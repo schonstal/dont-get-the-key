@@ -33,7 +33,7 @@ namespace DontGetTheKey
         }
 
         public override void Update(GameTime gameTime) {
-            SoundBank.Instance.play("door_close");
+            SoundBank.Instance.play("door_close", 0.5f, 0, 0, false);
             GameState.Instance.Enter(new InGame(spriteBatch, content, actors));
             base.Update(gameTime);
         }

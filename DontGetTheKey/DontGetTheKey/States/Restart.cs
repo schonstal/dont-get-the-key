@@ -33,7 +33,7 @@ namespace DontGetTheKey
             if (InputHandler.Instance.pressed("Up") || InputHandler.Instance.pressed("Down")) {
                 actors["key"].Move(new Vector2(0, (restart ? 16 : -16)));
                 restart = !restart;
-                SoundBank.Instance.play("select");
+                SoundBank.Instance.play("select", 0.5f, 0, 0, false);
             }
 
             if ((InputHandler.Instance.pressed("A") || InputHandler.Instance.pressed("Start")))

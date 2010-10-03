@@ -24,7 +24,7 @@ namespace DontGetTheKey
             this.actors = actors;
             ((Character)actors["main"]).PlayerControlled = true;
             actors.Remove("statcover");
-            SoundBank.Instance.play("bgmusic", 1, 0, 0, true);
+            SoundBank.Instance.play("bgmusic", 0.8f, 0, 0, true);
 
             Register(
                 "chest",
@@ -141,7 +141,7 @@ namespace DontGetTheKey
                 (SoundBank.Instance.effect("bgmusic").State == SoundState.Playing) &&
                 ((Stats)actors["stats"]).Remaining <= 5000) {
                 SoundBank.Instance.stop("bgmusic");
-                SoundBank.Instance.play("bgmusic_fast", 1, 0, 0, true);
+                SoundBank.Instance.play("bgmusic_fast", 0.8f, 0, 0, true);
             }
 
             base.Update(gameTime);

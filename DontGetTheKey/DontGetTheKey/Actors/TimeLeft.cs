@@ -54,7 +54,7 @@ namespace DontGetTheKey
 
         public override void Draw(GameTime gameTime) {
             spriteBatch.DrawString(ImageBank.Instance.font, 
-                ((int)remaining/1000).ToString("00"), position, color);
+                (Math.Ceiling(remaining/1000)).ToString("00"), position, color);
             spriteBatch.DrawString(ImageBank.Instance.font, "01", 
                 new Vector2(position.X - 112, position.Y), Color.White);
             spriteBatch.DrawString(ImageBank.Instance.font, 

@@ -163,7 +163,7 @@ namespace DontGetTheKey
         void moveEffect() {
             if (actors.ContainsKey("description"))
                 actors.Remove("description");
-            SoundBank.Instance.play("select");
+            SoundBank.Instance.play("select", 0.8f, 0, 0, false);
         }
     }
 

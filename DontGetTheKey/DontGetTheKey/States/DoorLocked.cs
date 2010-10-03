@@ -20,7 +20,8 @@ namespace DontGetTheKey
             String obj, Dictionary<string, Actor> actors)
             : base(sb, contentManager) {
             this.actors = actors;
-            SoundBank.Instance.play(obj.ToLower() + "_locked");
+            //Half volume for chests (boobs).
+            SoundBank.Instance.play(obj.ToLower() + "_locked", (obj=="CHEST"?0.5f:0.8f), 0, 0, false);
             Register("locked", new Message(sb, contentManager, "THIS " + obj + " IS LOCKED!"));
             Register("need_key", new Message(sb, contentManager, "YOU NEED A KEY TO OPEN IT."));
             actors["need_key"].Move(new Vector2(0, 8));

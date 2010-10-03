@@ -33,12 +33,15 @@ namespace DontGetTheKey
 
         public virtual void Draw(GameTime gameTime) {
             spriteBatch.Begin();
-            foreach (KeyValuePair<string, Actor> kvp in actors)
-                kvp.Value.Draw(gameTime);
-            
-            //Guy needs to be guaranteed to be on top (should have had a draw priority)
-            if (actors.ContainsKey("main"))
-                actors["main"].Draw(gameTime);
+
+            IEnumerable<Actor> priorityActors = 
+                from k in actors.Keys
+                orderby actors[k].Priority ascending
+                select actors[k];
+
+            foreach (Actor actor in priorityActors)
+                actor.Draw(gameTime);
+
             spriteBatch.End();
         }
 

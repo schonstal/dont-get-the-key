@@ -23,7 +23,8 @@ namespace DontGetTheKey
         public Key(SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, string texture, Rectangle box)
             : base(sb, contentManager, pos, texture, box) {
-            return;
+                priority = 3;
+                return;
         }
 
         public override void Update(GameTime gameTime) {

@@ -20,9 +20,10 @@ namespace DontGetTheKey
 
         public Message(SpriteBatch sb, ContentManager contentManager, string message)
             : base(sb, contentManager, new Vector2(0,0), "", new Rectangle(0,0,0,0)) {
-            msg = message;
-            position.X = 160 - msg.Length * 4;
-            position.Y = 100;
+                priority = 1;
+                msg = message;
+                position.X = 160 - msg.Length * 4;
+                position.Y = 100;
         }
 
         public override void Update(GameTime gameTime) {

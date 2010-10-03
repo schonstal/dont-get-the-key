@@ -82,14 +82,15 @@ namespace DontGetTheKey
 
         public Character(SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, string texture, Rectangle box)
-            : base(sb, contentManager, pos, texture, box) {
-            target = new Rectangle(0, 0, 16, 16);
-            ptm = new Vector2(0, 0);
+            : base(sb, contentManager, pos, texture, box) {      
+                priority = 2;
+                target = new Rectangle(0, 0, 16, 16);
+                ptm = new Vector2(0, 0);
 
-            offsets = new int[5] {0,2,7,4,6};
+                offsets = new int[5] {0,2,7,4,6};
 
-            boundingBox = new Rectangle(64, 78, 192, 121);
-            return;
+                boundingBox = new Rectangle(64, 78, 192, 121);
+                return;
         }
 
         public override void Update(GameTime gameTime) {

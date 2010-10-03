@@ -38,6 +38,14 @@ namespace DontGetTheKey
         protected float relapsed;
         protected List<Color> colors;
         protected int cframe;
+
+        protected int priority = 0;
+
+        public int Priority
+        {
+            get { return priority; }
+            set { priority = value; }
+        }
         
         public Actor(SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, string texture, Rectangle box) {

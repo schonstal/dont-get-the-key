@@ -22,7 +22,9 @@ namespace DontGetTheKey
             this.actors = actors;
             ((Character)this.actors["main"]).Walking = true;
             actors.Remove("title");
-            actors.Remove("push_start");
+            actors.Remove("easy");
+            actors.Remove("hard");
+            actors.Remove("key");
         }
 
         public override void Update(GameTime gameTime) {

@@ -23,6 +23,10 @@ namespace DontGetTheKey
         public Stats(SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, string texture, Rectangle box)
             : base(sb, contentManager, pos, texture, box) {
+                if (GameState.Instance.Easy)
+                    remaining = 30000;
+                else
+                    remaining = 90000;
         }
 
         public float Rate {

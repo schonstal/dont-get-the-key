@@ -17,7 +17,6 @@ namespace DontGetTheKey
 {
     public class NewGame : State
     {
-        float elapsed;
         public NewGame(SpriteBatch sb, ContentManager contentManager)
             : base(sb, contentManager) {
             //Background

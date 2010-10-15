@@ -26,11 +26,50 @@ namespace DontGetTheKey
             }
         }
         private InputHandler() {
-            prev = new Dictionary<string, ButtonState>();
+            // Previous input state
+            prev = new Dictionary<string, bool>();
+
+            // Map from string to actual keyboard key
+            keyboard_map = new Dictionary<string, Keys>();
+            keyboard_map["A"] = Keys.Z;
+            keyboard_map["B"] = Keys.X;
+            keyboard_map["X"] = Keys.C;
+            keyboard_map["Y"] = Keys.V;
+            keyboard_map["Back"] = Keys.Q;
+            keyboard_map["BigButton"] = Keys.W;
+            keyboard_map["LeftShoulder"] = Keys.E;
+            keyboard_map["RightShoulder"] = Keys.R;
+            keyboard_map["LeftStick"] = Keys.S;
+            keyboard_map["RightStick"] = Keys.D;
+            keyboard_map["Start"] = Keys.A;
+            keyboard_map["Up"] = Keys.Up;
+            keyboard_map["Down"] = Keys.Down;
+            keyboard_map["Left"] = Keys.Left;
+            keyboard_map["Right"] = Keys.Right;
+           
+            // Map from string to actual gamepad button
+            gamepad_map = new Dictionary<string, Buttons>();
+            gamepad_map["A"] = Buttons.A;
+            gamepad_map["B"] = Buttons.B;
+            gamepad_map["X"] = Buttons.X;
+            gamepad_map["Y"] = Buttons.Y;
+            gamepad_map["Back"] = Buttons.Back;
+            gamepad_map["BigButton"] = Buttons.BigButton;
+            gamepad_map["LeftShoulder"] = Buttons.LeftShoulder;
+            gamepad_map["RightShoulder"] = Buttons.RightShoulder;
+            gamepad_map["LeftStick"] = Buttons.LeftStick;
+            gamepad_map["RightStick"] = Buttons.RightStick;
+            gamepad_map["Start"] = Buttons.Start;
+            gamepad_map["Up"] = Buttons.DPadUp;
+            gamepad_map["Down"] = Buttons.DPadDown;
+            gamepad_map["Left"] = Buttons.DPadLeft;
+            gamepad_map["Right"] = Buttons.DPadRight;
         }
 
         private PlayerIndex player;
-        private Dictionary<string, ButtonState> prev;
+        private Dictionary<string, bool> prev;
+        private Dictionary<string, Keys> keyboard_map;
+        private Dictionary<string, Buttons> gamepad_map;
 
         public Vector2 RightStick {
             get { return GamePad.GetState(player).ThumbSticks.Right; }
@@ -47,57 +86,44 @@ namespace DontGetTheKey
 
         //We needn't worry about multibutton
         public bool pressed(string button) {
-            if ((buttonMap(button, GamePad.GetState(player)) == ButtonState.Pressed) && prev != null && prev.ContainsKey(button) && (prev[button] == ButtonState.Released)) {
-                prev[button] = buttonMap(button, GamePad.GetState(player));
+            if ((buttonMap(button, GamePad.GetState(player), Keyboard.GetState(player))) && prev != null && prev.ContainsKey(button) && (!prev[button]))
+            {
+                prev[button] = buttonMap(button, GamePad.GetState(player), Keyboard.GetState(player));
                 return true;
             }
-            prev[button] = buttonMap(button, GamePad.GetState(player));
+            prev[button] = buttonMap(button, GamePad.GetState(player), Keyboard.GetState(player));
             return false;
         }
 
 
         public bool held(string button) {
-            if (buttonMap(button, GamePad.GetState(player)) == ButtonState.Pressed)
+            if (buttonMap(button, GamePad.GetState(player), Keyboard.GetState(player)))
                 return true;
             return false;
         }
 
         //I'll have some dynamic programming, please. No? :(
-        private ButtonState buttonMap(string button, GamePadState state) {
-            switch (button) {
-                case "A":
-                    return state.Buttons.A;
-                case "B":
-                    return state.Buttons.B;
-                case "X":
-                    return state.Buttons.X;
-                case "Y":
-                    return state.Buttons.Y;
-                case "Back":
-                    return state.Buttons.Back;
-                case "BigButton":
-                    return state.Buttons.BigButton;
-                case "LeftShoulder":
-                    return state.Buttons.LeftShoulder;
-                case "RightShoulder":
-                    return state.Buttons.RightShoulder;
-                case "LeftStick":
-                    return state.Buttons.LeftStick;
-                case "RightStick":
-                    return state.Buttons.RightStick;
-                case "Start":
-                    return state.Buttons.Start;
-                case "Up":
-                    return state.DPad.Up;
-                case "Down":
-                    return state.DPad.Down;
-                case "Left":
-                    return state.DPad.Left;
-                case "Right":
-                    return state.DPad.Right;
-                default:
-                    return ButtonState.Released;
+        private bool buttonMap(string button, GamePadState state, KeyboardState kbstate) {
+            // Check for any key press
+            if (button.Equals("Any"))
+            {
+                if (kbstate.GetPressedKeys().Length > 0)
+                    return true;
+                else
+                {
+                    foreach (KeyValuePair<String, Buttons> kvp in gamepad_map)
+                    {
+                        if (state.IsButtonDown(kvp.Value))
+                            return true;
+                    }
+                }
             }
+            else // Check the gamepad and keyboard
+            {
+                if (state.IsButtonDown(gamepad_map[button]) || kbstate.IsKeyDown(keyboard_map[button]))
+                    return true;
+            }
+            return false;
         }
     }
 }

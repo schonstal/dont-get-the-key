@@ -38,17 +38,6 @@ namespace DontGetTheKey
                 );
 
             Register(
-                "stats",
-                new Stats(
-                    sb,
-                    contentManager,
-                    new Vector2(256, 40),
-                    "stats",
-                    new Rectangle(0, 0, 0, 0)
-                    )
-                );
-
-            Register(
                 "key_shadow",
                 new Actor(
                     sb,
@@ -106,6 +95,17 @@ namespace DontGetTheKey
                     )
                 );
 
+            Register(
+                "stats",
+                new Stats(
+                    sb,
+                    contentManager,
+                    new Vector2(256, 40),
+                    "stats",
+                    new Rectangle(0, 0, 0, 0)
+                    )
+                );
+
             inventory = new Inventory(spriteBatch, content, actors);
 
         }
@@ -147,8 +147,8 @@ namespace DontGetTheKey
             base.Update(gameTime);
         }
 
-        public override void Draw(GameTime gameTime) {
-            base.Draw(gameTime);
+        public override void Draw(GameTime gameTime, Matrix spriteBatch) {
+            base.Draw(gameTime, spriteBatch);
         }
 
         private bool ChestPad(String side) {

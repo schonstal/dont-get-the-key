@@ -26,6 +26,16 @@ namespace DontGetTheKey
                 position.Y = 100;
         }
 
+        public Message(SpriteBatch sb, ContentManager contentManager, string message, Color color)
+            : base(sb, contentManager, new Vector2(0, 0), "", new Rectangle(0, 0, 0, 0))
+        {
+            priority = 1;
+            msg = message;
+            position.X = 160 - msg.Length * 4;
+            position.Y = 100;
+            this.color = color;
+        }
+
         public override void Update(GameTime gameTime) {
             base.Update(gameTime);
         }

@@ -29,7 +29,7 @@ namespace DontGetTheKey
         }
 
         public override void Update(GameTime gameTime) {
-            if ((InputHandler.Instance.pressed("A") || InputHandler.Instance.pressed("Start"))) {
+            if (InputHandler.Instance.pressed("Any")) {
                 actors.Remove("locked");
                 actors.Remove("need_key");
                 ((Character)actors["main"]).PlayerControlled = true;

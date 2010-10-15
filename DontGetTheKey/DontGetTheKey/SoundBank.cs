@@ -44,20 +44,19 @@ namespace DontGetTheKey
         //There should only be one instance of a sound effect at a time.
         public void play(string effectName) {
             if (!sei.ContainsKey(effectName) && soundEffects.ContainsKey(effectName))
-                sei[effectName] = soundEffects[effectName].Play();
-            else
-                sei[effectName].Play();
+                sei[effectName] = soundEffects[effectName].CreateInstance();
+            sei[effectName].Play();
         }
 
         public void play(string effectName, float volume, float pitch, float pan, bool loop) {
-            if (!sei.ContainsKey(effectName) && soundEffects.ContainsKey(effectName)) {
-                sei[effectName] = soundEffects[effectName].Play(volume, pitch, pan, loop);
-            } else {
-                sei[effectName].Volume = volume;
-                sei[effectName].Pitch = pitch;
-                sei[effectName].Pan = pan;
-                sei[effectName].Play(); //Can't change loop except when starting
-            }
+            if (!sei.ContainsKey(effectName) && soundEffects.ContainsKey(effectName))
+                sei[effectName] = soundEffects[effectName].CreateInstance();
+            sei[effectName].Volume = volume;
+            sei[effectName].Pitch = pitch;
+            sei[effectName].Pan = pan;
+            if (loop)
+                sei[effectName].IsLooped = true;
+            sei[effectName].Play(); //Can't change loop except when starting
         }
 
         public void stop(string effectName) {

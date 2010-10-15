@@ -26,7 +26,7 @@ namespace DontGetTheKey
         public override void Update(GameTime gameTime) {
             if (SoundBank.Instance.effect("start").State == SoundState.Stopped) {
                 SoundBank.Instance.stop("start");
-                GameState.Instance.Enter(new WalkingOver(spriteBatch, content, actors));
+                GameState.Instance.Enter(new DifficultySelect(spriteBatch, content, actors));
             }
             base.Update(gameTime);
         }

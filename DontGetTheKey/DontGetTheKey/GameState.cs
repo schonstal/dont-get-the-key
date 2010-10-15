@@ -21,6 +21,7 @@ namespace DontGetTheKey
         //For Deterministic Finite Autobots
         private Stack<State> states;
         private bool terminate = false;
+        private bool easy = true;
 
         private GameState() {
             states = new Stack<State>();
@@ -42,14 +43,20 @@ namespace DontGetTheKey
         public bool Terminate {
             get { return terminate; }
         }
+        
+        public bool Easy
+        {
+            get { return this.easy; }
+            set { this.easy = value; }
+        }
 
         public void Update(GameTime gameTime) {
             //Handle pausing
             states.Peek().Update(gameTime);
         }
 
-        public void Draw(GameTime gameTime) {
-            states.Peek().Draw(gameTime);
+        public void Draw(GameTime gameTime, Matrix spriteScale) {
+            states.Peek().Draw(gameTime, spriteScale);
         }
 
         //Return to the previous state.

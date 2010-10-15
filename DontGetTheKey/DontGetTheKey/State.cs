@@ -31,9 +31,8 @@ namespace DontGetTheKey
                 kvp.Value.Update(gameTime);
         }
 
-        public virtual void Draw(GameTime gameTime) {
-            spriteBatch.Begin();
-
+        public virtual void Draw(GameTime gameTime, Matrix spriteScale) {
+            spriteBatch.Begin(SpriteSortMode.Immediate, null, null, null, null, null, spriteScale);
             IEnumerable<Actor> priorityActors = 
                 from k in actors.Keys
                 orderby actors[k].Priority ascending

@@ -11,6 +11,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Net;
 using Microsoft.Xna.Framework.Storage;
+using System.Text.RegularExpressions;
 
 namespace DontGetTheKey
 {
@@ -27,7 +28,11 @@ namespace DontGetTheKey
 
         public bool Finished
         {
-            get { return message == msg; }
+            get 
+            {
+                string msgNoNew = Regex.Replace(msg, @"\n", "");
+                return message == msgNoNew;
+            }
         }
 
         public TypingMessage(SpriteBatch sb, ContentManager contentManager, string message)
@@ -39,7 +44,7 @@ namespace DontGetTheKey
         }
 
         public override void Update(GameTime gameTime) {
-            if (1000 / lps <= elapsed && part < parts.Length && msg != message) {
+            if (1000 / lps <= elapsed && !Finished) {
                 msg += Next();
                 SoundBank.Instance.play("typing");
                 elapsed = 0;
@@ -59,7 +64,8 @@ namespace DontGetTheKey
 
         public void Finish()
         {
-            msg = message;
+            while (!Finished)
+                msg += Next();
         }
 
         private char Next() {

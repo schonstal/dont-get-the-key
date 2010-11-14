@@ -66,13 +66,23 @@ namespace DontGetTheKey
 
             Random rng = new Random();
             int slot = 0;
+            int threshold = 6;
             foreach (KeyValuePair<string, ItemTuple> kvp in init) {
-                if (rng.Next(10) < 6 && slot < 8) {
+                if (rng.Next(10) < threshold && slot < 8)
+                {
                     items.Add(new Item(spriteBatch, content, kvp.Key,
                         slot, kvp.Value.name, kvp.Value.messages));
                     slot++;
-                } else if (slot == 8) {
+                    if(threshold > 1)
+                        threshold--;
+                }
+                else if (slot == 8)
+                {
                     break;
+                }
+                else
+                {
+                    threshold++;
                 }
             }
 

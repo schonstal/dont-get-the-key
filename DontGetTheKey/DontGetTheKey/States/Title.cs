@@ -16,8 +16,6 @@ namespace DontGetTheKey
 {
     public class Title : State
     {
-        bool startPressed = false;
-
         public Title(SpriteBatch sb, ContentManager content, Dictionary<string, Actor> actors)
             : base(sb, content) {
             this.actors = actors;

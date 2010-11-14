@@ -46,7 +46,7 @@ namespace DontGetTheKey
             {
                 if (Guide.IsTrialMode && !GameState.Instance.Easy) 
                 {
-                    SoundBank.Instance.play("hit_wall", 0.5f, 0, 0, false);
+                    SoundBank.Instance.play("nope", 0.5f, 0, 0, false);
                 }
                 else
                 {

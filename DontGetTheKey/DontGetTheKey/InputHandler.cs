@@ -25,9 +25,19 @@ namespace DontGetTheKey
                 return instance;
             }
         }
+        
+        private PlayerIndex player;
+        private Dictionary<PlayerIndex, Dictionary<string, bool>> prev;
+        private Dictionary<string, Keys> keyboard_map;
+        private Dictionary<string, Buttons> gamepad_map;
+
         private InputHandler() {
             // Previous input state
-            prev = new Dictionary<string, bool>();
+            prev = new Dictionary<PlayerIndex, Dictionary<string, bool>>();
+            prev[PlayerIndex.One] = new Dictionary<string, bool>();
+            prev[PlayerIndex.Two] = new Dictionary<string, bool>();
+            prev[PlayerIndex.Three] = new Dictionary<string, bool>();
+            prev[PlayerIndex.Four] = new Dictionary<string, bool>();
 
             // Map from string to actual keyboard key
             keyboard_map = new Dictionary<string, Keys>();
@@ -66,11 +76,6 @@ namespace DontGetTheKey
             gamepad_map["Right"] = Buttons.DPadRight;
         }
 
-        private PlayerIndex player;
-        private Dictionary<string, bool> prev;
-        private Dictionary<string, Keys> keyboard_map;
-        private Dictionary<string, Buttons> gamepad_map;
-
         public Vector2 RightStick {
             get { return GamePad.GetState(player).ThumbSticks.Right; }
         }
@@ -86,12 +91,12 @@ namespace DontGetTheKey
 
         //We needn't worry about multibutton
         public bool pressed(string button) {
-            if ((buttonMap(button, GamePad.GetState(player), Keyboard.GetState(player))) && prev != null && prev.ContainsKey(button) && (!prev[button]))
+            if ((buttonMap(button, GamePad.GetState(player), Keyboard.GetState(player))) && prev != null && prev[player].ContainsKey(button) && (!prev[player][button]))
             {
-                prev[button] = buttonMap(button, GamePad.GetState(player), Keyboard.GetState(player));
+                prev[player][button] = buttonMap(button, GamePad.GetState(player), Keyboard.GetState(player));
                 return true;
             }
-            prev[button] = buttonMap(button, GamePad.GetState(player), Keyboard.GetState(player));
+            prev[player][button] = buttonMap(button, GamePad.GetState(player), Keyboard.GetState(player));
             return false;
         }
 

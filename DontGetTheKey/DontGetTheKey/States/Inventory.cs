@@ -82,6 +82,10 @@ namespace DontGetTheKey
 
             Register("selector", new Selector(spriteBatch, content));
             Register("selected", new SelectedItem(spriteBatch, content));
+
+            ((SelectedItem)actors["selected"]).Set(
+                items[((Selector)actors["selector"]).Slot].Texture,
+                items[((Selector)actors["selector"]).Slot].Name);
         }
 
         public override void Update(GameTime gameTime) {

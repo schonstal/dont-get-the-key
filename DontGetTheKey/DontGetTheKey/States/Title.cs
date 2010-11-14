@@ -69,7 +69,7 @@ namespace DontGetTheKey
                 GameState.Instance.Enter(new StartPressed(spriteBatch, content, actors));
                 return true;
             }
-
+            InputHandler.Instance.Update();
             return false;
         }
     }

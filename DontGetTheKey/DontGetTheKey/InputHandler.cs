@@ -97,7 +97,6 @@ namespace DontGetTheKey
             {
                 press = true;
             }
-            prev[player][button] = buttonMap(button, GamePad.GetState(player), Keyboard.GetState(player));
             return press;
         }
 
@@ -146,6 +145,12 @@ namespace DontGetTheKey
             if (buttonMap(button, GamePad.GetState(player), Keyboard.GetState(player)))
                 return true;
             return false;
+        }
+
+        public void Update()
+        {
+            foreach (string button in gamepad_map.Keys)
+                prev[player][button] = buttonMap(button, GamePad.GetState(player), Keyboard.GetState(player));
         }
 
         //I'll have some dynamic programming, please. No? :(

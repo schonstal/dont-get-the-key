@@ -115,6 +115,7 @@ namespace DontGetTheKey
 
         protected override void Update(GameTime gameTime) {
             GameState.Instance.Update(gameTime);
+            InputHandler.Instance.Update();
             
             //Hack :)
             if (GameState.Instance.Terminate)

@@ -23,6 +23,8 @@ namespace DontGetTheKey
             : base(sb, contentManager) {
             this.actors = actors;
 
+            Register("push_a", new PushA(sb, contentManager));
+
             items = new List<Item>();
 
             Dictionary<string, ItemTuple> init = new Dictionary<string, ItemTuple>()
@@ -94,19 +96,20 @@ namespace DontGetTheKey
             if (InputHandler.Instance.pressed("A")) {
                 if (!actors.ContainsKey("description"))
                 {
+                    actors["push_a"].Priority = -1;
                     Register("description", new TypingMessage(spriteBatch, content,
                         items[((Selector)actors["selector"]).Slot].Info));
                 }
                 else
                 {
-                    actors.Remove("description");
+                    removeDescription();
                 }
             }
 
             //Remove description
             if (InputHandler.Instance.pressed("B")) 
                 if (actors.ContainsKey("description"))
-                    actors.Remove("description");
+                    removeDescription();
                 else
                     GameState.Instance.Enter(new InventoryDown(spriteBatch, content, actors));
 
@@ -114,11 +117,16 @@ namespace DontGetTheKey
             if (InputHandler.Instance.pressed("Start"))
             {
                 if (actors.ContainsKey("description"))
-                    actors.Remove("description");
+                    removeDescription();
                 GameState.Instance.Enter(new InventoryDown(spriteBatch, content, actors));
             }
 
             base.Update(gameTime);
+        }
+
+        void removeDescription() {
+            actors.Remove("description");
+            actors["push_a"].Priority = 1;
         }
 
         void select() {
@@ -159,7 +167,7 @@ namespace DontGetTheKey
 
         void moveEffect() {
             if (actors.ContainsKey("description"))
-                actors.Remove("description");
+                removeDescription();
             SoundBank.Instance.play("select", 0.8f, 0, 0, false);
         }
     }

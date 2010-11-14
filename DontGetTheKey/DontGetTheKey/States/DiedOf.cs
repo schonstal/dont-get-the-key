@@ -40,7 +40,7 @@ namespace DontGetTheKey
 
         private string reason() {
             Random rand = new Random();
-            List<String> reasons = new List<String>() { "STARVATION", "DYSENTERY", "DEHYDRATION", "OLD AGE", "A HEART ATTACK", "DIABETES", "AIDS", "POLIO", "POISON", "OBESITY", "SUFFOCATION", "SEIZURE" };
+            List<String> reasons = new List<String>() { "DYSENTERY", "DIABETES", "AIDS", "POLIO" };
             return reasons[rand.Next(reasons.Count-1)];
         }
     }

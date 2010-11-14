@@ -30,7 +30,9 @@ namespace DontGetTheKey
         }
 
         public override void Update(GameTime gameTime) {
-            if (InputHandler.Instance.pressed("Up") || InputHandler.Instance.pressed("Down")) {
+            if (InputHandler.Instance.pressed("Up") || InputHandler.Instance.pressed("Down") ||
+                InputHandler.Instance.stickPressed("LeftStick", "Up") || InputHandler.Instance.stickPressed("LeftStick", "Down"))
+            {
                 actors["key"].Move(new Vector2(0, (restart ? 16 : -16)));
                 restart = !restart;
                 SoundBank.Instance.play("select", 0.5f, 0, 0, false);

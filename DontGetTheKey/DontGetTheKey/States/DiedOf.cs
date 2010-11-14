@@ -32,7 +32,7 @@ namespace DontGetTheKey
         }
 
         public override void Update(GameTime gameTime) {
-            if ((InputHandler.Instance.pressed("A") || InputHandler.Instance.pressed("Start"))) {
+            if (InputHandler.Instance.pressed("Any")) {
                 GameState.Instance.Enter(new Restart(spriteBatch, content, actors));
             }
             base.Update(gameTime);

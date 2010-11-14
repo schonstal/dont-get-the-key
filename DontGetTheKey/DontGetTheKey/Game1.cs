@@ -81,6 +81,7 @@ namespace DontGetTheKey
             SoundBank.Instance.load("select");
             SoundBank.Instance.load("typing");
             SoundBank.Instance.load("nope");
+            SoundBank.Instance.load("sad_pause");
 
             ImageBank.Instance.loadFont("PressStart");
 

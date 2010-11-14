@@ -231,3 +231,4 @@ C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\
 C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\obj\x86\Debug\DontGetTheKey.exe
 C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\obj\x86\Debug\DontGetTheKey.pdb
+C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\push_a_to_use.xnb

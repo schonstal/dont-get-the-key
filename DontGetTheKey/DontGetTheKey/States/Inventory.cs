@@ -28,53 +28,38 @@ namespace DontGetTheKey
             Dictionary<string, ItemTuple> init = new Dictionary<string, ItemTuple>()
             {
                 {"bikelock", new ItemTuple {messages = new List<string>() { 
-                    "AREN'T YOU FORGETTING SOMETHING?", 
-                    "SURE, YOU SHOULD ALWAYS BE PREPARED, BUT YOU DON'T EVEN HAVE A BIKE"
+                    "WON'T OPEN WITHOUT A KEY"
                 }, name = "BIKE LOCK"}},
                 {"binoculars", new ItemTuple {messages = new List<string>() { 
-                    "THE LENS COVERS ARE LOCKED IN PLACE", 
-                    "REMEMBER TO DOUBLE-CHECK THE MERCHANDISE WHEN TRADING WITH PARANOID BIRD WATCHERS"
+                    "THE LENS COVERS ARE LOCKED IN PLACE"
                 }, name = "BINOCULARS"}},
                 {"goldpouch", new ItemTuple {messages = new List<string>() { 
-                    "YOU CAN'T OPEN THIS WITHOUT A KEY",
-                    "AT LEAST YOU'RE FINANCIALLY SECURE"
+                    "YOU CAN'T OPEN THIS WITHOUT A KEY"
                 }, name = "GOLD POUCH"}},
                 {"journal", new ItemTuple {messages = new List<string>() { 
-                    "IT WON'T OPEN WITHOUT A KEY",
-                    "AREN'T YOU A LITTLE OLD FOR GOSSIP?",
-                    "THE COVER READS \"PROPERTY OF LARRY LOCKSMITH\""
+                    "IT WON'T OPEN WITHOUT A KEY"
                 }, name = "JOURNAL"}},
                 {"keyrings", new ItemTuple {messages = new List<string>() { 
                     "YOU DON'T HAVE ANY KEYS", 
-                    "YOU CAN'T USE THESE WITHOUT A KEY",
-                    "JUST KEEP TELLING YOURSELF FIFTY KEYRINGS FOR A SINGLE GOLD PIECE WAS A GOOD DEAL"
+                    "YOU CAN'T USE THESE WITHOUT A KEY"
                 }, name = "KEYRINGS"}},
                 {"lockbox", new ItemTuple {messages = new List<string>() { 
-                    "IT'S LOCKED. WHAT A SURPRISE", 
-                    "IF ONLY YOU HAD A KEY...",
-                    "THAT SANDWICH IS PROBABLY MOLDY BY NOW ANYWAY"
+                    "IT'S LOCKED"
                 }, name = "LOCK BOX"}},
                 {"locket", new ItemTuple {messages = new List<string>() { 
-                    "IT'S FIRMLY CLOSED SHUT", 
-                    "IF YOU HAD A KEY, YOU MIGHT BE ABLE TO PRY IT OPEN",
-                    "AT THIS RATE, YOU'LL NEVER KNOW IF OLD MAN HAD A HOT WIFE"
+                    "IT'S LOCKED SHUT"
                 }, name = "LOCKET"}},
                 {"lockofhair", new ItemTuple {messages = new List<string>() { 
-                    "IT'S \"LOCKED\"",
-                    "IT'S A PUN",
-                    "WHAT DID YOU EXPECT IT TO DO?"
+                    "IT'S A PUN"
                 }, name = "HAIR LOCK"}},
                 {"lockpicks", new ItemTuple {messages = new List<string>() { 
-                    "THEY'RE BROKEN", 
-                    "STILL BROKEN..."
+                    "NOT ENOUGH SKILL"
                 }, name = "LOCK PICKS"}},
                 {"padlock", new ItemTuple {messages = new List<string>() { 
-                    "YOU NEED A KEY TO USE THIS",
-                    "WHY DON'T YOU HAVE A KEY YET?",
+                    "YOU NEED AT LEAST ONE KEY TO USE THIS"
                 }, name = "PAD LOCK"}},
                 {"rope", new ItemTuple {messages = new List<string>() { 
-                    "IT'S LOCKED?!",
-                    "THAT ROPE DEALER WAS AN ASSHOLE"
+                    "IT'S LOCKED"
                 }, name = "ROPE"}}
             };
 
@@ -107,9 +92,14 @@ namespace DontGetTheKey
 
             //Display description
             if (InputHandler.Instance.pressed("A")) {
-                if (!actors.ContainsKey("description")) {
+                if (!actors.ContainsKey("description"))
+                {
                     Register("description", new TypingMessage(spriteBatch, content,
                         items[((Selector)actors["selector"]).Slot].Info));
+                }
+                else
+                {
+                    actors.Remove("description");
                 }
             }
 
@@ -117,19 +107,23 @@ namespace DontGetTheKey
             if (InputHandler.Instance.pressed("B")) 
                 if (actors.ContainsKey("description"))
                     actors.Remove("description");
+                else
+                    GameState.Instance.Enter(new InventoryDown(spriteBatch, content, actors));
 
             //Remove description/leave inventory
             if (InputHandler.Instance.pressed("Start"))
+            {
                 if (actors.ContainsKey("description"))
                     actors.Remove("description");
-                else
-                    GameState.Instance.Enter(new InventoryDown(spriteBatch, content, actors));
+                GameState.Instance.Enter(new InventoryDown(spriteBatch, content, actors));
+            }
 
             base.Update(gameTime);
         }
 
         void select() {
-            if (InputHandler.Instance.pressed("Left")) {
+            if (InputHandler.Instance.pressed("Left") || InputHandler.Instance.stickPressed("LeftStick", "Left"))
+            {
                 if (((Selector)actors["selector"]).Slot > 0)
                     ((Selector)actors["selector"]).Slot--;
                 else
@@ -137,7 +131,8 @@ namespace DontGetTheKey
                 moveEffect();
             }
 
-            if (InputHandler.Instance.pressed("Right")) {
+            if (InputHandler.Instance.pressed("Right") || InputHandler.Instance.stickPressed("LeftStick", "Right"))
+            {
                 if (((Selector)actors["selector"]).Slot < items.Count - 1)
                     ((Selector)actors["selector"]).Slot++;
                 else
@@ -145,14 +140,16 @@ namespace DontGetTheKey
                 moveEffect();
             }
 
-            if (InputHandler.Instance.pressed("Up")) {
+            if (InputHandler.Instance.pressed("Up") || InputHandler.Instance.stickPressed("LeftStick", "Up"))
+            {
                 if (((Selector)actors["selector"]).Slot - 4 >= 0) {
                     ((Selector)actors["selector"]).Slot -= 4;
                     moveEffect();
                 }
             }
 
-            if (InputHandler.Instance.pressed("Down")) {
+            if (InputHandler.Instance.pressed("Down") || InputHandler.Instance.stickPressed("LeftStick", "Down"))
+            {
                 if (((Selector)actors["selector"]).Slot + 4 < items.Count) {
                     ((Selector)actors["selector"]).Slot += 4;
                     moveEffect();

@@ -397,6 +397,15 @@
       <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\typing.xnb</Output>
       <Time>2010-11-13T18:21:27.9837578-08:00</Time>
     </Item>
+    <Item>
+      <Source>push_a_to_use.png</Source>
+      <Name>push_a_to_use</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\push_a_to_use.xnb</Output>
+      <Time>2010-11-13T21:14:03.7620781-08:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

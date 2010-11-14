@@ -23,7 +23,7 @@ namespace DontGetTheKey
         public Key(SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, string texture, Rectangle box)
             : base(sb, contentManager, pos, texture, box) {
-                priority = 3;
+                priority = 4;
                 return;
         }
 

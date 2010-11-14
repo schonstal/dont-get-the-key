@@ -25,6 +25,7 @@ namespace DontGetTheKey
             Vector2 pos, string texture, Rectangle box)
             : base(sb, contentManager, pos, texture, box) {
             target = new Rectangle(0, 0, 16, 32);
+            this.priority = 1;
         }
 
         public override void Update(GameTime gameTime) {

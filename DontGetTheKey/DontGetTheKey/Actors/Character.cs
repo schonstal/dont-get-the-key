@@ -83,7 +83,7 @@ namespace DontGetTheKey
         public Character(SpriteBatch sb, ContentManager contentManager,
             Vector2 pos, string texture, Rectangle box)
             : base(sb, contentManager, pos, texture, box) {      
-                priority = 2;
+                priority = 3;
                 target = new Rectangle(0, 0, 16, 16);
                 ptm = new Vector2(0, 0);
 

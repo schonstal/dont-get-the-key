@@ -54,6 +54,9 @@ namespace DontGetTheKey
                     )
                 );
 
+            actors["clear_left"].Priority = 2;
+            actors["clear_right"].Priority = 2;
+
             Register("got_key", new Message(sb, contentManager, "YOU GOT THE KEY!"));
             SoundBank.Instance.stop("bgmusic");
             SoundBank.Instance.stop("bgmusic_fast");

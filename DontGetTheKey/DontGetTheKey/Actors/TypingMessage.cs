@@ -16,6 +16,7 @@ namespace DontGetTheKey
 {
     class TypingMessage : Actor
     {
+        string message;
         string msg;
         float lps = 30.0f;
         char[] delim = { ' ' };
@@ -24,14 +25,21 @@ namespace DontGetTheKey
         int length = 0;
         int index = 0;
 
+        public bool Finished
+        {
+            get { return message == msg; }
+        }
+
         public TypingMessage(SpriteBatch sb, ContentManager contentManager, string message)
-            : base(sb, contentManager, new Vector2(64,132), "", new Rectangle(0,0,0,0)) {
+            : base(sb, contentManager, new Vector2(64, 132), "", new Rectangle(0, 0, 0, 0))
+        {
+            this.message = message;
             parts = message.Split(delim);
             msg = "";
         }
 
         public override void Update(GameTime gameTime) {
-            if (1000 / lps <= elapsed && part < parts.Length) {
+            if (1000 / lps <= elapsed && part < parts.Length && msg != message) {
                 msg += Next();
                 SoundBank.Instance.play("typing");
                 elapsed = 0;
@@ -47,6 +55,11 @@ namespace DontGetTheKey
         public override void Celebrate() {
             cframe = 1;
             base.Celebrate();
+        }
+
+        public void Finish()
+        {
+            msg = message;
         }
 
         private char Next() {

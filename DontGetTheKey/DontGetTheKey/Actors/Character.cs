@@ -210,7 +210,6 @@ namespace DontGetTheKey
             Freeze();
             offset = 4;
             frame = 0;
-            SoundBank.Instance.play("pickup_key");
         }
 
         private void Punt(GameTime gameTime) {

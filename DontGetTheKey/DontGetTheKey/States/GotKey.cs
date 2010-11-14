@@ -26,6 +26,9 @@ namespace DontGetTheKey
         public GotKey(SpriteBatch sb, ContentManager contentManager, 
             Dictionary<string, Actor> actors)
             : base(sb, contentManager) {
+            
+            SoundBank.Instance.play("pickup_key");
+
             this.actors = actors;
             actors.Remove("key_shadow");
 

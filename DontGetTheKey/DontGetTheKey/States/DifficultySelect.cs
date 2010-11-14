@@ -37,17 +37,21 @@ namespace DontGetTheKey
         public override void Update(GameTime gameTime) {
             if (InputHandler.Instance.pressed("Up") || InputHandler.Instance.pressed("Down"))
             {
-                if (!Guide.IsTrialMode)
-                {
-                    SoundBank.Instance.play("select", 0.5f, 0, 0, false);
-                    actors["key"].Move(new Vector2(0, (GameState.Instance.Easy ? 16 : -16)));
-                    GameState.Instance.Easy = !GameState.Instance.Easy;
-                }
+                SoundBank.Instance.play("select", 0.5f, 0, 0, false);
+                actors["key"].Move(new Vector2(0, (GameState.Instance.Easy ? 16 : -16)));
+                GameState.Instance.Easy = !GameState.Instance.Easy;
             }
             else if (InputHandler.Instance.pressed("Start"))
             {
-                SoundBank.Instance.play("start", 0.5f, 0, 0, false);
-                GameState.Instance.Enter(new WalkingOver(spriteBatch, content, actors));
+                if (Guide.IsTrialMode && !GameState.Instance.Easy) 
+                {
+                    SoundBank.Instance.play("hit_wall", 0.5f, 0, 0, false);
+                }
+                else
+                {
+                    SoundBank.Instance.play("pickup_key", 1.0f, 0, 0, false);
+                    GameState.Instance.Enter(new WalkingOver(spriteBatch, content, actors));
+                }
             }
             base.Update(gameTime);
         }

@@ -69,7 +69,6 @@
     <Compile Include="Actor.cs" />
     <Compile Include="Actors\Background.cs" />
     <Compile Include="Actors\Character.cs" />
-    <Compile Include="Actors\PushA.cs" />
     <Compile Include="Actors\Door.cs" />
     <Compile Include="Actors\Item.cs" />
     <Compile Include="Actors\Key.cs" />

@@ -21,6 +21,7 @@ namespace DontGetTheKey
             : base(sb, contentManager) {
             this.actors = actors;
 
+            SoundBank.Instance.play("sad_pause", 0.8f, 0, 0, false);
             foreach (KeyValuePair<string, Actor> kvp in actors)
                 kvp.Value.Tween(new Vector2(kvp.Value.Position.X, kvp.Value.Position.Y - 184), 1.2);
         }

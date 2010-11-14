@@ -397,6 +397,24 @@
       <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\typing.xnb</Output>
       <Time>2010-11-13T18:21:27.9837578-08:00</Time>
     </Item>
+    <Item>
+      <Source>sad_pause.wav</Source>
+      <Name>sad_pause</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\sad_pause.xnb</Output>
+      <Time>2010-11-14T13:54:39.7844218-08:00</Time>
+    </Item>
+    <Item>
+      <Source>nope.wav</Source>
+      <Name>nope</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\nope.xnb</Output>
+      <Time>2010-11-14T13:48:51.2541484-08:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

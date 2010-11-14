@@ -30,6 +30,7 @@ namespace DontGetTheKey
         private Dictionary<PlayerIndex, Dictionary<string, bool>> prev;
         private Dictionary<string, Keys> keyboard_map;
         private Dictionary<string, Buttons> gamepad_map;
+        float sensitivity = 0.3f;
 
         private InputHandler() {
             // Previous input state
@@ -91,13 +92,53 @@ namespace DontGetTheKey
 
         //We needn't worry about multibutton
         public bool pressed(string button) {
+            bool press = false;
             if ((buttonMap(button, GamePad.GetState(player), Keyboard.GetState(player))) && prev != null && prev[player].ContainsKey(button) && (!prev[player][button]))
             {
-                prev[player][button] = buttonMap(button, GamePad.GetState(player), Keyboard.GetState(player));
-                return true;
+                press = true;
             }
             prev[player][button] = buttonMap(button, GamePad.GetState(player), Keyboard.GetState(player));
-            return false;
+            return press;
+        }
+
+        public bool stickPressed(string stick, string direction)
+        {
+            Vector2 orientation;
+            bool press = false;
+            bool held = true;
+            string id = stick + direction;
+
+            if(stick == "RightStick")
+                orientation = RightStick;
+            else if(stick == "LeftStick")
+                orientation = LeftStick;
+            else
+                return false;
+
+            switch (direction)
+            {
+                case "Up":
+                    held = orientation.Y > sensitivity;
+                    break;
+                case "Down":
+                    held = orientation.Y < -sensitivity;
+                    break;
+                case "Right":
+                    held = orientation.X > sensitivity;
+                    break;
+                case "Left":
+                    held = orientation.X < -sensitivity;
+                    break;
+
+            }
+
+            if(prev != null && prev[player].ContainsKey(id) && !prev[player][id] && held) {
+                press = true; 
+            }
+
+            prev[player][id] = held;
+
+            return press;
         }
 
 

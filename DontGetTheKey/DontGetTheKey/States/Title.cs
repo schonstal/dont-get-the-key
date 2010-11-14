@@ -42,8 +42,6 @@ namespace DontGetTheKey
                     new Rectangle(0, 0, 0, 0)
                     )
                 );
-            //Hack :(
-            startPressed = true;
         }
 
         public override void Update(GameTime gameTime) {
@@ -66,19 +64,12 @@ namespace DontGetTheKey
             InputHandler.Instance.Player = p;
             if (InputHandler.Instance.pressed("Start"))
             {
-                if (startPressed == false)
-                {
-                    SoundBank.Instance.play("start");
-                    SoundBank.Instance.stop("menu");
-                    SoundBank.Instance.stop("titlemusic_main");
-                    GameState.Instance.Enter(new StartPressed(spriteBatch, content, actors));
-                    return true;
-                }
-                startPressed = true;
-            }
-            else
-            {
-                startPressed = false;
+
+                SoundBank.Instance.play("start");
+                SoundBank.Instance.stop("menu");
+                SoundBank.Instance.stop("titlemusic_main");
+                GameState.Instance.Enter(new StartPressed(spriteBatch, content, actors));
+                return true;
             }
 
             return false;

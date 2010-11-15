@@ -151,6 +151,7 @@ namespace DontGetTheKey
         {
             foreach (string button in gamepad_map.Keys)
                 prev[player][button] = buttonMap(button, GamePad.GetState(player), Keyboard.GetState(player));
+            prev[player]["Any"] = buttonMap("Any", GamePad.GetState(player), Keyboard.GetState(player));
         }
 
         //I'll have some dynamic programming, please. No? :(

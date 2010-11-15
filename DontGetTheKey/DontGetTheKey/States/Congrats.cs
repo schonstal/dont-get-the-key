@@ -16,6 +16,7 @@ namespace DontGetTheKey
 {
     class Congrats : State
     {
+        int time = 1000;
         public Congrats(SpriteBatch sb, ContentManager contentManager, 
             Dictionary<string, Actor> actors)
             : base(sb, contentManager) {
@@ -29,8 +30,10 @@ namespace DontGetTheKey
         }
 
         public override void Update(GameTime gameTime) {
-            if (InputHandler.Instance.pressed("Any"))
+            if (InputHandler.Instance.pressed("Any") && time <= 0)
                 GameState.Instance.Enter(new DiedOf(spriteBatch, content, actors));
+            else
+                time -= gameTime.ElapsedGameTime.Milliseconds;
             base.Update(gameTime);
         }
     }

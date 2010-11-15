@@ -7,8 +7,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\PressStart.xnb</Output>
-      <Time>2010-11-13T18:21:27.782586-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\PressStart.xnb</Output>
+      <Time>2010-11-13T20:29:05.6411539-08:00</Time>
     </Item>
     <Item>
       <Source>background.PNG</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\background.xnb</Output>
-      <Time>2010-11-14T16:02:44.2189922-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\background.xnb</Output>
+      <Time>2010-11-14T12:22:25.7651437-08:00</Time>
     </Item>
     <Item>
       <Source>key.PNG</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\key.xnb</Output>
-      <Time>2010-11-13T18:21:27.885125-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\key.xnb</Output>
+      <Time>2010-11-13T20:29:05.7241587-08:00</Time>
     </Item>
     <Item>
       <Source>character.PNG</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\character.xnb</Output>
-      <Time>2010-11-13T18:21:27.8148125-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\character.xnb</Output>
+      <Time>2010-11-13T20:29:05.6831563-08:00</Time>
     </Item>
     <Item>
       <Source>title.png</Source>
@@ -43,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\title.xnb</Output>
-      <Time>2010-11-13T18:21:27.9202813-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\title.xnb</Output>
+      <Time>2010-11-13T20:29:05.7741615-08:00</Time>
     </Item>
     <Item>
       <Source>key_shadow.png</Source>
@@ -52,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\key_shadow.xnb</Output>
-      <Time>2010-11-13T18:21:27.885125-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\key_shadow.xnb</Output>
+      <Time>2010-11-13T20:29:05.7251587-08:00</Time>
     </Item>
     <Item>
       <Source>door.png</Source>
@@ -61,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\door.xnb</Output>
-      <Time>2010-11-13T18:21:27.829461-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\door.xnb</Output>
+      <Time>2010-11-13T20:29:05.7021574-08:00</Time>
     </Item>
     <Item>
       <Source>lives.png</Source>
@@ -70,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\lives.xnb</Output>
-      <Time>2010-11-13T18:21:27.885125-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\lives.xnb</Output>
+      <Time>2010-11-13T20:29:05.7261588-08:00</Time>
     </Item>
     <Item>
       <Source>chest.png</Source>
@@ -79,8 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\chest.xnb</Output>
-      <Time>2010-11-13T18:21:27.8148125-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\chest.xnb</Output>
+      <Time>2010-11-13T20:29:05.6841564-08:00</Time>
     </Item>
     <Item>
       <Source>gravestone.png</Source>
@@ -88,8 +88,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\gravestone.xnb</Output>
-      <Time>2010-11-13T18:21:27.8460625-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\gravestone.xnb</Output>
+      <Time>2010-11-13T20:29:05.7151582-08:00</Time>
     </Item>
     <Item>
       <Source>button_a.png</Source>
@@ -97,8 +97,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\button_a.xnb</Output>
-      <Time>2010-11-13T18:21:27.8148125-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\button_a.xnb</Output>
+      <Time>2010-11-13T20:29:05.6821563-08:00</Time>
     </Item>
     <Item>
       <Source>item_bikelock.png</Source>
@@ -106,8 +106,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_bikelock.xnb</Output>
-      <Time>2010-11-13T18:21:27.8480156-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_bikelock.xnb</Output>
+      <Time>2010-11-13T20:29:05.7171583-08:00</Time>
     </Item>
     <Item>
       <Source>item_journal.png</Source>
@@ -115,8 +115,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_journal.xnb</Output>
-      <Time>2010-11-13T18:21:27.8489922-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_journal.xnb</Output>
+      <Time>2010-11-13T20:29:05.7191584-08:00</Time>
     </Item>
     <Item>
       <Source>item_lockbox.png</Source>
@@ -124,8 +124,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_lockbox.xnb</Output>
-      <Time>2010-11-13T18:21:27.8499688-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_lockbox.xnb</Output>
+      <Time>2010-11-13T20:29:05.7211585-08:00</Time>
     </Item>
     <Item>
       <Source>item_locket.png</Source>
@@ -133,8 +133,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_locket.xnb</Output>
-      <Time>2010-11-13T18:21:27.8499688-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_locket.xnb</Output>
+      <Time>2010-11-13T20:29:05.7211585-08:00</Time>
     </Item>
     <Item>
       <Source>item_binoculars.png</Source>
@@ -142,8 +142,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_binoculars.xnb</Output>
-      <Time>2010-11-13T18:21:27.8489922-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_binoculars.xnb</Output>
+      <Time>2010-11-13T20:29:05.7181583-08:00</Time>
     </Item>
     <Item>
       <Source>item_goldpouch.png</Source>
@@ -151,8 +151,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_goldpouch.xnb</Output>
-      <Time>2010-11-13T18:21:27.8489922-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_goldpouch.xnb</Output>
+      <Time>2010-11-13T20:29:05.7191584-08:00</Time>
     </Item>
     <Item>
       <Source>item_keyrings.png</Source>
@@ -160,8 +160,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_keyrings.xnb</Output>
-      <Time>2010-11-13T18:21:27.8489922-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_keyrings.xnb</Output>
+      <Time>2010-11-13T20:29:05.7201585-08:00</Time>
     </Item>
     <Item>
       <Source>item_lockofhair.png</Source>
@@ -169,8 +169,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_lockofhair.xnb</Output>
-      <Time>2010-11-13T18:21:27.8499688-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_lockofhair.xnb</Output>
+      <Time>2010-11-13T20:29:05.7221586-08:00</Time>
     </Item>
     <Item>
       <Source>item_lockpicks.png</Source>
@@ -178,8 +178,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_lockpicks.xnb</Output>
-      <Time>2010-11-13T18:21:27.8499688-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_lockpicks.xnb</Output>
+      <Time>2010-11-13T20:29:05.7221586-08:00</Time>
     </Item>
     <Item>
       <Source>item_padlock.png</Source>
@@ -187,8 +187,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_padlock.xnb</Output>
-      <Time>2010-11-13T18:21:27.8841485-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_padlock.xnb</Output>
+      <Time>2010-11-13T20:29:05.7231586-08:00</Time>
     </Item>
     <Item>
       <Source>item_rope.png</Source>
@@ -196,8 +196,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_rope.xnb</Output>
-      <Time>2010-11-13T18:21:27.8841485-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\item_rope.xnb</Output>
+      <Time>2010-11-13T20:29:05.7241587-08:00</Time>
     </Item>
     <Item>
       <Source>selector.png</Source>
@@ -205,8 +205,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\selector.xnb</Output>
-      <Time>2010-11-13T18:21:27.9183281-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\selector.xnb</Output>
+      <Time>2010-11-13T20:29:05.7671611-08:00</Time>
     </Item>
     <Item>
       <Source>blackbar.PNG</Source>
@@ -214,8 +214,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\blackbar.xnb</Output>
-      <Time>2010-11-13T18:21:27.813836-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\blackbar.xnb</Output>
+      <Time>2010-11-13T20:29:05.6821563-08:00</Time>
     </Item>
     <Item>
       <Source>statcover.PNG</Source>
@@ -223,8 +223,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\statcover.xnb</Output>
-      <Time>2010-11-13T18:21:27.9193047-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\statcover.xnb</Output>
+      <Time>2010-11-13T20:29:05.7721614-08:00</Time>
     </Item>
     <Item>
       <Source>swipe.PNG</Source>
@@ -232,8 +232,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\swipe.xnb</Output>
-      <Time>2010-11-13T18:21:27.9193047-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\swipe.xnb</Output>
+      <Time>2010-11-13T20:29:05.7731615-08:00</Time>
     </Item>
     <Item>
       <Source>door_locked.wav</Source>
@@ -241,8 +241,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\door_locked.xnb</Output>
-      <Time>2010-11-13T18:21:27.8304375-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\door_locked.xnb</Output>
+      <Time>2010-11-13T20:29:05.7031575-08:00</Time>
     </Item>
     <Item>
       <Source>pickup_key.wav</Source>
@@ -250,8 +250,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\pickup_key.xnb</Output>
-      <Time>2010-11-13T18:21:27.9173516-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\pickup_key.xnb</Output>
+      <Time>2010-11-13T20:29:05.7661611-08:00</Time>
     </Item>
     <Item>
       <Source>walk1.wav</Source>
@@ -259,8 +259,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\walk1.xnb</Output>
-      <Time>2010-11-13T18:21:27.9837578-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\walk1.xnb</Output>
+      <Time>2010-11-13T20:29:05.8131638-08:00</Time>
     </Item>
     <Item>
       <Source>walk2.wav</Source>
@@ -268,8 +268,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\walk2.xnb</Output>
-      <Time>2010-11-13T18:21:27.9837578-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\walk2.xnb</Output>
+      <Time>2010-11-13T20:29:05.8141638-08:00</Time>
     </Item>
     <Item>
       <Source>door_close.wav</Source>
@@ -277,8 +277,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\door_close.xnb</Output>
-      <Time>2010-11-13T18:21:27.829461-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\door_close.xnb</Output>
+      <Time>2010-11-13T20:29:05.7031575-08:00</Time>
     </Item>
     <Item>
       <Source>hit_wall.wav</Source>
@@ -286,8 +286,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\hit_wall.xnb</Output>
-      <Time>2010-11-13T18:21:27.8460625-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\hit_wall.xnb</Output>
+      <Time>2010-11-13T20:29:05.7171583-08:00</Time>
     </Item>
     <Item>
       <Source>start.wav</Source>
@@ -295,8 +295,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\start.xnb</Output>
-      <Time>2010-11-13T18:21:27.9193047-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\start.xnb</Output>
+      <Time>2010-11-13T20:29:05.7721614-08:00</Time>
     </Item>
     <Item>
       <Source>bgmusic.wav</Source>
@@ -304,8 +304,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\bgmusic.xnb</Output>
-      <Time>2010-11-13T18:21:27.8030938-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\bgmusic.xnb</Output>
+      <Time>2010-11-13T20:29:05.6671554-08:00</Time>
     </Item>
     <Item>
       <Source>bgmusic_fast.wav</Source>
@@ -313,8 +313,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\bgmusic_fast.xnb</Output>
-      <Time>2010-11-13T18:21:27.813836-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\bgmusic_fast.xnb</Output>
+      <Time>2010-11-13T20:29:05.6741558-08:00</Time>
     </Item>
     <Item>
       <Source>titlemusic_intro.wav</Source>
@@ -322,8 +322,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\titlemusic_intro.xnb</Output>
-      <Time>2010-11-13T18:21:27.9427422-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\titlemusic_intro.xnb</Output>
+      <Time>2010-11-13T20:29:05.7841621-08:00</Time>
     </Item>
     <Item>
       <Source>titlemusic_main.wav</Source>
@@ -331,8 +331,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\titlemusic_main.xnb</Output>
-      <Time>2010-11-13T18:21:27.9818047-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\titlemusic_main.xnb</Output>
+      <Time>2010-11-13T20:29:05.8111637-08:00</Time>
     </Item>
     <Item>
       <Source>menu.wav</Source>
@@ -340,8 +340,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\menu.xnb</Output>
-      <Time>2010-11-13T18:21:27.8861016-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\menu.xnb</Output>
+      <Time>2010-11-13T20:29:05.7261588-08:00</Time>
     </Item>
     <Item>
       <Source>pause.wav</Source>
@@ -349,8 +349,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\pause.xnb</Output>
-      <Time>2010-11-13T18:21:27.916375-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\pause.xnb</Output>
+      <Time>2010-11-13T20:29:05.765161-08:00</Time>
     </Item>
     <Item>
       <Source>chest_locked.wav</Source>
@@ -358,8 +358,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\chest_locked.xnb</Output>
-      <Time>2010-11-13T18:21:27.8148125-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\chest_locked.xnb</Output>
+      <Time>2010-11-13T20:29:05.6911568-08:00</Time>
     </Item>
     <Item>
       <Source>game_over.wav</Source>
@@ -367,8 +367,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\game_over.xnb</Output>
-      <Time>2010-11-13T18:21:27.8353203-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\game_over.xnb</Output>
+      <Time>2010-11-13T20:29:05.7071577-08:00</Time>
     </Item>
     <Item>
       <Source>congrats.wav</Source>
@@ -376,8 +376,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\congrats.xnb</Output>
-      <Time>2010-11-13T18:21:27.8284844-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\congrats.xnb</Output>
+      <Time>2010-11-13T20:29:05.7011574-08:00</Time>
     </Item>
     <Item>
       <Source>select.wav</Source>
@@ -385,8 +385,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\select.xnb</Output>
-      <Time>2010-11-13T18:21:27.9173516-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\select.xnb</Output>
+      <Time>2010-11-13T20:29:05.7661611-08:00</Time>
     </Item>
     <Item>
       <Source>typing.wav</Source>
@@ -394,8 +394,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\typing.xnb</Output>
-      <Time>2010-11-13T18:21:27.9837578-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\typing.xnb</Output>
+      <Time>2010-11-13T20:29:05.8121637-08:00</Time>
     </Item>
     <Item>
       <Source>sad_pause.wav</Source>
@@ -403,8 +403,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\sad_pause.xnb</Output>
-      <Time>2010-11-14T13:54:39.7844218-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\sad_pause.xnb</Output>
+      <Time>2010-11-14T15:58:27.8013162-08:00</Time>
     </Item>
     <Item>
       <Source>nope.wav</Source>
@@ -412,8 +412,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\nope.xnb</Output>
-      <Time>2010-11-14T13:48:51.2541484-08:00</Time>
+      <Output>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\nope.xnb</Output>
+      <Time>2010-11-14T15:58:27.7993161-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -421,39 +421,39 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\Content\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\Content\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\randrord\dont-get-the-key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\Content\</RootDirectory>
+      <LoggerRootDirectory>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\</LoggerRootDirectory>
+      <IntermediateDirectory>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\Content\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>D:\Incredible Ape\Projects\Don't Get The Key\dont-get-the-key\DontGetTheKey\DontGetTheKey\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
-        <Value>2010-08-23T12:41:18-07:00</Value>
+        <Value>2010-08-23T13:41:18-07:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
-        <Value>2010-08-23T12:41:18-07:00</Value>
+        <Value>2010-08-23T13:41:18-07:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
-        <Value>2010-08-23T12:41:18-07:00</Value>
+        <Value>2010-08-23T13:41:18-07:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
-        <Value>2010-08-23T12:41:18-07:00</Value>
+        <Value>2010-08-23T13:41:18-07:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
-        <Value>2010-08-23T12:41:18-07:00</Value>
+        <Value>2010-08-23T13:41:18-07:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
-        <Value>2010-08-23T12:41:18-07:00</Value>
+        <Value>2010-08-23T13:41:18-07:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2010-10-29T14:27:27.6234375-07:00</Value>
+        <Value>2010-11-14T11:37:46.0468759-08:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

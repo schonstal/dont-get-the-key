@@ -42,17 +42,17 @@ namespace DontGetTheKey
 
             // Map from string to actual keyboard key
             keyboard_map = new Dictionary<string, Keys>();
-            keyboard_map["A"] = Keys.Z;
-            keyboard_map["B"] = Keys.X;
-            keyboard_map["X"] = Keys.C;
-            keyboard_map["Y"] = Keys.V;
-            keyboard_map["Back"] = Keys.Q;
-            keyboard_map["BigButton"] = Keys.W;
+            keyboard_map["A"] = Keys.A;
+            keyboard_map["B"] = Keys.S;
+            keyboard_map["X"] = Keys.Q;
+            keyboard_map["Y"] = Keys.W;
+            keyboard_map["Back"] = Keys.O;
+            keyboard_map["BigButton"] = Keys.P;
             keyboard_map["LeftShoulder"] = Keys.E;
             keyboard_map["RightShoulder"] = Keys.R;
             keyboard_map["LeftStick"] = Keys.S;
             keyboard_map["RightStick"] = Keys.D;
-            keyboard_map["Start"] = Keys.A;
+            keyboard_map["Start"] = Keys.Enter;
             keyboard_map["Up"] = Keys.Up;
             keyboard_map["Down"] = Keys.Down;
             keyboard_map["Left"] = Keys.Left;
@@ -154,7 +154,6 @@ namespace DontGetTheKey
             prev[player]["Any"] = buttonMap("Any", GamePad.GetState(player), Keyboard.GetState(player));
         }
 
-        //I'll have some dynamic programming, please. No? :(
         private bool buttonMap(string button, GamePadState state, KeyboardState kbstate) {
             // Check for any key press
             if (button.Equals("Any"))

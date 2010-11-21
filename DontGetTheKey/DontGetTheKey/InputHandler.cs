@@ -93,7 +93,7 @@ namespace DontGetTheKey
         //We needn't worry about multibutton
         public bool pressed(string button) {
             bool press = false;
-            if ((buttonMap(button, GamePad.GetState(player), Keyboard.GetState(player))) && prev != null && prev[player].ContainsKey(button) && (!prev[player][button]))
+            if (buttonMap(button) && prev != null && prev[player].ContainsKey(button) && (!prev[player][button]))
             {
                 press = true;
             }
@@ -142,7 +142,7 @@ namespace DontGetTheKey
 
 
         public bool held(string button) {
-            if (buttonMap(button, GamePad.GetState(player), Keyboard.GetState(player)))
+            if (buttonMap(button))
                 return true;
             return false;
         }
@@ -150,11 +150,14 @@ namespace DontGetTheKey
         public void Update()
         {
             foreach (string button in gamepad_map.Keys)
-                prev[player][button] = buttonMap(button, GamePad.GetState(player), Keyboard.GetState(player));
-            prev[player]["Any"] = buttonMap("Any", GamePad.GetState(player), Keyboard.GetState(player));
+                prev[player][button] = buttonMap(button);
+            prev[player]["Any"] = buttonMap("Any");
         }
 
-        private bool buttonMap(string button, GamePadState state, KeyboardState kbstate) {
+        private bool buttonMap(string button) {
+            GamePadState state =  GamePad.GetState(player);
+            KeyboardState kbstate = Keyboard.GetState(player);
+            
             // Check for any key press
             if (button.Equals("Any"))
             {

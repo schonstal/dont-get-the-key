@@ -58,7 +58,9 @@ namespace DontGetTheKey
             base.Update(gameTime);
         }
 
-        private bool pokeInput(PlayerIndex p) {
+        private bool pokeInput(PlayerIndex p) {         
+            
+         
             InputHandler.Instance.Player = p;
             if (InputHandler.Instance.pressed("Start"))
             {

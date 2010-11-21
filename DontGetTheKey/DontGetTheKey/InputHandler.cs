@@ -174,7 +174,7 @@ namespace DontGetTheKey
             }
             else // Check the gamepad and keyboard
             {
-                if (state.IsButtonDown(gamepad_map[button]) || kbstate.IsKeyDown(keyboard_map[button]))
+                if (state.IsButtonDown(gamepad_map[button]) || (kbstate.IsKeyDown(keyboard_map[button]) && player == PlayerIndex.One))
                     return true;
             }
             return false;

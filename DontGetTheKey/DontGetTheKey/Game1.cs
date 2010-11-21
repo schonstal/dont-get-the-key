@@ -27,14 +27,14 @@ namespace DontGetTheKey
             graphics.PreferredBackBufferWidth = 320;
             graphics.PreferredBackBufferHeight = 240;
             Content.RootDirectory = "Content";
-            this.Window.AllowUserResizing = true;
-            this.Window.ClientSizeChanged += new EventHandler<EventArgs>(this.Window_ClientSizeChanged);
+            //this.Window.AllowUserResizing = true;
+            //this.Window.ClientSizeChanged += new EventHandler<EventArgs>(this.Window_ClientSizeChanged);
 
             // Guide init
-            //Components.Add(new GamerServicesComponent(this));
+            Components.Add(new GamerServicesComponent(this));
 
             // Uncomment to test trial mode
-            //Guide.SimulateTrialMode = true; 
+            Guide.SimulateTrialMode = false; 
 
         }
 

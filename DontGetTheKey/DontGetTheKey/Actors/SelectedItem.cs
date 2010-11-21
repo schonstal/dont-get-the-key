@@ -19,7 +19,6 @@ namespace DontGetTheKey
     {
         string item = "";
         string name = "";
-        bool moved = false;
         Vector2 textPos;
 
 

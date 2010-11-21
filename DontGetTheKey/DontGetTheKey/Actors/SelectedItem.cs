@@ -19,23 +19,31 @@ namespace DontGetTheKey
     {
         string item = "";
         string name = "";
+        bool moved = false;
         Vector2 textPos;
+
 
         public SelectedItem(SpriteBatch sb, ContentManager contentManager)
             : base(sb, contentManager, new Vector2(224,-140), "item_rope", new Rectangle(0,0,0,0)) {
             textPos = new Vector2(0, 0);
         }
 
+
+        public override void Move(Vector2 amount)
+        {
+            position += amount;
+            textPos += amount;
+        }
+
         public override void Update(GameTime gameTime) {
+            base.Update(gameTime);
             textPos.X = (position.X + 8) - (name.Length * 4);
             textPos.Y = position.Y + 22;
-            base.Update(gameTime);
         }
 
         public override void Draw(GameTime gameTime) {
             if (item != "")
                 spriteBatch.Draw(ImageBank.Instance.texture("item_" + item), position, color);
-
             spriteBatch.DrawString(ImageBank.Instance.font, name, textPos, color);
         }
 

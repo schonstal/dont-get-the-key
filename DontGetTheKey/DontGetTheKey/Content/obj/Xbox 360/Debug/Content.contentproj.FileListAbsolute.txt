@@ -1,3 +1,0 @@
-C:\DON'T GET THE KEY\DontGetTheKey\DontGetTheKey\Content\obj\Xbox 360\Debug\ResolveAssemblyReference.cache
-C:\DON'T GET THE KEY\dgtk\trunk\DontGetTheKey\DontGetTheKey\Content\obj\Xbox 360\Debug\ResolveAssemblyReference.cache
-C:\Users\randrord\Documents\DGTK\dgtk\trunk\DontGetTheKey\DontGetTheKey\Content\obj\Xbox 360\Debug\ResolveAssemblyReference.cache

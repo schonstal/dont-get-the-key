@@ -83,6 +83,10 @@ namespace DontGetTheKey
             SoundBank.Instance.load("nope");
             SoundBank.Instance.load("sad_pause");
 
+            //Keeps sound playing so the 360 doesn't fade sounds in when no sounds are playing
+            SoundBank.Instance.load("tone");
+            SoundBank.Instance.play("tone", 0.000546875f, 1.0f, 0.0f, true);
+
             ImageBank.Instance.loadFont("PressStart");
 
             ImageBank.Instance.load("character");

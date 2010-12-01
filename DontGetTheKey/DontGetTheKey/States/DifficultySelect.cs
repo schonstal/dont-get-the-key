@@ -32,6 +32,8 @@ namespace DontGetTheKey
             actors["easy"].Move(new Vector2(0, 80));
             actors["hard"].Move(new Vector2(0, 96));
             Register("key", new Key(sb, content, new Vector2(127, 175), "key", new Rectangle(0, 0, 0, 0)));
+
+            GameState.Instance.Easy = true;
         }
 
         public override void Update(GameTime gameTime) {

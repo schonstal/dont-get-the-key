@@ -35,7 +35,7 @@ namespace DontGetTheKey
 
         public override void Update(GameTime gameTime) {
             elapsed += gameTime.ElapsedGameTime.Milliseconds;
-            if (elapsed >= 2000 || InputHandler.Instance.pressed("Any"))
+            if (elapsed >= 2000)
             {
                 if(Guide.IsTrialMode)
                     GameState.Instance.Enter(new HowToPlay(spriteBatch, content));

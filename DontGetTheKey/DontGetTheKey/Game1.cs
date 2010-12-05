@@ -49,7 +49,7 @@ namespace DontGetTheKey
             float screenscalew = 1f;
             float screenscaleh = 1f;
             spriteScale = Matrix.CreateScale(screenscalew, screenscaleh, 1);
-            GameState.Instance.Enter(new Intro(spriteBatch, Content));
+            GameState.Instance.Enter(new Logo(spriteBatch, Content));
             ImageBank.Instance.Content = Content;
             SoundBank.Instance.Content = Content;
             base.Initialize();
@@ -88,6 +88,10 @@ namespace DontGetTheKey
 
             ImageBank.Instance.loadFont("PressStart");
 
+            //Startup
+            ImageBank.Instance.load("logo");
+
+            //Gameplay
             ImageBank.Instance.load("character");
             ImageBank.Instance.load("background");
             ImageBank.Instance.load("door");
@@ -101,6 +105,7 @@ namespace DontGetTheKey
             ImageBank.Instance.load("statcover");
             ImageBank.Instance.load("swipe");
 
+            //Inventory
             ImageBank.Instance.load("item_bikelock");
             ImageBank.Instance.load("item_binoculars");
             ImageBank.Instance.load("item_goldpouch");
@@ -112,7 +117,6 @@ namespace DontGetTheKey
             ImageBank.Instance.load("item_lockpicks");
             ImageBank.Instance.load("item_padlock");
             ImageBank.Instance.load("item_rope");
-
             ImageBank.Instance.load("selector");
         }
 

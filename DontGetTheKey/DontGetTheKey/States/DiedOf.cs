@@ -41,7 +41,7 @@ namespace DontGetTheKey
         private string reason() {
             Random rand = new Random();
             List<String> reasons = new List<String>() { "DYSENTERY", "DIABETES", "AIDS", "POLIO" };
-            return reasons[rand.Next(reasons.Count-1)];
+            return reasons[rand.Next(reasons.Count)];
         }
     }
 }

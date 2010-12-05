@@ -92,6 +92,7 @@
     <Compile Include="States\DiedOf.cs" />
     <Compile Include="States\DifficultySelect.cs" />
     <Compile Include="States\DoorLocked.cs" />
+    <Compile Include="States\HowToPlay.cs" />
     <Compile Include="States\Inventory.cs" />
     <Compile Include="States\InventoryDown.cs" />
     <Compile Include="States\Logo.cs" />

@@ -135,6 +135,7 @@
     <Compile Include="InputHandler.cs" />
     <Compile Include="SoundBank.cs" />
     <Compile Include="States\Congrats.cs" />
+    <Compile Include="States\HowToPlay.cs" />
     <Compile Include="States\Logo.cs" />
     <Compile Include="States\DifficultySelect.cs" />
     <Compile Include="States\InventoryDown.cs" />

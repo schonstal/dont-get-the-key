@@ -32,7 +32,7 @@ namespace DontGetTheKey
             Components.Add(new GamerServicesComponent(this));
 
             // Set to true to test trial mode
-            Guide.SimulateTrialMode = false; 
+            Guide.SimulateTrialMode = true; 
 
         }
 
@@ -90,6 +90,7 @@ namespace DontGetTheKey
 
             //Startup
             ImageBank.Instance.load("logo");
+            ImageBank.Instance.load("controls");
 
             //Gameplay
             ImageBank.Instance.load("character");

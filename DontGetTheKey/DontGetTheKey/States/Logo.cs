@@ -37,9 +37,10 @@ namespace DontGetTheKey
             elapsed += gameTime.ElapsedGameTime.Milliseconds;
             if (elapsed >= 2000 || InputHandler.Instance.pressed("Any"))
             {
-                //if(Guide.IsTrialMode)
-                //GameState.Instance.Enter(new HowToPlay(spriteBatch, content));
-                GameState.Instance.Enter(new Intro(spriteBatch, content));
+                if(Guide.IsTrialMode)
+                    GameState.Instance.Enter(new HowToPlay(spriteBatch, content));
+                else
+                    GameState.Instance.Enter(new Intro(spriteBatch, content));
             }
 
             base.Update(gameTime);

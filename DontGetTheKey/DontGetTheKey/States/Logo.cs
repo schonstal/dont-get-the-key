@@ -19,7 +19,7 @@ namespace DontGetTheKey
     {
         float elapsed;
         //Duration
-        int timeout = 2000;
+        int timeout = 3000;
 
         public Logo(SpriteBatch sb, ContentManager contentManager)
             : base(sb, contentManager) {
@@ -34,6 +34,8 @@ namespace DontGetTheKey
                     new Rectangle(0, 0, 0, 0)
                     )
                 );
+
+            Register("fader", new Fader(sb, content, 150));
         }
 
         public override void Update(GameTime gameTime)

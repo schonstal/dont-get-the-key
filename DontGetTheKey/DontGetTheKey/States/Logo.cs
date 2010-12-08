@@ -35,7 +35,7 @@ namespace DontGetTheKey
                     )
                 );
 
-            Register("fader", new Fader(sb, content, 250, 0.25f));
+            Register("fader", new Fader(sb, content, 200, 0.20f));
         }
 
         public override void Update(GameTime gameTime)

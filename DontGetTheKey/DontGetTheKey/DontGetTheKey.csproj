@@ -119,6 +119,7 @@
     <Compile Include="Actor.cs" />
     <Compile Include="Actors\Background.cs" />
     <Compile Include="Actors\Character.cs" />
+    <Compile Include="Actors\Fader.cs" />
     <Compile Include="Actors\SelectedItem.cs" />
     <Compile Include="Actors\Selector.cs" />
     <Compile Include="Actors\Item.cs" />

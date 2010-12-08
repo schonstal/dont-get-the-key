@@ -18,13 +18,13 @@ namespace DontGetTheKey
     class Fader : Actor
     {
         //Rate for fade-in/out
-        int update;
+        int rate;
         //Percent opacity increase
         float percent;
 
-        public Fader(SpriteBatch sb, ContentManager contentManager, int update, float percent)
+        public Fader(SpriteBatch sb, ContentManager contentManager, int rate, float percent)
             : base(sb, contentManager, new Vector2(56,-136), "black", new Rectangle(0,0,0,0)) {
-                this.update = update;
+                this.rate = rate;
                 this.percent = percent;
         }
 

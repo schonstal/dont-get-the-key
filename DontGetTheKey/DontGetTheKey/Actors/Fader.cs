@@ -22,6 +22,8 @@ namespace DontGetTheKey
         //Percent opacity increase
         float percent;
 
+        float opacity;
+
         public Fader(SpriteBatch sb, ContentManager contentManager, int rate, float percent)
             : base(sb, contentManager, new Vector2(56,-136), "black", new Rectangle(0,0,0,0)) {
                 this.rate = rate;
@@ -31,6 +33,13 @@ namespace DontGetTheKey
         public override void Update(GameTime gameTime)
         {
             elapsed += gameTime.ElapsedGameTime.Milliseconds;
+            if (elapsed > rate && opacity < 1.0f)
+            {
+                opacity += percent;
+                elapsed = 0;
+            }
+            color = Color.FromNonPremultiplied((int)(255.0f * opacity), 255, 255, 255);
         }
+
     }
 }

@@ -18,6 +18,9 @@ namespace DontGetTheKey
     public class Logo : State
     {
         float elapsed;
+        //Duration
+        int timeout = 2000;
+
         public Logo(SpriteBatch sb, ContentManager contentManager)
             : base(sb, contentManager) {
 
@@ -33,11 +36,12 @@ namespace DontGetTheKey
                 );
         }
 
-        public override void Update(GameTime gameTime) {
+        public override void Update(GameTime gameTime)
+        {
             elapsed += gameTime.ElapsedGameTime.Milliseconds;
-            if (elapsed >= 2000)
+            if (elapsed >= timeout)
             {
-                if(Guide.IsTrialMode)
+                if (Guide.IsTrialMode)
                     GameState.Instance.Enter(new HowToPlay(spriteBatch, content));
                 else
                     GameState.Instance.Enter(new Intro(spriteBatch, content));

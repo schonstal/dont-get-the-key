@@ -91,6 +91,7 @@ namespace DontGetTheKey
             //Startup
             ImageBank.Instance.load("logo");
             ImageBank.Instance.load("controls");
+            ImageBank.Instance.load("black");
 
             //Gameplay
             ImageBank.Instance.load("character");

@@ -18,6 +18,8 @@ namespace DontGetTheKey
     public class HowToPlay : State
     {
         float elapsed;
+        int timeout = 15000;
+
         public HowToPlay(SpriteBatch sb, ContentManager contentManager)
             : base(sb, contentManager) {
 
@@ -31,10 +33,22 @@ namespace DontGetTheKey
                     new Rectangle(0, 0, 0, 0)
                     )
                 );
+
+            Register("fader", new Fader(sb, content, 250, 0.25f));
         }
 
         public override void Update(GameTime gameTime) {
             elapsed += gameTime.ElapsedGameTime.Milliseconds;
+            if (elapsed >= timeout)
+            {
+                ((Fader)actors["fader"]).FadeIn = false;
+
+                if (((Fader)actors["fader"]).Finished)
+                {
+                    GameState.Instance.Enter(new Intro(spriteBatch, content));
+                }
+            }
+
             //Can't loop over enums because no IEnumerable?
             List<PlayerIndex> players = new List<PlayerIndex>() { PlayerIndex.One, PlayerIndex.Two, PlayerIndex.Three, PlayerIndex.Four };
             foreach (PlayerIndex p in players)
@@ -45,6 +59,7 @@ namespace DontGetTheKey
                     GameState.Instance.Enter(new Intro(spriteBatch, content));
                 }
             }
+
 
             base.Update(gameTime);
         }

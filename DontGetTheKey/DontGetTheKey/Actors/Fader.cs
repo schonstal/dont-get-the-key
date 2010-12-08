@@ -24,18 +24,33 @@ namespace DontGetTheKey
 
         float alpha = 1.0f;
 
+        Boolean fadeIn = true;
+
         public Fader(SpriteBatch sb, ContentManager contentManager, int rate, float amount)
             : base(sb, contentManager, new Vector2(0,0), "black", new Rectangle(0,0,0,0)) {
                 this.rate = rate;
                 this.amount = amount;
         }
 
+        public Boolean FadeIn {
+            get { return fadeIn; }
+            set { fadeIn = value; }
+        }
+
+        public Boolean Finished
+        {
+            get { return (fadeIn && alpha <= 0) || (!fadeIn && alpha >= 1.0f); }
+        }
+
         public override void Update(GameTime gameTime)
         {
             elapsed += gameTime.ElapsedGameTime.Milliseconds;
-            if (elapsed > rate && alpha > 0)
+            if (elapsed > rate)
             {
-                alpha -= amount;
+                if (fadeIn && alpha > 0)
+                    alpha -= amount;
+                else if (!fadeIn && alpha < 1.0f)
+                    alpha += amount;
                 elapsed = 0;
             }
 

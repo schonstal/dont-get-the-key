@@ -43,10 +43,15 @@ namespace DontGetTheKey
             elapsed += gameTime.ElapsedGameTime.Milliseconds;
             if (elapsed >= timeout)
             {
-                if (Guide.IsTrialMode)
-                    GameState.Instance.Enter(new HowToPlay(spriteBatch, content));
-                else
-                    GameState.Instance.Enter(new Intro(spriteBatch, content));
+                ((Fader)actors["fader"]).FadeIn = false;
+
+                if (((Fader)actors["fader"]).Finished)
+                {
+                    if (Guide.IsTrialMode)
+                        GameState.Instance.Enter(new HowToPlay(spriteBatch, content));
+                    else
+                        GameState.Instance.Enter(new Intro(spriteBatch, content));
+                }
             }
 
             base.Update(gameTime);
